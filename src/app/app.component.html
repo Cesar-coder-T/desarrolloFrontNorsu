@@ -12,81 +12,20 @@
   <div id="toolbar">
     <mat-toolbar>
       <div id="logo">
-        <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu">
+        <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu" routerLink="">
       </div>
       <div id="routes">
         <label id="home">Inicio</label>
         <label id="about-us">Conócenos</label>
       </div>
       <div id="register">
-        <button mat-raised-button color="primary">Registrar</button>
+        <button mat-raised-button color="primary" routerLink="Registrarme">Registrar</button>
       </div>
     </mat-toolbar>
   </div>
   <!--ToolBar-->
-
-  <!--News Carousel-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://4.bp.blogspot.com/-dKrTI_3oT2g/T56ywUWRRVI/AAAAAAAAbTU/HPDo6ZLKcDU/s1600/Reflexiones-de-Paisajes_02.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://4.bp.blogspot.com/-dKrTI_3oT2g/T56ywUWRRVI/AAAAAAAAbTU/HPDo6ZLKcDU/s1600/Reflexiones-de-Paisajes_02.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://4.bp.blogspot.com/-dKrTI_3oT2g/T56ywUWRRVI/AAAAAAAAbTU/HPDo6ZLKcDU/s1600/Reflexiones-de-Paisajes_02.jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button id="btn-prev" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button id="btn-next" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <!--News Carousel-->
-
-  <!--Login Form-->
-  <div id="form-login">
-    <div id="void">&nbsp;</div>
-    <div id="ctn-default">
-      <div id="ctn-lg-email">
-        <label class="lb-login">Correo:</label>
-        <form class="login-email">
-          <mat-form-field class="full-width" appearance="fill">
-            <input id="eml" matInput>
-          </mat-form-field>
-        </form>
-      </div>
-      <div id="ctn-lg-password">
-        <label class="lb-login">Contraseña:</label>
-        <form class="login-password">
-          <mat-form-field class="full-width" appearance="fill">
-            <input id="passw" matInput>
-          </mat-form-field>
-        </form>
-      </div>
-      <div id="ctn-lg-question">
-        <a>¿Olvidaste tu contraseña?</a>
-      </div>
-      <div id="ctn-lg-btn-login">
-        <button mat-raised-button color="primary">Ingresar</button>
-      </div>
-      <div id="ctn-lg-other">
-        <label>¿No tienes cuenta?</label>
-        <a>Registrate.</a>
-      </div>
-    </div>
-  </div>
-  <!--Login Form-->
+  
+  <router-outlet></router-outlet>
 
 </body>
 </html>

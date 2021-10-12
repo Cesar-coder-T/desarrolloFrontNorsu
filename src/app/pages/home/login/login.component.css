@@ -1,0 +1,73 @@
+/*Beginning
+Login form customization*/
+#form-login{
+    background-color: #293347;
+    width: 30%;
+    height: 80%;
+    float: left;
+}
+#void{
+    width: 100%;
+    height: 20%;
+}
+#ctn-default{
+    width: 100%;
+    height: 80%;
+}
+#ctn-lg-email,
+#ctn-lg-password,
+#ctn-lg-question,
+#ctn-lg-other{
+    width: 100%;
+    margin-top: 1em;
+}
+.login-email,
+.login-password{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: .5em;
+}
+.lb-login{
+    color: #fff;
+    margin-left: 1.1em;
+    font-weight: 700;
+    font-size: 20px;
+}
+mat-form-field{
+    width: 90%;
+    height: 3.5em;
+    background-color: #fff;
+    color: #293347;
+    border-radius: .2em;
+    border: none;
+}
+#ctn-lg-question,
+#ctn-lg-btn-login,
+#ctn-lg-other{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+#ctn-lg-question{
+    color: rgb(35, 149, 216);
+    cursor: pointer;
+}
+#ctn-lg-btn-login{
+    width: 100%;
+    margin-top: 1em;
+}
+#ctn-lg-btn-login button{
+    width: 90%;
+    height: 2.5em;
+    font-size: 20px;
+    background-color: rgb(35, 149, 216);
+}
+#ctn-lg-other a{
+    color: rgb(35, 149, 216);
+    margin-left: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+/*End*/
