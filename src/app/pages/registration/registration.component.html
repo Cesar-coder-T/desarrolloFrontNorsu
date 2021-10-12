@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registrate papu</h1>
+
+    <div style="margin: 0px auto; text-align: center;">
+        <br />
+        <br />
+        <form id="tabla" class="mat-elevation-z8" 
+            (ngSubmit)="onRegistro()" [formGroup]="registrationForm" #frmReg="ngForm">
+            <br />
+            <br />
+            <h1>Registro</h1>
+            <br />
+            <p>
+                <mat-form-field id="textField">
+                    <mat-label id="formField-label">Nombre(s)</mat-label>
+                    <input type="text" minlength="5" maxlength="35" formControlName="completeName" matInput required #lgName>
+                    <mat-error *ngIf="registrationForm.get('completeName')!.hasError('required')">
+                        <strong>Este campo es obligatorio</strong>
+                    </mat-error>
+                    <mat-error *ngIf="registrationForm.get('completeName')!.hasError('minlength') && !registrationForm.get('completeName')!.hasError('required')">
+                        <strong>Longitud mínima de 3 caracteres</strong>
+                    </mat-error>
+                    <mat-hint align="end">{{lgName.value?.length || 0}}/35</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <button id="botonRegistrar" class="mat-elevation-z8" type="submit" [disabled]="frmReg.invalid">
+                    REGISTRAR</button>
+            </p>
+            <br />
+            <br />
+        </form>
+        <br />
+    </div>
+
 </body>
+
 </html>

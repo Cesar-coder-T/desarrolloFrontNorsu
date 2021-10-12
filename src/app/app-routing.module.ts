@@ -5,11 +5,10 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'Registrarme', component: RegistrationComponent}
-];
-
+  {path: 'registro', component: RegistrationComponent}
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }
