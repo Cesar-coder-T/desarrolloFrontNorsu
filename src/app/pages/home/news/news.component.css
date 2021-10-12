@@ -1,9 +1,9 @@
 /*Carousel customization*/
 #carouselExampleIndicators{
     width: 70%;
-    height: 80%;
+    height: 88.6vh;
     float: left;
 }
 .carousel-inner img{
-    height: 39.46em;
+    height: 88.6vh;
 }
