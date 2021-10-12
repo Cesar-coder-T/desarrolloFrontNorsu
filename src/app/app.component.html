@@ -19,7 +19,7 @@
         <label id="about-us">Conócenos</label>
       </div>
       <div id="register">
-        <button mat-raised-button color="primary">Registrar</button>
+        <button mat-raised-button color="primary" routerLink="/registro" target="_blank">Registrar</button>
       </div>
     </mat-toolbar>
   </div>
@@ -85,8 +85,11 @@
         <a>Registrate.</a>
       </div>
     </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
   <!--Login Form-->
-
+  
 </body>
 </html>
