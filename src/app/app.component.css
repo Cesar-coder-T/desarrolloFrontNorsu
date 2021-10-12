@@ -1,3 +1,12 @@
+#toolbar mat-toolbar{
+    background-color: #fff;
+    border-bottom: 1px solid rgb(0,0,0);
+    height: 4.5em;
+}
+#Norsu{
+    height: 4em;
+    margin-left: 2.5em;
+}
 #carouselExampleIndicators{
     width: 70%;
     height: 40em;
