@@ -60,8 +60,9 @@ export class RegistrationComponent implements OnInit {
     this.validador = 0;
     this.registrationForm = new FormGroup({
       completeName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      electronicMail: new FormControl('', [Validators.required, Validators.email, Validators.minLength(10)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       /**apellido: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      correo: new FormControl('', [Validators.required, Validators.email, Validators.minLength(10)]),
       rol_id: new FormControl(4),
       fecha_nacimiento: new FormControl('', Validators.required),
       identificacion: new FormControl('', [Validators.required, Validators.min(1000),]),
