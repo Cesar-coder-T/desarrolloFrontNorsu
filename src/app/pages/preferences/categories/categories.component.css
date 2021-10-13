@@ -1,0 +1,21 @@
+#ctn-gnl{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    margin: 0 auto;
+}
+.ctn-catgs{
+    margin: 0 auto;
+    margin-bottom: 2.5em;
+}
+.catg{
+    width: 19em;
+    height: 12em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: .5em;
+}
+.catg h3{
+    font-size: 1.5em;
+}

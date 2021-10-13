@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--ToolBar-->
+    <div id="toolbar">
+        <mat-toolbar>
+            <div id="ctn-h1">
+                <h1>Preferencias</h1>
+            </div>
+            <div id="logo">
+                <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu" routerLink="">
+            </div>
+        </mat-toolbar>
+    </div>
+    <!--ToolBar-->
+
+    <!--Subtitle and skip button-->
+    <div id="general">
+        <div id="ctn-h2">
+            <h2>Elije en que temas te quieres capacitar</h2>
+        </div>
+        <div id="ctn-btn">
+            <button pButton type="button" routerLink="/registro">
+                <a>Omitir</a>
+            </button>
+        </div>
+    </div>
+    <!--Subtitle and skip button-->
+
+    <app-categories></app-categories>
+
+    <!--Next button-->
+    <div id="ctn_btn-next">
+        <button pButton type="button" routerLink="/registro" [disabled]="stateBtb">
+            <a>Siguiente</a>
+        </button>
+    </div>
+    <!--Next button-->
+</body>
+</html>

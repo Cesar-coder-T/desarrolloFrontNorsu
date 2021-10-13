@@ -5,17 +5,13 @@
     <div id="ctn-lg-email">
         <label class="lb-login">Correo:</label>
         <form class="login-email">
-        <mat-form-field class="full-width" appearance="fill">
-            <input id="eml" matInput>
-        </mat-form-field>
+            <input id="eml" pInputText placeholder="tucorreo@ejemplo.com">
         </form>
     </div>
     <div id="ctn-lg-password">
         <label class="lb-login">Contraseña:</label>
         <form class="login-password">
-        <mat-form-field class="full-width" appearance="fill">
-            <input id="passw" matInput>
-        </mat-form-field>
+            <input id="passw" type="password" pPassword>
         </form>
     </div>
     <div id="ctn-lg-question">
@@ -26,7 +22,7 @@
     </div>
     <div id="ctn-lg-other">
         <label>¿No tienes cuenta?</label>
-        <a>Registrate.</a>
+        <a routerLink="/registro">Registrate.</a>
     </div>
     </div>
 </div>

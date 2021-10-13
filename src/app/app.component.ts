@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'desarrollo-front-Norsu';
+  state: boolean;
+  constructor(){
+    this.state = true;
+  }
   ngOnInit(){
     document.onscroll = function() {
       console.log("Vertical: " + window.scrollY);

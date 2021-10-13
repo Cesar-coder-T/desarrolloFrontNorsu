@@ -9,7 +9,7 @@
 <body>
 
   <!--ToolBar-->
-  <div id="toolbar">
+  <div id="toolbar" *ngIf="state">
     <mat-toolbar>
       <div id="logo">
         <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu" routerLink="">
@@ -19,7 +19,7 @@
         <label id="about-us">Conócenos</label>
       </div>
       <div id="register">
-        <button mat-raised-button color="primary" routerLink="/registro" target="_blank">Registrar</button>
+        <button pButton type="button" label="Registrarme" routerLink="/registro"></button>
       </div>
     </mat-toolbar>
   </div>

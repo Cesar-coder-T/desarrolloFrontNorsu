@@ -12,7 +12,6 @@ Toolbar customization*/
 #logo{
     height: 100%;
     width: 15%;
-    cursor: pointer;
 }
 #routes{
     height: 100%;
@@ -30,13 +29,20 @@ Toolbar customization*/
 #toolbar mat-toolbar label{
     color: rgb(0,0,0);
 }
+#home,
+#about-us{
+    cursor: pointer;
+}
 #about-us{
     margin-left: 5em;
 }
 #toolbar mat-toolbar button{
     background-color: transparent;
-    border: 1px solid #293347;
-    color: #293347;
+    border: 2px solid #293347;
+    border-radius: .2em;
+    color: #474529;
+    width: 100%;
+    height: 60%;
     transition: .7s;
 }
 #toolbar mat-toolbar button:hover{
@@ -48,6 +54,7 @@ Toolbar customization*/
 #Norsu{
     height: 4em;
     margin-left: 2.5em;
+    cursor: pointer;
 }
 /*End*/
 

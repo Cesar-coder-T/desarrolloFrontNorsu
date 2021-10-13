@@ -34,13 +34,17 @@ Login form customization*/
     font-weight: 700;
     font-size: 20px;
 }
-mat-form-field{
+#eml,
+#passw{
     width: 90%;
-    height: 3.5em;
+    height: 3.2em;
     background-color: #fff;
     color: #293347;
+    font-size: 1em;
     border-radius: .2em;
     border: none;
+    outline: none;
+    text-align: center;
 }
 #ctn-lg-question,
 #ctn-lg-btn-login,

@@ -1,0 +1,83 @@
+/*Toolbar customization*/
+#toolbar mat-toolbar{
+    background-color: #fff;
+    border-bottom: 1px solid rgb(0,0,0);
+    height: 4.5em;
+}
+#ctn-h1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: #293347;
+    font-size: 1.7em;
+    margin-left: 2em;
+}
+#logo{
+    height: 100%;
+    width: 10%;
+}
+#Norsu{
+    height: 4em;
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+/*End*/
+
+/*Subtitle and skip button*/
+#general{
+    width: 70%;
+    height: 3em;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+#ctn-h2{
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+#ctn-h2 h2{
+    height: 100%;
+    margin-left: 1.7em;
+    font-size: 1.5em;
+}
+#ctn-btn{
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#ctn-btn button{
+    width: 13em;
+    height: 100%;
+    margin-right: 2em;
+    border: none;
+    border-radius: .4em;
+    background: rgb(224, 92, 77);
+    color: #fff;
+    font-weight: 500;
+}
+#ctn-btn button:hover{
+    background: transparent;
+    color: rgb(224, 92, 77);
+    box-shadow: 0 0 .5em rgb(224, 92, 77);
+    font-weight: 500;
+}
+/*Subtitle and skip button*/
+
+#ctn_btn-next{
+    padding-bottom: 3em;
+    text-align: center;
+}
+#ctn_btn-next button{
+    width: 11em;
+    height: 3em;
+    border-radius: .4em;
+    background: transparent;
+}
