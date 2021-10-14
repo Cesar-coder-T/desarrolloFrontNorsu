@@ -29,7 +29,7 @@ a{
   
   #tableForm{
     width: 50%;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     margin:5em auto;
   }
   #tableForm h1 {
@@ -142,4 +142,9 @@ a{
     color: rgb(255,255,255) !important;
     text-align: center;
     font-weight: bold;
+  }
+  #space{
+    display: block;
+    background-color: transparent;
+    height: 5em;
   }

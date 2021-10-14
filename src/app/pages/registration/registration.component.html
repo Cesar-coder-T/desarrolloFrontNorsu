@@ -109,24 +109,25 @@
                 <div id="expansionContainer">
                     <mat-expansion-panel id="expansionPanel">
                         <mat-expansion-panel-header>
-                          <mat-panel-title id="expansionTittle">
-                            Tengo un código de referido
-                          </mat-panel-title>
-                          <mat-panel-description>
-                          </mat-panel-description>
+                            <mat-panel-title id="expansionTittle">
+                                Tengo un código de referido
+                            </mat-panel-title>
+                            <mat-panel-description>
+                            </mat-panel-description>
                         </mat-expansion-panel-header>
                         <div>
                             <p id="headerText">Código:</p>
                             <p>
                                 <mat-form-field id="textField2">
                                     <mat-label id="formField-label"></mat-label>
-                                    <input type="text" minlength="10" maxlength="10" formControlName="referralCode" matInput
-                                         #lgCode>
+                                    <input type="text" minlength="10" maxlength="10" formControlName="referralCode"
+                                        matInput #lgCode>
                                     <mat-error
                                         *ngIf="registrationForm.get('referralCode')!.hasError('minlength') || registrationForm.get('referralCode')!.hasError('maxlength')">
                                         <strong>Longitud de 10 caracteres</strong>
                                     </mat-error>
-                                    <mat-hint style="color: rgb(255,255,255);" align="end">{{lgCode.value?.length || 0}}/10
+                                    <mat-hint style="color: rgb(255,255,255);" align="end">{{lgCode.value?.length ||
+                                        0}}/10
                                     </mat-hint>
                                 </mat-form-field>
                             </p>
@@ -136,12 +137,12 @@
                             <p>
                                 <mat-form-field id="textField3">
                                     <mat-label id="formField-label"></mat-label>
-                                    
+
                                     <input id="textCompany" matInput [value]="empresa" [disabled]="true">
                                 </mat-form-field>
                             </p>
                         </div>
-                      </mat-expansion-panel>
+                    </mat-expansion-panel>
                 </div>
                 <div id="checkContainer">
                     <div class="form-check">
@@ -162,32 +163,14 @@
                         initCallback="loadCaptcha"></p-captcha>
                 </div>
             </div>
-<<<<<<< HEAD
             <div id="buttonContainer">
-                <button id="registerButton" class="mat-elevation-z8" type="submit" [disabled]="frmReg.invalid" routerLink="/preferencias">
-=======
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Acepto los <a>Términos y condiciones</a>
-                </label>
-              </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Acepto las <a>Políticas de privacidad</a>
-                    </label>
-                  </div>
-                <div>
-                <button id="registerButton" class="mat-elevation-z8" type="submit" routerLink="/preferencias" [disabled]="frmReg.invalid">
->>>>>>> 32f38fbcff0c3924c475da1c07519e87da0971b0
+                <button id="registerButton" class="mat-elevation-z8" type="submit" routerLink="/preferencias"
+                    [disabled]="frmReg.invalid">
                     SIGUIENTE</button>
             </div>
-            <br />
-            <br />
         </form>
-        <br />
     </div>
+    <div id="space"></div>
 
 </body>
 
