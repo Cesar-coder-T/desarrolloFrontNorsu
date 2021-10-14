@@ -1,119 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-    <div style="margin: 0px auto; text-align: center;">
-        <br />
-        <br />
-        <form id="tableForm" class="mat-elevation-z8" 
-            (ngSubmit)="onRegistro()" [formGroup]="registrationForm" #frmReg="ngForm">
-            <br />
-            <br />
+    <div>
+
+        <form id="tableForm" (ngSubmit)="onRegistro()" [formGroup]="registrationForm" #frmReg="ngForm">
+
             <h1>Regístrate y disfruta las ventajas de estar capacitado</h1>
-            <br />
-            <div>
-                <p id="headerText">Nombre completo:</p>
-                <p>
-                <mat-form-field id="textField">
-                    <mat-label id="formField-label"></mat-label>
-                    <input type="text" minlength="5" maxlength="35" formControlName="completeName" matInput required #lgName>
-                    <mat-error *ngIf="registrationForm.get('completeName')!.hasError('required')">
-                        <strong>Este campo es obligatorio</strong>
-                    </mat-error>
-                    <mat-error *ngIf="registrationForm.get('completeName')!.hasError('minlength') && !registrationForm.get('completeName')!.hasError('required')">
-                        <strong>Longitud mínima de 5 caracteres</strong>
-                    </mat-error>
-                    <mat-hint align="end">{{lgName.value?.length || 0}}/35</mat-hint>
-                </mat-form-field>
-                </p>
-            </div>
-            <div>
-                <p id="headerText">Correo:</p>
-                <p>
-                <mat-form-field id="textField">
-                    <mat-label id="formField-label"></mat-label>
-                    <input type="email" maxlength="75" formControlName="electronicMail" matInput required
-                         [(ngModel)]="correo" #mailLong>
-                    <mat-error *ngIf="registrationForm.get('electronicMail')!.hasError('email') && !registrationForm.get('electronicMail')!.hasError('required')">
-                        <strong>Por favor ingresa un correo válido</strong>
-                    </mat-error>
-                    <mat-error *ngIf="registrationForm.get('electronicMail')!.hasError('minlength') && !registrationForm.get('electronicMail')!.hasError('required') && !registrationForm.get('electronicMail')!.hasError('email')">
-                        <strong>Longitud mínima de 10 caracteres</strong>
-                    </mat-error>
-                    <mat-error *ngIf="registrationForm.get('electronicMail')!.hasError('required')">
-                        <strong>Este campo es obligatorio</strong>
-                    </mat-error>
-                    <mat-hint align="end">{{mailLong.value?.length || 0}}/75</mat-hint>
-                </mat-form-field>
-                </p>
-            </div>
-            <div>
-                <p id="headerText">Cree una contraseña:</p>
-                <p>
-                    <mat-form-field id="textField">
-                        <mat-label id="formField-label"></mat-label>
-                        <input matInput [type]="hide ? 'password' 
-                      : 'text'" required maxlength="25" required [(ngModel)]="contrasena1"
-                            (input)="equalPasswordControl(); securityPasswordControl()" formControlName="password">
-                        <mat-icon class="icono-clave" matSuffix (click)="hide = !hide">{{hide ?
-                            'visibility_off' : 'visibility'}}</mat-icon>
-                        <mat-error *ngIf="registrationForm.get('password')!.hasError('required')">
-                            <strong>Por favor ingresa tu contraseña</strong>
-                        </mat-error>
-                        <mat-error *ngIf="registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
-                            <strong>Longitud mínima de 6 caracteres</strong>
-                        </mat-error>
-                        <mat-error *ngIf="registrationForm.get('password')!.errors?.validSecurityPassword && !registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
-                            <strong>Debe mínimo tener: mayúscula-minúscula-número</strong>
-                        </mat-error>
-                        <mat-hint style="color:{{colorVar}}"> <strong>{{mensaje}}</strong></mat-hint>
-                        <mat-hint align="end" style="color:{{colorVar2}}"> <strong>{{mensaje2}}</strong></mat-hint>
-                    </mat-form-field>
-                </p>
-            </div>
-            <div>
-                <p id="headerText">Escriba nuevamente su contraseña:</p>
-                <p>
-                    <mat-form-field id="textField">
-                        <mat-label id="formField-label"></mat-label>
-                        <input matInput type="text" [type]="hide ? 
-                          'password' : 'text'" required maxlength="25" required [(ngModel)]="contrasena2"
-                            (input)="equalPasswordControl()" formControlName="password">
-                        <mat-icon class="icono-clave" matSuffix (click)="hide = !hide">{{hide ?
-                            'visibility_off' : 'visibility'}}</mat-icon>
-                        <mat-error *ngIf="registrationForm.get('password')!.hasError('required')">
-                            <strong>Por favor favor confirma tu contraseña</strong>
-                        </mat-error>
-                        <mat-error *ngIf="registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
-                            <strong>Longitud mínima de 4 caracteres</strong>
-                        </mat-error>
-                        <mat-hint style="color: {{colorVar}}"> <strong>{{mensaje}}</strong></mat-hint>
-    
-                    </mat-form-field>
-                </p>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Acepto los <a>Términos y condiciones</a>
-                </label>
-              </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Acepto las <a>Políticas de privacidad</a>
-                    </label>
-                  </div>
+            <div id="textContainer">
                 <div>
-                <button id="registerButton" class="mat-elevation-z8" type="submit" [disabled]="frmReg.invalid">
-                    SIGUIENTE</button>
+                    <p id="headerText">Nombre completo:</p>
+                    <p>
+                        <mat-form-field id="textField">
+                            <mat-label id="formField-label"></mat-label>
+                            <input type="text" minlength="5" maxlength="35" formControlName="completeName" matInput
+                                required #lgName>
+                            <mat-error *ngIf="registrationForm.get('completeName')!.hasError('required')">
+                                <strong>Este campo es obligatorio</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="registrationForm.get('completeName')!.hasError('minlength') && !registrationForm.get('completeName')!.hasError('required')">
+                                <strong>Longitud mínima de 5 caracteres</strong>
+                            </mat-error>
+                            <mat-hint style="color: rgb(29, 33, 47);" align="end">{{lgName.value?.length || 0}}/35
+                            </mat-hint>
+                        </mat-form-field>
+                    </p>
                 </div>
+                <div>
+                    <p id="headerText">Correo:</p>
+                    <p>
+                        <mat-form-field id="textField">
+                            <mat-label id="formField-label"></mat-label>
+                            <input type="email" maxlength="75" formControlName="electronicMail" matInput required
+                                [(ngModel)]="correo" #mailLong>
+                            <mat-error
+                                *ngIf="registrationForm.get('electronicMail')!.hasError('email') && !registrationForm.get('electronicMail')!.hasError('required')">
+                                <strong>Por favor ingresa un correo válido</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="registrationForm.get('electronicMail')!.hasError('minlength') && !registrationForm.get('electronicMail')!.hasError('required') && !registrationForm.get('electronicMail')!.hasError('email')">
+                                <strong>Longitud mínima de 10 caracteres</strong>
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('electronicMail')!.hasError('required')">
+                                <strong>Este campo es obligatorio</strong>
+                            </mat-error>
+                            <mat-hint style="color: rgb(29, 33, 47);" align="end">{{mailLong.value?.length || 0}}/75
+                            </mat-hint>
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div>
+                    <p id="headerText">Cree una contraseña:</p>
+                    <p>
+                        <mat-form-field id="textField">
+                            <mat-label id="formField-label"></mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" required maxlength="25" required
+                                [(ngModel)]="contrasena1" (input)="equalPasswordControl(); securityPasswordControl()"
+                                formControlName="password">
+                            <mat-icon class="icono-clave" matSuffix (click)="hide = !hide">{{hide ?
+                                'visibility_off' : 'visibility'}}</mat-icon>
+                            <mat-error *ngIf="registrationForm.get('password')!.hasError('required')">
+                                <strong>Por favor ingresa tu contraseña</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
+                                <strong>Longitud mínima de 6 caracteres</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="registrationForm.get('password')!.errors?.validSecurityPassword && !registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
+                                <strong>Debe mínimo tener: mayúscula-minúscula-número</strong>
+                            </mat-error>
+                            <mat-hint style="color:{{colorVar}}"> <strong>{{mensaje}}</strong></mat-hint>
+                            <mat-hint align="end" style="color:{{colorVar2}}"> <strong>{{mensaje2}}</strong></mat-hint>
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div>
+                    <p id="headerText">Escriba nuevamente su contraseña:</p>
+                    <p>
+                        <mat-form-field id="textField">
+                            <mat-label id="formField-label"></mat-label>
+                            <input matInput type="text" [type]="hide ? 
+                          'password' : 'text'" required maxlength="25" required [(ngModel)]="contrasena2"
+                                (input)="equalPasswordControl()" formControlName="password">
+                            <mat-icon class="icono-clave" matSuffix (click)="hide = !hide">{{hide ?
+                                'visibility_off' : 'visibility'}}</mat-icon>
+                            <mat-error *ngIf="registrationForm.get('password')!.hasError('required')">
+                                <strong>Por favor favor confirma tu contraseña</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
+                                <strong>Longitud mínima de 4 caracteres</strong>
+                            </mat-error>
+                            <mat-hint style="color: {{colorVar}}"> <strong>{{mensaje}}</strong></mat-hint>
+
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div id="expansionContainer">
+                    <mat-expansion-panel id="expansionPanel">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title id="expansionTittle">
+                            Tengo un código de referido
+                          </mat-panel-title>
+                          <mat-panel-description>
+                          </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div>
+                            <p id="headerText">Código:</p>
+                            <p>
+                                <mat-form-field id="textField2">
+                                    <mat-label id="formField-label"></mat-label>
+                                    <input type="text" minlength="10" maxlength="10" formControlName="referralCode" matInput
+                                         #lgCode>
+                                    <mat-error
+                                        *ngIf="registrationForm.get('referralCode')!.hasError('minlength') || registrationForm.get('referralCode')!.hasError('maxlength')">
+                                        <strong>Longitud de 10 caracteres</strong>
+                                    </mat-error>
+                                    <mat-hint style="color: rgb(255,255,255);" align="end">{{lgCode.value?.length || 0}}/10
+                                    </mat-hint>
+                                </mat-form-field>
+                            </p>
+                        </div>
+                        <div>
+                            <p id="headerText">Nombre de la empresa:</p>
+                            <p>
+                                <mat-form-field id="textField3">
+                                    <mat-label id="formField-label"></mat-label>
+                                    
+                                    <input id="textCompany" matInput [value]="empresa" [disabled]="true">
+                                </mat-form-field>
+                            </p>
+                        </div>
+                      </mat-expansion-panel>
+                </div>
+                <div id="checkContainer">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Acepto los <a>Términos y condiciones</a>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Acepto las <a>Políticas de privacidad</a>
+                        </label>
+                    </div>
+                </div>
+                <div id="captchaContainer">
+                    <p-captcha siteKey="6Ld4MMwcAAAAAD98j5TVYaI-Dmgfpr2xpfNsKbZI" (onResponse)="showResponse($event)"
+                        initCallback="loadCaptcha"></p-captcha>
+                </div>
+            </div>
+            <div id="buttonContainer">
+                <button id="registerButton" class="mat-elevation-z8" type="submit" [disabled]="frmReg.invalid" routerLink="/preferencias">
+                    SIGUIENTE</button>
+            </div>
             <br />
             <br />
         </form>

@@ -10,7 +10,7 @@ import { delay } from 'rxjs/operators';
   styleUrls: ['./registration.component.css']
 })
 /**
- * Class of Registration component
+ * Class of RegistrationComponent
  * @autor César Téllez
  * @autor Juan Páez
  * @since 1.0.0
@@ -30,23 +30,24 @@ export class RegistrationComponent implements OnInit {
   colorVar2!: string;
   validador!: number;
   correo!: string;
+  empresa: string = "Empresa prueba";
 
   hide = true;
   /**
    * Constructor of class "registrationComponent"
-   * @param apiRegistro consulta el post para el registro
-   * @param router redirecciona al usuario
-   * @param snackBar muestra error capturado
-   * @param estado muestra el estado de carga del componente
-   * @param consultaService carga el proceso de consulta
+   * @param router redirects user
+   * @param status shows the charging status of the component
    */
   constructor(
     private router: Router,
-    private estado: AppComponent
+    private status: AppComponent
   ) {
     
     };
   
+    showResponse(response: any) {
+      console.log(response);
+  }
   /**
      * Método que se ejecuta inmediatamente después
      * del constructor y que activa todo su contenido al
@@ -60,6 +61,7 @@ export class RegistrationComponent implements OnInit {
       completeName: new FormControl('', [Validators.required, Validators.minLength(5)]),
       electronicMail: new FormControl('', [Validators.required, Validators.email, Validators.minLength(10)]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      referralCode: new FormControl('', [Validators.minLength(10), Validators.maxLength(10)]),
       /**apellido: new FormControl('', [Validators.required, Validators.minLength(3)]),
       rol_id: new FormControl(4),
       fecha_nacimiento: new FormControl('', Validators.required),
