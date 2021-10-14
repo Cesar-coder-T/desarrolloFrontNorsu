@@ -1,10 +1,10 @@
 <div id="ctn-gnl">
-    <div class="ctn-catgs" *ngFor="let category of categories">
-        <mat-button-toggle-group name="categories" aria-label="Categories" multiple>
-            <mat-button-toggle #selections class="catg">
-                <h3>{{category.name}}</h3>
+    <div class="ctn-catgs" *ngFor="let category of categories; let i = index">
+        <mat-button-toggle-group #group="matButtonToggleGroup" name="categories" aria-label="Categories" multiple>
+            <mat-button-toggle class="catg" [value]="categories[i].name">
+                <h3 (categories)="group.value">{{category.name}}</h3>
             </mat-button-toggle>
-            {{selections.checked}}
         </mat-button-toggle-group>
+        {{group.value}}
     </div>
 </div>

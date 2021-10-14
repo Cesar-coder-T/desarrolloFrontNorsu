@@ -11,7 +11,7 @@
     <div id="toolbar">
         <mat-toolbar>
             <div id="ctn-h1">
-                <h1>Preferencias</h1>
+                <h1>Verificación</h1>
             </div>
             <div id="logo">
                 <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu" routerLink="">
@@ -19,26 +19,14 @@
         </mat-toolbar>
     </div>
     <!--ToolBar-->
-
-    <!--Subtitle and skip button-->
-    <div id="general">
-        <div id="ctn-h2">
-            <h2>Elije en que temas te quieres capacitar</h2>
-        </div>
-        <div id="ctn-btn">
-            <button pButton type="button" routerLink="/verificacion">
-                <a>Omitir</a>
-            </button>
-        </div>
+    <div id="message">
+        <h2>Para finalizar el registro, por favor ingresa el código que enviamos a tu correo</h2>
     </div>
-    <!--Subtitle and skip button-->
-    
-    <app-categories></app-categories>
-
+    <app-code></app-code>
     <!--Next button-->
-    <div id="ctn_btn-next">
+    <div id="ctn_btn-end">
         <button pButton type="button" routerLink="/verificacion" [disabled]="stateBtb">
-            <a>Siguiente</a>
+            <a>Finalizar Registro</a>
         </button>
     </div>
     <!--Next button-->

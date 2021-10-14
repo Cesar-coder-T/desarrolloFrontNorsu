@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AppComponent } from 'src/app/app.component';
 import { delay } from 'rxjs/operators';
 
 @Component({
@@ -41,8 +40,7 @@ export class RegistrationComponent implements OnInit {
    * @param consultaService carga el proceso de consulta
    */
   constructor(
-    private router: Router,
-    private estado: AppComponent
+    private router: Router
   ) {
     
     };
