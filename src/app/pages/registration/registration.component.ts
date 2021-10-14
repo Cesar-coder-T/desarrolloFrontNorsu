@@ -42,7 +42,7 @@ export class RegistrationComponent implements OnInit {
     private router: Router,
     private status: AppComponent
   ) {
-    
+    status.state=false;
     };
   
     showResponse(response: any) {
@@ -85,6 +85,8 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
+
+  
   /**
    * Método encargado de evaliuar si los valores de contraseña
    * y confirmar contraseña ingresados por el usuario, coinciden o no.

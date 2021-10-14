@@ -30,13 +30,23 @@ a{
   #tableForm{
     width: 50%;
     background-color: rgb(255, 255, 255);
-    margin:5em auto;
+    margin:auto;
   }
   #tableForm h1 {
     color: rgb(29, 33, 47);
     font-size: 18px;
     text-align: center;
     font-weight: bold;
+  }
+  #backButton{
+    background-color: transparent;
+    color:rgb(46, 147, 191) !important;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    height: 40px;
+    margin-left: 6%;
+    border: none;
   }
   #registerButton{
     background-color: rgb(29, 33, 47);
@@ -144,6 +154,7 @@ a{
     font-weight: bold;
   }
   #space{
+    margin-top: 3em;
     display: block;
     background-color: transparent;
     height: 5em;
