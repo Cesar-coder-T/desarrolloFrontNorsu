@@ -1,0 +1,49 @@
+/*Toolbar customization*/
+#toolbar mat-toolbar{
+    background-color: #fff;
+    border-bottom: 1px solid rgb(0,0,0);
+    height: 4.5em;
+}
+#ctn-h1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: #293347;
+    font-size: 1.7em;
+    margin-left: 2em;
+}
+#logo{
+    height: 100%;
+    width: 10%;
+}
+#Norsu{
+    height: 4em;
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+/*End*/
+
+#message{
+    width: 100%;
+    height: 2em;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+#ctn_btn-end{
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+}
+#ctn_btn-end button{
+    width: 11em;
+    height: 3em;
+    border-radius: .4em;
+    background: transparent;
+
+}

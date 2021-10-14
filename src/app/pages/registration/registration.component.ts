@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AppComponent } from 'src/app/app.component';
 import { delay } from 'rxjs/operators';
 
 @Component({
@@ -39,8 +38,12 @@ export class RegistrationComponent implements OnInit {
    * @param status shows the charging status of the component
    */
   constructor(
+<<<<<<< HEAD
     private router: Router,
     private status: AppComponent
+=======
+    private router: Router
+>>>>>>> 32f38fbcff0c3924c475da1c07519e87da0971b0
   ) {
     
     };

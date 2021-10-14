@@ -1,31 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.css']
+  styleUrls: ['./categories.component.css'],
+  providers: [MessageService]
 })
 export class CategoriesComponent implements OnInit {
-  
   state: boolean = false;
   categories = [
-    {name: "Categoría 1", state: false},
-    {name: "Categoría 2", state: false},
-    {name: "Categoría 3", state: false},
-    {name: "Categoría 4", state: false},
-    {name: "Categoría 5", state: false},
-    {name: "Categoría 6", state: false},
-    {name: "Categoría 7", state: false},
-    {name: "Categoría 8", state: false},
-    {name: "Categoría 9", state: false},
-    {name: "Categoría 10", state: false},
-    {name: "Categoría 11", state: false},
-    {name: "Categoría 12", state: false}
+    {name: "Categoría 1"},
+    {name: "Categoría 2"},
+    {name: "Categoría 3"},
+    {name: "Categoría 4"},
+    {name: "Categoría 5"},
+    {name: "Categoría 6"},
+    {name: "Categoría 7"},
+    {name: "Categoría 8"},
+    {name: "Categoría 9"},
+    {name: "Categoría 10"},
+    {name: "Categoría 11"},
+    {name: "Categoría 12"}
   ];
 
   constructor(
-    home: AppComponent
+    home: AppComponent,
+    private messageService: MessageService
   ){
     home.state = this.state;
   }
@@ -33,4 +35,5 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(){
     this.state = true;
   }
+
 }

@@ -12,6 +12,5 @@ export class PreferencesComponent implements OnInit{
     this.stateBtb = true;
   }
   ngOnInit(){
-
   }
 }
