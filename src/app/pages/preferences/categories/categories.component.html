@@ -1,10 +1,16 @@
-<div id="ctn-gnl">
-    <div class="ctn-catgs" *ngFor="let category of categories; let i = index">
-        <mat-button-toggle-group #group="matButtonToggleGroup" name="categories" aria-label="Categories" multiple>
-            <mat-button-toggle class="catg" [value]="categories[i].name">
-                <h3 (categories)="group.value">{{category.name}}</h3>
-            </mat-button-toggle>
-        </mat-button-toggle-group>
-        {{group.value}}
-    </div>
+<div class="ctn-btns">
+  <mat-button-toggle-group
+    class="gp-pf"
+    [(value)] = "selectedValue"
+    #group="matButtonToggleGroup"
+    multiple=true>
+    <mat-button-toggle
+      class="btn-toggle"
+      *ngFor="let category of categories; let i = index"
+      [value]="categories[i].id">
+      <h3>
+        {{categories[i].name}}
+      </h3>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
 </div>

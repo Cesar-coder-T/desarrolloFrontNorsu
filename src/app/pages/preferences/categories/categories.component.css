@@ -1,21 +1,24 @@
-#ctn-gnl{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 70%;
-    margin: 0 auto;
+.ctn-btns{
+  width: 100%;
 }
-.ctn-catgs{
-    margin: 0 auto;
-    margin-bottom: 2.5em;
+.gp-pf{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 2em;
 }
-.catg{
-    width: 19em;
-    height: 12em;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    border-radius: .5em;
+.btn-toggle{
+  width: 90%;
+  height: 12em;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: .5em;
+  margin: 0 5%;
+  margin-top: 2.2em;
 }
-.catg h3{
-    font-size: 1.5em;
+.btn-toggle h3{
+  font-size: 1.5em;
+  width: 95%;
 }
