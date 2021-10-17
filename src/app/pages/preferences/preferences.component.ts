@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./preferences.component.css']
 })
 export class PreferencesComponent implements OnInit{
-  stateBtb: boolean;
 
   constructor(){
-    this.stateBtb = true;
   }
   ngOnInit(){
   }

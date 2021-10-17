@@ -71,13 +71,3 @@ h1{
 }
 /*Subtitle and skip button*/
 
-#ctn_btn-next{
-    padding-bottom: 3em;
-    text-align: center;
-}
-#ctn_btn-next button{
-    width: 11em;
-    height: 3em;
-    border-radius: .4em;
-    background: transparent;
-}

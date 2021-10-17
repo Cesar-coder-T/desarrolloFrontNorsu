@@ -7,6 +7,7 @@
   width: 80%;
   margin: 0 auto;
   padding-bottom: 2em;
+  box-shadow: none;
 }
 .btn-toggle{
   width: 90%;
@@ -14,11 +15,31 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  font-weight: bold;
   border-radius: .5em;
+  border: 2px solid transparent;
+  -webkit-text-stroke: 1px transparent;
   margin: 0 5%;
   margin-top: 2.2em;
+}
+.btn-toggle:hover{
+  border: 2px solid #292929;
 }
 .btn-toggle h3{
   font-size: 1.5em;
   width: 95%;
+  color: rgb(35, 149, 216);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#ctn_btn-next{
+  padding-bottom: 3em;
+  text-align: center;
+}
+#ctn_btn-next button{
+  width: 11em;
+  height: 3em;
+  border-radius: .4em;
+  background: transparent;
 }

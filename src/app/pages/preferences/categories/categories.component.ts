@@ -10,7 +10,8 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class CategoriesComponent implements OnInit {
   state: boolean = false;
-  selectedValue = []
+  selectedValue = [];
+  stateBtb: boolean;
 
   categories = [
     {"id": 1, "name": "Categoria 1"},
@@ -26,15 +27,23 @@ export class CategoriesComponent implements OnInit {
     {"id": 11, "name": "Categoria 11"},
     {"id": 12, "name": "Categoria 12"}
   ];
-
   constructor(
     home: AppComponent
   ){
     home.state = this.state;
+    this.stateBtb = true;
   }
 
   ngOnInit(){
     this.state = true;
+  }
+
+  checkStateBtns(){
+    if(this.selectedValue.length > 0){
+      this.stateBtb = false;
+    }else{
+      this.stateBtb = true;
+    }
   }
 
 }

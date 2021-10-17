@@ -1,11 +1,13 @@
 <div class="ctn-btns">
   <mat-button-toggle-group
     class="gp-pf"
+    appearance="legacy"
     [(value)] = "selectedValue"
     #group="matButtonToggleGroup"
     multiple=true>
     <mat-button-toggle
       class="btn-toggle"
+      (click)="checkStateBtns()"
       *ngFor="let category of categories; let i = index"
       [value]="categories[i].id">
       <h3>
@@ -14,3 +16,11 @@
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
+
+<!--Next button-->
+<div id="ctn_btn-next">
+  <button pButton type="button" routerLink="/verificacion" [disabled]="stateBtb">
+      <a>Siguiente</a>
+  </button>
+</div>
+<!--Next button-->
