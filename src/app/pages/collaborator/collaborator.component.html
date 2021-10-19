@@ -1,0 +1,43 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <img id="avatar" src="https://marriedbiography.com/wp-content/uploads/2017/03/drew.jpg">
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-icon
+        class="icons"
+        routerLink="/colaborador/mis-cursos"
+        routerLinkActive="active">auto_stories</mat-icon>
+      <mat-icon
+        class="icons"
+        routerLink=""
+        routerLinkActive="">library_books</mat-icon>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!--ToolBar-->
+    <div id="toolbar">
+      <mat-toolbar>
+        <button
+        type="button"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+        <div id="ctn-h1">
+            <h1>Mis Cursos</h1>
+        </div>
+        <div id="logo">
+            <img id="Norsu" src="../assets/images/Norsu_white.png" alt="Norsu" routerLink="">
+        </div>
+      </mat-toolbar>
+  </div>
+  <!--ToolBar-->
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

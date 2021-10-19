@@ -15,6 +15,14 @@ import { PreferencesComponent } from './pages/preferences/preferences.component'
 import { CategoriesComponent } from './pages/preferences/categories/categories.component';
 import { CheckComponent } from './pages/check/check.component';
 import { CodeComponent } from './pages/check/code/code.component';
+import { CollaboratorComponent } from './pages/collaborator/collaborator.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { CoursesComponent } from './pages/collaborator/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +35,9 @@ import { CodeComponent } from './pages/check/code/code.component';
     PreferencesComponent,
     CategoriesComponent,
     CheckComponent,
-    CodeComponent
+    CodeComponent,
+    CollaboratorComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +45,13 @@ import { CodeComponent } from './pages/check/code/code.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
-    PrimengModule
+    PrimengModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

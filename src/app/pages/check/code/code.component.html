@@ -1,44 +1,58 @@
 <div id="ctn-codes">
     <div id="input_1">
-        <input 
+        <input
             class="codes"
             [maxlength]="1"
             placeholder="#"
+            (input)="checkEmpty()"
             [(ngModel)]="getNumbers[0]">
     </div>
     <div id="input_2">
-        <input 
+        <input
             class="codes"
             [maxlength]="1"
             placeholder="#"
+            (input)="checkEmpty()"
             [(ngModel)]="getNumbers[1]">
     </div>
     <div id="input_3">
-        <input 
+        <input
             class="codes"
             [maxlength]="1"
             placeholder="#"
+            (input)="checkEmpty()"
             [(ngModel)]="getNumbers[2]">
     </div>
     <div id="input_4">
-        <input 
+        <input
             class="codes"
             [maxlength]="1"
             placeholder="#"
+            (input)="checkEmpty()"
             [(ngModel)]="getNumbers[3]">
     </div>
     <div id="input_5">
-        <input 
+        <input
             class="codes"
             [maxlength]="1"
             placeholder="#"
+            (input)="checkEmpty()"
             [(ngModel)]="getNumbers[4]">
     </div>
     <div id="input_6">
-        <input 
+        <input
             class="codes"
             [maxlength]="1"
             placeholder="#"
+            (input)="checkEmpty()"
             [(ngModel)]="getNumbers[5]">
     </div>
 </div>
+
+<!--Next button-->
+<div id="ctn_btn-end">
+  <button pButton type="button" routerLink="/colaborador" [disabled]="stateBtb">
+      <a>Finalizar Registro</a>
+  </button>
+</div>
+<!--Next button-->

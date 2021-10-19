@@ -1,3 +1,4 @@
+import { Byte } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class CodeComponent implements OnInit {
 
   getNumbers = [,,,,,];
+  stateBtb: boolean;
 
-  constructor() { }
+  constructor() {this.stateBtb = true;}
 
   ngOnInit(): void {
+  }
+
+  checkEmpty(){
+    let codeCheck: Byte = 0;
+    this.getNumbers.forEach(element => {
+      if(element != ""){
+        codeCheck += 1;
+      }
+    });
+
+    if(codeCheck == 6){
+      this.stateBtb = false;
+    }else{
+      this.stateBtb = true;
+    }
   }
 
 }

@@ -24,8 +24,21 @@
     text-align: center;
     font-size: 3em;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#ctn_btn-end{
+  width: 100%;
+  text-align: center;
+  margin-top: 3em;
+}
+#ctn_btn-end button{
+  width: 11em;
+  height: 3em;
+  border-radius: .4em;
+  background: transparent;
+
 }
