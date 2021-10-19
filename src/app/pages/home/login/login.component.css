@@ -66,7 +66,29 @@ Login form customization*/
     width: 90%;
     height: 2.5em;
     font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease all;
     background-color: rgb(35, 149, 216);
+}
+#ctn-lg-btn-login button span{
+  position: relative;
+  z-index: 2;
+  transition: .3s ease all;
+}
+#ctn-lg-btn-login button::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(65, 170, 231);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 2.5em);
+  transition: .6s ease-in-out all;
+}
+#ctn-lg-btn-login button:hover::after{
+  left: 0;
 }
 #ctn-lg-other a{
     color: rgb(35, 149, 216);

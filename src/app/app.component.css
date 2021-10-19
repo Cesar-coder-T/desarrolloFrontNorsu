@@ -6,28 +6,35 @@
 Toolbar customization*/
 #toolbar mat-toolbar{
     background-color: #fff;
-    border-bottom: 1px solid rgb(0,0,0);
+    border-bottom: 1px solid #293347;
     height: 4.5em;
+    padding: 0;
 }
 #logo{
     height: 100%;
     width: 15%;
-}
-#routes{
-    height: 100%;
-    width: 75%;
-    display: flex;
-    align-items: center;
-}
-#register{
-    height: 100%;
-    width: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#toolbar mat-toolbar label{
-    color: rgb(0,0,0);
+#Norsu{
+  height: 100%;
+  width: 60%;
+  cursor: pointer;
+}
+#routes{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    padding-left: 2em;
+    align-items: center;
+}
+#nbsp{
+  width: 2%;
+  height: 100%;
+}
+h2{
+  color: #293347;
 }
 #home,
 #about-us{
@@ -36,26 +43,69 @@ Toolbar customization*/
 #about-us{
     margin-left: 5em;
 }
-#toolbar mat-toolbar button{
+#register{
+  height: 100%;
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#register button{
     background-color: transparent;
     border: 2px solid #293347;
     border-radius: .2em;
-    color: #474529;
+    text-transform: uppercase;
+    color: #293347;
+    font-weight: bold;
     width: 100%;
     height: 60%;
-    transition: .7s;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease-in-out all;
 }
-#toolbar mat-toolbar button:hover{
-    background-color: #293347;
-    color: #fff;
-    box-shadow: 0 0 1em #fff;
-    cursor: pointer;
+#register button::after{
+  content: "";
+  background: #293347;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 100%;
+  transition: .6s ease-in-out all;
+
 }
-#Norsu{
-    height: 4em;
-    margin-left: 2.5em;
-    cursor: pointer;
+#register button span{
+  z-index: 2;
+  position: relative;
 }
+#register button:hover::after{
+  left: 0;
+}
+#register button:hover{
+  color: #fff;
+}
+/**
+#register button svg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+#register rect{
+  width: 100%;
+  height: 100%;
+  stroke: #293347;
+  stroke-width: .2em;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: .6s ease all;
+}
+#register button:hover rect{
+  stroke-dashoffset: 0;
+}**/
 /*End*/
 
 
