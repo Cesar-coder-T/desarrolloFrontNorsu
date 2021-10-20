@@ -1,0 +1,107 @@
+#ctn-ops{
+  width: 100%;
+  height: 7em;
+}#ctn-ops_sub1,
+#ctn-ops_sub2,
+#ctn-ops_sub3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+/*Customize new course button*/
+#ctn-ops_sub1{
+  width: 25%;
+  height: 100%;
+}
+#btn-add-course{
+  width: 60%;
+  height: 45%;
+  padding: 0;
+  border-radius: .5em;
+  border: 1px solid #293347;
+  background-color: #293347;
+}
+#btn-add-course mat-icon,
+#btn-add-course span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  float: left;
+  color: #fff;
+}
+#btn-add-course mat-icon{
+  font-size: 2.2em;
+  width: 30%;
+  padding-top: .05em;
+}
+#btn-add-course span{
+  width: 70%;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-right: 3%;
+}
+/*END*/
+
+/*Customize seeker*/
+#ctn-ops_sub2{
+  width: 50%;
+  height: 100%;
+}
+#ctn-ops_sub2_seeker{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 45%;
+  border-radius: 1.6em;
+  border: 2px solid #293347;
+  padding: 0;
+}
+#ctn-ops_sub2_seeker mat-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  width: 13%;
+  height: 100%;
+  color: #293347;
+  padding-top: .07em;
+}
+#ctn-ops_sub2_seeker input{
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #293347;
+}
+/*End*/
+
+/*Customize filter*/
+#ctn-ops_sub3{
+  width: 25%;
+  height: 100%
+}
+#ctn-ops_sub3 select{
+  width: 60%;
+  height: 45%;
+  outline: none !important;
+  border: 2px solid #293347;
+  border-radius: .5em;
+  text-align: center;
+  cursor: pointer;
+  color: #293347;
+  font-weight: 500;
+}
+/*End*/
+h2{
+  color: #293347;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-left: 3em;
+}

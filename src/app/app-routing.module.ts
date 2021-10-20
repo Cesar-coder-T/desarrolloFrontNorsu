@@ -6,6 +6,8 @@ import { PreferencesComponent } from './pages/preferences/preferences.component'
 import { CheckComponent } from './pages/check/check.component';
 import { CollaboratorComponent } from './pages/collaborator/collaborator.component';
 import { CoursesComponent } from './pages/collaborator/courses/courses.component';
+import { AdministratorComponent } from './pages/administrator/administrator.component';
+import { ManageCoursesComponent } from './pages/administrator/manage-courses/manage-courses.component';
 
 const routes: Routes = [
   {path: 'registro', component: RegistrationComponent},
@@ -15,6 +17,10 @@ const routes: Routes = [
   children: [
     {path: 'mis-cursos', component: CoursesComponent}
   ]},
+  {path: 'administrador', component: AdministratorComponent,
+   children: [
+     {path: 'gestionar-cursos', component: ManageCoursesComponent}
+   ]},
   {path: '', component: HomeComponent}
 ]
 @NgModule({

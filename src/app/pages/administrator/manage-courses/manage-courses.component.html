@@ -1,0 +1,27 @@
+<div id="ctn-ops">
+  <div id="ctn-ops_sub1">
+    <button id="btn-add-course">
+      <mat-icon>add_circle_outline</mat-icon>
+      <span>Nuevo curso</span>
+    </button>
+  </div>
+  <div id="ctn-ops_sub2">
+    <div id="ctn-ops_sub2_seeker">
+      <mat-icon>search</mat-icon>
+      <input placeholder="Buscar curso">
+    </div>
+  </div>
+  <div id="ctn-ops_sub3">
+    <select>
+      <option selected disabled>Visibilidad</option>
+      <option
+        class="option"
+        *ngFor="let item of filter"
+        [value]="item.id">
+        <span>{{item.name}}</span>
+      </option>
+    </select>
+  </div>
+</div>
+
+<h2>Cursos</h2>

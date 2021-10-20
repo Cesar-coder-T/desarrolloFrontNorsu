@@ -23,6 +23,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CoursesComponent } from './pages/collaborator/courses/courses.component';
+import { AdministratorComponent } from './pages/administrator/administrator.component';
+import { ManageCoursesComponent } from './pages/administrator/manage-courses/manage-courses.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CoursesComponent } from './pages/collaborator/courses/courses.component
     CheckComponent,
     CodeComponent,
     CollaboratorComponent,
-    CoursesComponent
+    CoursesComponent,
+    AdministratorComponent,
+    ManageCoursesComponent
   ],
   imports: [
     BrowserModule,

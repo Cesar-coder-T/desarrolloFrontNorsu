@@ -8,7 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatIconModule} from '@angular/material/icon';
-import {MatExpansionModule} from '@angular/material/expansion'
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -22,7 +23,8 @@ import {MatExpansionModule} from '@angular/material/expansion'
     MatButtonModule,
     MatButtonToggleModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ],
   exports: [
     MatFormFieldModule,
@@ -33,7 +35,8 @@ import {MatExpansionModule} from '@angular/material/expansion'
     MatButtonModule,
     MatButtonToggleModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
