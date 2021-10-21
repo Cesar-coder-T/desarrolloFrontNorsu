@@ -1,0 +1,113 @@
+/*Customize general containers*/
+#ctn-gnl{
+    width: 100%;
+    height: 20em;
+}
+#ctn-gnl_sub{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 5em;
+}
+/*End*/
+
+/*Customize sub containers*/
+#ctn-gnl_sub_input,
+#ctn-gnl_sub_select-vs,
+#ctn-gnl_sub_select-cat,
+#ctn-gnl_sub_image,
+#ctn-gnl_sub_button{
+    width: 100%;
+    margin: 0 auto;
+}
+#ctn-gnl_sub_buttons{
+    padding-bottom: 6em;
+}
+#ctn-gnl_sub_image{
+    text-align: center;
+}
+#ctn-gnl_sub_image_content{
+    background-image: url("../../../../../../assets/images/default_image.png");
+    background-position: 50%;
+    background-size: cover;
+    width: 60%;
+    height: 12em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+/*End*/
+
+/*Customize items*/
+h3{
+    color: #293347;
+}
+input,
+select{
+    width: 100%;
+    height: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    border-radius: .3em;
+    border: 1px solid #293347;
+    font-size: 1.2em;
+    color: #293347;
+    font-weight: 500;
+    outline: none;
+}
+#image{
+    width: 100%;
+    height: 100%;
+}
+#image-upload{
+    opacity: 0;
+}
+#btn-image-upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(36, 169, 231);
+    padding: 0.3em;
+    border-radius: 0.2em;
+    color: #fff;
+    width: 30%;
+    height: 3em;
+    font-size: 1.1em;
+    margin: 0 auto;
+    border: 2px solid transparent;
+    transition: .5s ease all;
+}
+#btn-image-upload:hover{
+    cursor: pointer;
+}
+/*End*/
+
+/*Customize buttons*/
+#ctn-gnl_sub_buttons-cancel{
+    width: 50%;
+    height: 3em;
+    float: left;
+    text-align: left;
+}
+#ctn-gnl_sub_buttons-next{
+    width: 50%;
+    height: 3em;
+    float: left;
+    text-align: right;
+}
+#ctn-gnl_sub_buttons-cancel button,
+#ctn-gnl_sub_buttons-next button{
+    width: 75%;
+    height: 100%;
+    color: #fff;
+    border: none;
+    border-radius: .3em;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+#ctn-gnl_sub_buttons-cancel button{
+    background-color: rgb(216, 77, 77);
+}
+#ctn-gnl_sub_buttons-next button{
+    background-color: #293347;
+}
+/*End*/

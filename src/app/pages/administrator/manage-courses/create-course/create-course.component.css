@@ -1,0 +1,26 @@
+#ctn-create_title{
+    width: 100%;
+    height: 5em;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ctn-create_title h2{
+    color: #293347;
+    font-weight: bold;
+    font-size: 2em;
+}
+#ctn-create_stepper{
+    width: 70%;
+    height: 5em;
+    margin: 0 auto;
+}
+mat-horizontal-stepper{
+    width: 100%;
+}
+mat-step{
+    color: #293347;
+    font-size: 1.2em;
+    font-weight: 500;
+}

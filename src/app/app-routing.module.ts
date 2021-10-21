@@ -5,22 +5,17 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { CheckComponent } from './pages/check/check.component';
 import { CollaboratorComponent } from './pages/collaborator/collaborator.component';
-import { CoursesComponent } from './pages/collaborator/courses/courses.component';
 import { AdministratorComponent } from './pages/administrator/administrator.component';
-import { ManageCoursesComponent } from './pages/administrator/manage-courses/manage-courses.component';
+import { ADMINISTRATOR_ROUTES } from './routes/administrator.routes';
+import { COLLABORATOR_ROUTES } from './routes/collaborator.routes';
+
 
 const routes: Routes = [
   {path: 'registro', component: RegistrationComponent},
   {path: 'preferencias', component: PreferencesComponent},
   {path: 'verificacion', component: CheckComponent},
-  {path: 'colaborador', component: CollaboratorComponent,
-  children: [
-    {path: 'mis-cursos', component: CoursesComponent}
-  ]},
-  {path: 'administrador', component: AdministratorComponent,
-   children: [
-     {path: 'gestionar-cursos', component: ManageCoursesComponent}
-   ]},
+  {path: 'colaborador', component: CollaboratorComponent, children: COLLABORATOR_ROUTES},
+  {path: 'administrador', component: AdministratorComponent, children: ADMINISTRATOR_ROUTES},
   {path: '', component: HomeComponent}
 ]
 @NgModule({

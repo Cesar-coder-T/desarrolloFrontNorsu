@@ -15,34 +15,6 @@
   width: 25%;
   height: 100%;
 }
-#btn-add-course{
-  width: 60%;
-  height: 45%;
-  padding: 0;
-  border-radius: .5em;
-  border: 1px solid #293347;
-  background-color: #293347;
-}
-#btn-add-course mat-icon,
-#btn-add-course span{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  float: left;
-  color: #fff;
-}
-#btn-add-course mat-icon{
-  font-size: 2.2em;
-  width: 30%;
-  padding-top: .05em;
-}
-#btn-add-course span{
-  width: 70%;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-right: 3%;
-}
 /*END*/
 
 /*Customize seeker*/
@@ -89,13 +61,11 @@
 #ctn-ops_sub3 select{
   width: 60%;
   height: 45%;
-  outline: none !important;
   border: 2px solid #293347;
   border-radius: .5em;
   text-align: center;
   cursor: pointer;
   color: #293347;
-  font-weight: 500;
 }
 /*End*/
 h2{

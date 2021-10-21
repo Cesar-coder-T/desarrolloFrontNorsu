@@ -1,0 +1,42 @@
+<div id="ctn-gnl">
+    <div id="ctn-gnl_sub">
+        <h3>Nombre del curso:</h3>
+        <div id="ctn-gnl_sub_input">
+            <input type="text">
+        </div>
+        <h3>Visibilidad:</h3>
+        <div id="ctn-gnl_sub_select-vs">
+            <select>
+                <option selected disabled>Seleccione la visibilidad</option>
+                <option value="publico">Público</option>
+                <option value="privado">Privado</option>
+            </select>
+        </div>
+        <h3>Categoría: </h3>
+        <div id="ctn-gnl_sub_select-cat">
+            <select>
+                <option selected disabled>Seleccione una categoría</option>
+                <option value="categoria">Categorias</option>
+            </select>
+        </div>
+        <h3>Imagen de portada:</h3>
+        <div id="ctn-gnl_sub_image">
+            <div id="ctn-gnl_sub_image_content">
+                <img id="image" [src]="imgURL" *ngIf="imgURL">
+            </div>
+            <span style="color: red;" *ngIf="message">{{message}}</span>
+            <label id="btn-image-upload" for="image-upload">
+                <mat-icon>file_upload</mat-icon>
+            </label>
+            <input id="image-upload" #file type="file" accept="image/*" (change)="preview($event)">
+        </div>
+        <div id="ctn-gnl_sub_buttons">
+            <div id="ctn-gnl_sub_buttons-cancel">
+                <button routerLink="/administrador/gestionar-cursos">Cancelar</button>
+            </div>
+            <div id="ctn-gnl_sub_buttons-next">
+                <button mat-button matStepperNext>Siguiente</button>
+            </div>
+        </div>
+    </div>
+</div>

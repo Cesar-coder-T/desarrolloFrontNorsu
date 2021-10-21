@@ -1,0 +1,68 @@
+/*Customize general containers*/
+#ctn-gnl{
+    width: 100%;
+    height: 20em;
+}
+#ctn-gnl_sub{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 4em;
+}
+/*End*/
+
+/*Customize sub containers*/
+#ctn-gnl_subtitle,
+#ctn-gnl_ctn-welcome,
+#ctn-gnl_sub{
+    text-align: center;
+    margin-bottom: 2em;
+}
+/*End*/
+
+/*Customize items*/
+#ctn-gnl_subtitle h3{
+    font-weight: 500;
+    font-size: 1.5em;
+}
+#ctn-gnl_ctn-welcome textarea{
+    width: 100%;
+    height: 10em;
+    color: #293347;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    padding: .5em;
+}
+/*End*/
+
+/*Customize buttons*/
+#ctn-gnl_sub_buttons-cancel{
+    width: 50%;
+    height: 3em;
+    float: left;
+    text-align: left;
+}
+#ctn-gnl_sub_buttons-next{
+    width: 50%;
+    height: 3em;
+    float: left;
+    text-align: right;
+}
+#ctn-gnl_sub_buttons-cancel button,
+#ctn-gnl_sub_buttons-next button{
+    width: 75%;
+    height: 100%;
+    color: #fff;
+    border: none;
+    border-radius: .3em;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+#ctn-gnl_sub_buttons-cancel button{
+    background-color: rgb(216, 77, 77);
+}
+#ctn-gnl_sub_buttons-next button{
+    background-color: #293347;
+}
+/*End*/

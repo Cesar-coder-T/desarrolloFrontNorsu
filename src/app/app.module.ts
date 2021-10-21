@@ -25,6 +25,10 @@ import { MatListModule } from '@angular/material/list';
 import { CoursesComponent } from './pages/collaborator/courses/courses.component';
 import { AdministratorComponent } from './pages/administrator/administrator.component';
 import { ManageCoursesComponent } from './pages/administrator/manage-courses/manage-courses.component';
+import { CreateCourseComponent } from './pages/administrator/manage-courses/create-course/create-course.component';
+import { GeneralitiesComponent } from './pages/administrator/manage-courses/create-course/generalities/generalities.component';
+import { WelcomeComponent } from './pages/administrator/manage-courses/create-course/welcome/welcome.component';
+import { MgCourseComponent } from './pages/administrator/manage-courses/mg-course/mg-course.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { ManageCoursesComponent } from './pages/administrator/manage-courses/man
     CollaboratorComponent,
     CoursesComponent,
     AdministratorComponent,
-    ManageCoursesComponent
+    ManageCoursesComponent,
+    CreateCourseComponent,
+    GeneralitiesComponent,
+    WelcomeComponent,
+    MgCourseComponent
   ],
   imports: [
     BrowserModule,

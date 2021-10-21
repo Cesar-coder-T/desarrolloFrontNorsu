@@ -17,18 +17,14 @@
   justify-content: center;
   font-weight: bold;
   border-radius: .5em;
-  border: 2px solid transparent;
-  -webkit-text-stroke: 1px transparent;
+  border: 2px solid #293347;
   margin: 0 5%;
   margin-top: 2.2em;
-}
-.btn-toggle:hover{
-  border: 2px solid #292929;
 }
 .btn-toggle h3{
   font-size: 1.5em;
   width: 95%;
-  color: rgb(35, 149, 216);
+  color: #293347;
   font-weight: 500;
   text-transform: uppercase;
 }

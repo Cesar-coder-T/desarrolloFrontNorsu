@@ -1,0 +1,16 @@
+<div id="ctn-create">
+    <div id="ctn-create_title">
+        <h2>Creación del curso</h2>
+    </div>
+    <div id="ctn-create_stepper">
+        <mat-horizontal-stepper color="primary" [labelPosition]="'bottom'">
+            <mat-step label="Generalidades">
+                <app-generalities></app-generalities>
+            </mat-step>
+            <mat-step label="Bienvenida">
+                <app-welcome></app-welcome>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+    <router-outlet></router-outlet>
+</div>
