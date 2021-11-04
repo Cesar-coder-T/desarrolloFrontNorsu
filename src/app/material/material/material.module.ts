@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -26,7 +27,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatExpansionModule,
     MatIconModule,
     MatSelectModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSnackBarModule
   ],
   exports: [
     MatFormFieldModule,
@@ -39,7 +41,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatExpansionModule,
     MatIconModule,
     MatSelectModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }

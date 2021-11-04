@@ -20,7 +20,7 @@ export class RegistrationService {
   /**
      * Stores the path of the http request
      */
-  url: string = `${environment.HOST}/colaboradores/registrar`;
+  url: string = `${environment.HOST}/collaborators/toRegister`;
 
   /**
    * Constructor de la clase "RegistroService".

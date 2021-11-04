@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { delay } from 'rxjs/operators';
 import { AppComponent } from 'src/app/app.component';
+import { Registration } from 'src/app/_model/registration';
+import { RegistrationService } from 'src/app/_service/registration.service';
 
 @Component({
   selector: 'app-registration',
@@ -40,7 +43,9 @@ export class RegistrationComponent implements OnInit {
    */
   constructor(
     private router: Router,
-    private status: AppComponent
+    private snackBar: MatSnackBar,
+    private status: AppComponent,
+    private apiRegistration: RegistrationService
   ) {
     status.state=false;
     };
@@ -49,39 +54,70 @@ export class RegistrationComponent implements OnInit {
       console.log(response);
   }
   /**
-     * Método que se ejecuta inmediatamente después
-     * del constructor y que activa todo su contenido al
-     * cargar el componente.
-     * Nota: En este método se cargan las validaciones del
-     * formulario de registro
+     * 
+     * A method that runs immediately after the constructor and activates the component content.
+     * Note: This method loads the validations of the registration form.
      */
   ngOnInit(): void {
     this.validador = 0;
     this.registrationForm = new FormGroup({
-      completeName: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      electronicMail: new FormControl('', [Validators.required, Validators.email, Validators.minLength(10)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      firstNames: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]),
+      lastNames: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
+      electronicMail: new FormControl('', [Validators.required, Validators.email, Validators.minLength(9), Validators.maxLength(90)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]),
       referralCode: new FormControl('', [Validators.minLength(10), Validators.maxLength(10)]),
-      /**apellido: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      rol_id: new FormControl(4),
-      fecha_nacimiento: new FormControl('', Validators.required),
-      identificacion: new FormControl('', [Validators.required, Validators.min(1000),]),
-      clave: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      estado_id: new FormControl(1),*/
+      dateBirth: new FormControl(new Date())
     });
   }
   /**
-   * Método encargado de obtener los valores ingresados por el usuario
-   * al formulario y cargarlos en el objeto usuario, para consumir 
-   * el servicio que guarda al usuario en base de datos.
+   * Method that captures and loads the information from 
+   * the registration form into the user object. Finally, 
+   * it saves the user's information in the database.
    */
   onRegistro() {
+    let user = new Registration;
     if (this.contrasena1 == this.contrasena2) {
-      console.log("Correcto");
+      this.validador = 1;
+      user.firstNames = this.registrationForm.value['firstNames'];
+      user.lastNames = this.registrationForm.value['lastNames'];
+      if (this.correo.indexOf('.') !== -1) {
+        user.email = this.registrationForm.value['electronicMail'];
+      }
+      if (this.correo.indexOf('.') == -1) {
+        user.email = this.registrationForm.value['electronicMail'] + '.com';
+      }
+      user.dateBirth = this.registrationForm.value['dateBirth'];
+      user.password = this.registrationForm.value['password'];
+      user.idCard = String(Math.random());
+    }
+    if (this.validador == 1) {
+      this.apiRegistration.registro(user).subscribe(data => {
+        this.snackBar.open('¡¡Usuario registrado satisfactoriamente!!', 'Info', {
+          duration: 2000,
+        });
+        this.router.navigate(['login']);
+
+      },
+        erro => {
+          if (erro.status == 401) {
+            this.snackBar.open('Error 401', 'Advertencia', {
+              duration: 2000,
+            });
+          } else if (erro.status == 400) {
+            this.snackBar.open(erro.error.message, 'Advertencias', {
+              duration: 2000,
+            })
+          } else
+            this.router.navigate([`/error/${erro.status}/${erro.statusText}`])
+        }
+
+      );
     }
     else {
       delay(1000);
-      console.log("Error");
+      this.snackBar.open('¡¡Datos erróneos: Debe confirmar la contraseña correctamente!!', '', {
+        duration: 2000,
+      });
     }
   }
 

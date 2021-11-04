@@ -20,20 +20,39 @@
             <h1>Regístrate y disfruta las ventajas de estar capacitado</h1>
             <div id="textContainer">
                 <div>
-                    <p id="headerText">Nombre completo:</p>
+                    <p id="headerText">Nombre(s):</p>
                     <p>
                         <mat-form-field id="textField">
                             <mat-label id="formField-label"></mat-label>
-                            <input type="text" minlength="5" maxlength="35" formControlName="completeName" matInput
+                            <input type="text" minlength="3" maxlength="25" formControlName="firstNames" matInput
                                 required #lgName>
-                            <mat-error *ngIf="registrationForm.get('completeName')!.hasError('required')">
+                            <mat-error *ngIf="registrationForm.get('firstNames')!.hasError('required')">
                                 <strong>Este campo es obligatorio</strong>
                             </mat-error>
                             <mat-error
-                                *ngIf="registrationForm.get('completeName')!.hasError('minlength') && !registrationForm.get('completeName')!.hasError('required')">
-                                <strong>Longitud mínima de 5 caracteres</strong>
+                                *ngIf="registrationForm.get('firstNames')!.hasError('minlength') && !registrationForm.get('firstNames')!.hasError('required')">
+                                <strong>Longitud mínima de 3 caracteres</strong>
                             </mat-error>
-                            <mat-hint style="color: rgb(29, 33, 47);" align="end">{{lgName.value?.length || 0}}/35
+                            <mat-hint style="color: rgb(29, 33, 47);" align="end">{{lgName.value?.length || 0}}/25
+                            </mat-hint>
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div>
+                    <p id="headerText">Apellido(s):</p>
+                    <p>
+                        <mat-form-field id="textField">
+                            <mat-label id="formField-label"></mat-label>
+                            <input type="text" minlength="3" maxlength="30" formControlName="lastNames" matInput
+                                required #lglastName>
+                            <mat-error *ngIf="registrationForm.get('lastNames')!.hasError('required')">
+                                <strong>Este campo es obligatorio</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="registrationForm.get('lastNames')!.hasError('minlength') && !registrationForm.get('lastNames')!.hasError('required')">
+                                <strong>Longitud mínima de 3 caracteres</strong>
+                            </mat-error>
+                            <mat-hint style="color: rgb(29, 33, 47);" align="end">{{lglastName.value?.length || 0}}/30
                             </mat-hint>
                         </mat-form-field>
                     </p>
@@ -43,7 +62,7 @@
                     <p>
                         <mat-form-field id="textField">
                             <mat-label id="formField-label"></mat-label>
-                            <input type="email" maxlength="75" formControlName="electronicMail" matInput required
+                            <input type="email" minlength="9" maxlength="90" formControlName="electronicMail" matInput required
                                 [(ngModel)]="correo" #mailLong>
                             <mat-error
                                 *ngIf="registrationForm.get('electronicMail')!.hasError('email') && !registrationForm.get('electronicMail')!.hasError('required')">
@@ -66,7 +85,7 @@
                     <p>
                         <mat-form-field id="textField">
                             <mat-label id="formField-label"></mat-label>
-                            <input matInput [type]="hide ? 'password' : 'text'" required maxlength="25" required
+                            <input matInput [type]="hide ? 'password' : 'text'" required minlength="6" maxlength="20" required
                                 [(ngModel)]="contrasena1" (input)="equalPasswordControl(); securityPasswordControl()"
                                 formControlName="password">
                             <mat-icon class="icono-clave" matSuffix (click)="hide = !hide">{{hide ?
@@ -93,7 +112,7 @@
                         <mat-form-field id="textField">
                             <mat-label id="formField-label"></mat-label>
                             <input matInput type="text" [type]="hide ? 
-                          'password' : 'text'" required maxlength="25" required [(ngModel)]="contrasena2"
+                          'password' : 'text'" required minlength="6" maxlength="20" required [(ngModel)]="contrasena2"
                                 (input)="equalPasswordControl()" formControlName="password">
                             <mat-icon class="icono-clave" matSuffix (click)="hide = !hide">{{hide ?
                                 'visibility_off' : 'visibility'}}</mat-icon>

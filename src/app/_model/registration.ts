@@ -7,10 +7,10 @@
  */
  export class Registration {
     id: number;
-    nombres: string;
-    apellidos: string;
-    cedula: string;
-    clave: string;
-    correo: string;
-    fechaRegistro: string;
+    idCard: string;
+    firstNames: string;
+    lastNames: string;
+    password: string;
+    email: string;
+    dateBirth: string;
 }
