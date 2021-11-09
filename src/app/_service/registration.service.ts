@@ -10,7 +10,7 @@ import { Registration } from '../_model/registration';
   providedIn: 'root'
 })
 /**
- * Class that catches and send to database the register information 
+ * Class that catches and send to database the register information
  * @autor César Téllez
  * @autor Juan Páez
  * @since 1.0.0
@@ -28,11 +28,11 @@ export class RegistrationService {
    */
   constructor(private http: HttpClient) { }
   /**
-   * Method that get the request's Json  
+   * Method that get the request's Json
    * @param user
    * @returns request
    */
   registro(user: Registration) {
-    return this.http.post<string>(`${this.url}/Registro`, user);
+    return this.http.post<Registration>(`${this.url}`, user);
   }
 }

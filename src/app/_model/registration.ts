@@ -6,11 +6,11 @@
  * @version 1.0.0
  */
  export class Registration {
-    id: number;
-    idCard: string;
-    firstNames: string;
-    lastNames: string;
-    password: string;
-    email: string;
-    dateBirth: string;
+    id!: number;
+    idCard!: string;
+    firstNames!: string;
+    lastNames!: string;
+    password!: string;
+    email!: string;
+    dateBirth!: string;
 }
