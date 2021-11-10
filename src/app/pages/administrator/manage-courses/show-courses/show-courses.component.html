@@ -1,0 +1,6 @@
+<div class="ctn-gnl-cs">
+  <div class="ctn-gnl-cs_course" *ngFor="let course of courses; let i = index">
+    <img src="data:image/png;base64,{{courses[i].coverPage}}">
+    <h3>{{courses[i].name}}</h3>
+  </div>
+</div>

@@ -27,6 +27,7 @@ import { AdministratorComponent } from './pages/administrator/administrator.comp
 import { ManageCoursesComponent } from './pages/administrator/manage-courses/manage-courses.component';
 import { CreateCourseComponent } from './pages/administrator/manage-courses/create-course/create-course.component';
 import { MgCourseComponent } from './pages/administrator/manage-courses/mg-course/mg-course.component';
+import { ShowCoursesComponent } from './pages/administrator/manage-courses/show-courses/show-courses.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MgCourseComponent } from './pages/administrator/manage-courses/mg-cours
     AdministratorComponent,
     ManageCoursesComponent,
     CreateCourseComponent,
-    MgCourseComponent
+    MgCourseComponent,
+    ShowCoursesComponent
   ],
   imports: [
     BrowserModule,
