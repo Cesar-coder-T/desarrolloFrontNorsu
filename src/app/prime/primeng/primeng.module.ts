@@ -9,6 +9,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { StepsModule } from 'primeng/steps';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
+import { SkeletonModule } from 'primeng/skeleton';
 
 @NgModule({
   declarations: [],
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputNumberModule,
     StepsModule,
     FileUploadModule,
-    HttpClientModule
+    HttpClientModule,
+    SkeletonModule
   ],
   exports: [
     InputTextModule,
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputNumberModule,
     StepsModule,
     FileUploadModule,
-    HttpClientModule
+    HttpClientModule,
+    SkeletonModule
   ]
 })
 export class PrimengModule { }
