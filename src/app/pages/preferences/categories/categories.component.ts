@@ -14,7 +14,7 @@ export class CategoriesComponent implements OnInit {
   state: boolean = false;
   selectedValue = [];
   stateBtb: boolean;
-  categories: any; 
+  categories!: any;
 
   constructor(
     home: AppComponent,
