@@ -9,6 +9,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { StepsModule } from 'primeng/steps';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [],
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     InputNumberModule,
     StepsModule,
     FileUploadModule,
+    CheckboxModule,
     HttpClientModule
   ],
   exports: [
@@ -33,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     InputNumberModule,
     StepsModule,
     FileUploadModule,
+    CheckboxModule,
     HttpClientModule
   ]
 })

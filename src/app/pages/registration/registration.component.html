@@ -121,7 +121,7 @@
                             </mat-error>
                             <mat-error
                                 *ngIf="registrationForm.get('password')!.hasError('minlength') && !registrationForm.get('password')!.hasError('required')">
-                                <strong>Longitud mínima de 4 caracteres</strong>
+                                <strong>Longitud mínima de 6 caracteres</strong>
                             </mat-error>
                             <mat-hint style="color: {{colorVar}}"> <strong>{{mensaje}}</strong></mat-hint>
 
@@ -168,17 +168,18 @@
                 </div>
                 <div id="checkContainer">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault1" formControlName="val1">
                         <label class="form-check-label" for="flexCheckDefault">
                             Acepto los <a>Términos y condiciones</a>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault2" formControlName="val2">
                         <label class="form-check-label" for="flexCheckDefault">
                             Acepto las <a>Políticas de privacidad</a>
                         </label>
                     </div>
+                    
                 </div>
                 <div id="captchaContainer">
                     <p-captcha siteKey="6Ld4MMwcAAAAAD98j5TVYaI-Dmgfpr2xpfNsKbZI" (onResponse)="showResponse($event)"
@@ -186,7 +187,10 @@
                 </div>
             </div>
             <div id="buttonContainer">
-                <button id="registerButton" class="mat-elevation-z8" type="submit" routerLink="/preferencias"
+                <!--button id="registerButton" class="mat-elevation-z8" type="submit" routerLink="/preferencias"
+                    [disabled]="frmReg.invalid">
+                    SIGUIENTE</button-->
+                    <button id="registerButton" class="mat-elevation-z8" type="submit" 
                     [disabled]="frmReg.invalid">
                     SIGUIENTE</button>
             </div>

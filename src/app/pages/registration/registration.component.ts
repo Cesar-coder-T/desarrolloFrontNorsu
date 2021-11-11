@@ -34,6 +34,9 @@ export class RegistrationComponent implements OnInit {
   validador!: number;
   correo!: string;
   empresa: string = "Empresa prueba";
+  value1!: boolean;
+  value2!: boolean;
+  captchaValue!: boolean;
 
   hide = true;
   /**
@@ -47,12 +50,18 @@ export class RegistrationComponent implements OnInit {
     private status: AppComponent,
     private apiRegistration: RegistrationService
   ) {
+    this.value1=false;
+    this.value2=false;
+    this.captchaValue=false;
     status.state=false;
     };
-  
+  /*
     showResponse(response: any) {
       console.log(response);
-  }
+  }*/
+    showResponse(event: any) {
+        this.captchaValue=true;
+    }
   /**
      * 
      * A method that runs immediately after the constructor and activates the component content.
@@ -66,7 +75,9 @@ export class RegistrationComponent implements OnInit {
       electronicMail: new FormControl('', [Validators.required, Validators.email, Validators.minLength(9), Validators.maxLength(90)]),
       password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]),
       referralCode: new FormControl('', [Validators.minLength(10), Validators.maxLength(10)]),
-      dateBirth: new FormControl(new Date())
+      dateBirth: new FormControl(new Date().toDateString()),
+      val1: new FormControl(false,Validators.requiredTrue),
+      val2: new FormControl(false,Validators.requiredTrue)
     });
   }
   /**
@@ -88,14 +99,19 @@ export class RegistrationComponent implements OnInit {
       }
       user.dateBirth = this.registrationForm.value['dateBirth'];
       user.password = this.registrationForm.value['password'];
-      user.idCard = String(Math.random());
+      //user.idCard = String(Math.random().toFixed(5));
+      user.idCard = String(Math.floor(Math.random()*232300394)+562999);
+      if(!this.captchaValue){
+        this.validador = 2;
+      }
     }
     if (this.validador == 1) {
+      console.log(user);
       this.apiRegistration.registro(user).subscribe(data => {
         this.snackBar.open('¡¡Usuario registrado satisfactoriamente!!', 'Info', {
           duration: 2000,
         });
-        this.router.navigate(['login']);
+        this.router.navigate(['preferencias']);
 
       },
         erro => {
@@ -114,13 +130,19 @@ export class RegistrationComponent implements OnInit {
       );
     }
     else {
-      delay(1000);
+      if(this.validador == 2){
+        delay(1000);
+      this.snackBar.open('¡¡Error: No soy un robot es obligatorio!!', '', {
+        duration: 2000,
+      });
+      }else{
+        delay(1000);
       this.snackBar.open('¡¡Datos erróneos: Debe confirmar la contraseña correctamente!!', '', {
         duration: 2000,
       });
+      }
     }
   }
-
 
   
   /**
