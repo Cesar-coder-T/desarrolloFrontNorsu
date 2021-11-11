@@ -99,14 +99,12 @@ export class RegistrationComponent implements OnInit {
       }
       user.dateBirth = this.registrationForm.value['dateBirth'];
       user.password = this.registrationForm.value['password'];
-      //user.idCard = String(Math.random().toFixed(5));
       user.idCard = String(Math.floor(Math.random()*232300394)+562999);
       if(!this.captchaValue){
         this.validador = 2;
       }
     }
     if (this.validador == 1) {
-      console.log(user);
       this.apiRegistration.registro(user).subscribe(data => {
         this.snackBar.open('¡¡Usuario registrado satisfactoriamente!!', 'Info', {
           duration: 2000,
