@@ -2,14 +2,14 @@
   width: 100%;
   height: auto;
   padding: 0 7%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
 }
 .ctn-gnl-cs_course{
-  width: 40%;
   height: 16em;
-  margin: 0 2%;
   text-align: center;
+  margin-bottom: 2em;
 }
 .ctn-gnl-cs_course img{
   width: 100%;

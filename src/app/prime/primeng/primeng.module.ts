@@ -9,7 +9,11 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { StepsModule } from 'primeng/steps';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import {CheckboxModule} from 'primeng/checkbox';
+=======
+import { SkeletonModule } from 'primeng/skeleton';
+>>>>>>> 130f9c6ab4295329454721faa267692ea7dda6fc
 
 @NgModule({
   declarations: [],
@@ -23,8 +27,13 @@ import {CheckboxModule} from 'primeng/checkbox';
     InputNumberModule,
     StepsModule,
     FileUploadModule,
+<<<<<<< HEAD
     CheckboxModule,
     HttpClientModule
+=======
+    HttpClientModule,
+    SkeletonModule
+>>>>>>> 130f9c6ab4295329454721faa267692ea7dda6fc
   ],
   exports: [
     InputTextModule,
@@ -35,8 +44,13 @@ import {CheckboxModule} from 'primeng/checkbox';
     InputNumberModule,
     StepsModule,
     FileUploadModule,
+<<<<<<< HEAD
     CheckboxModule,
     HttpClientModule
+=======
+    HttpClientModule,
+    SkeletonModule
+>>>>>>> 130f9c6ab4295329454721faa267692ea7dda6fc
   ]
 })
 export class PrimengModule { }
