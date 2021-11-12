@@ -1,4 +1,4 @@
-.ctn-gnl-cs{
+.ctn-gnl-cs {
   width: 100%;
   height: auto;
   padding: 0 7%;
@@ -6,16 +6,20 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2%;
 }
-.ctn-gnl-cs_course{
+.ctn-gnl-cs_course {
   height: 16em;
   text-align: center;
   margin-bottom: 2em;
 }
-.ctn-gnl-cs_course_ctn-c{
+.ctn-gnl-cs_course_ctn-c {
   width: 100%;
   height: 12em;
+  -moz-background-size: 100% 100%; /*Firefox 3.6*/
+  -o-background-size: 100% 100%; /*opera*/
+  -webkit-background-size: 100% 100%; /*Safari*/
+  background-size: 100% 100%; /*estandar css3*/
 }
-.ctn-gnl-cs_course h3{
+.ctn-gnl-cs_course h3 {
   width: 100%;
   height: 4em;
   display: flex;
@@ -26,7 +30,7 @@
   text-transform: uppercase;
 }
 
-#btn-edit{
+#btn-edit {
   background-color: transparent;
   color: transparent;
   border: none;
@@ -36,9 +40,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: .3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
 }
-#btn-edit:hover{
+#btn-edit:hover {
   color: #fff;
+  font-weight: bold;
   font-size: 2em;
+  background-color: rgb(167, 167, 167);
+  opacity: .7;
 }
