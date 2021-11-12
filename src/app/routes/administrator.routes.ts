@@ -6,5 +6,5 @@ import { MgCourseComponent } from "../pages/administrator/manage-courses/mg-cour
 export const ADMINISTRATOR_ROUTES: Routes = [
     {path: 'gestionar-cursos', component: ManageCoursesComponent},
     {path: 'crear-curso', component: CreateCourseComponent},
-    {path: 'gestionar-curso', component: MgCourseComponent}
+    {path: 'gestionar-curso/:nombre', component: MgCourseComponent}
 ];

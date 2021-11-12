@@ -26,6 +26,10 @@ h1{
 }
 /*End*/
 
+mat-icon{
+  color: #fff;
+}
+
 .sidenav-container {
   height: 100%;
   background-color: #fff !important;

@@ -1,6 +1,9 @@
 <div class="ctn-gnl-cs">
   <div class="ctn-gnl-cs_course" *ngFor="let course of courses; let i = index">
-    <img src="data:image/png;base64,{{courses[i].coverPage}}">
+    <div class="ctn-gnl-cs_course_ctn-c"
+      style="background-image: url('data:image/png;base64,{{courses[i].coverPage}}')">
+      <mat-icon id="btn-edit" [routerLink]="['/administrador/gestionar-curso/', courses[i].name]">edit</mat-icon>
+    </div>
     <h3>{{courses[i].name}}</h3>
   </div>
 </div>

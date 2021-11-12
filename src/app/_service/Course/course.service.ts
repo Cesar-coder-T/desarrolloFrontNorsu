@@ -18,6 +18,10 @@ export class CourseService {
     return this._http.get<Course>(`${this.url}/getAll`);
   }
 
+  getByName(name: String){
+    return this._http.get<Course>(`${this.url}/getByName/${name}`);
+  }
+
   toRegister(course: Course){
     return this._http.post<Course>(`${this.url}/toRegister`, course);
   }

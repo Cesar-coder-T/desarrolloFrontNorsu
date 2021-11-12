@@ -1,1 +1,22 @@
-<p style="color: #293347;">Administrar curso</p>
+<div class="first-card" *ngIf="!(course.coverPage == '') && !(course.name == '')">
+  <div class="first-card_cover-page">
+    <img src="data:image/png;base64,{{course.coverPage}}">
+  </div>
+  <div class="first-card_name-course">
+    <h2>{{course.name}}</h2>
+  </div>
+  <div class="first-card_options">
+    <div class="first-card_options_edit">
+      <button class="btn-options" id="btn-edit">
+        <h3 class="title-options">Editar</h3>
+        <mat-icon id="edit-icon">edit</mat-icon>
+      </button>
+    </div>
+    <div class="first-card_options_delete">
+      <button class="btn-options" id="btn-delete">
+        <h3 class="title-options">Eliminar</h3>
+        <mat-icon id="delete-icon">delete</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

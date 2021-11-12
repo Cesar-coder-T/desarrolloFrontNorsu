@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Course } from 'src/app/_model/Course';
 import { CategoryService } from 'src/app/_service/Category/category.service';
 import { CourseService } from 'src/app/_service/Course/course.service';
@@ -25,7 +26,8 @@ export class CreateCourseComponent implements OnInit {
 
   constructor(
     private catService: CategoryService,
-    private courseService: CourseService
+    private courseService: CourseService,
+    private router: Router
   ) {
     this.generalities = {
       id: 0,
@@ -97,11 +99,12 @@ export class CreateCourseComponent implements OnInit {
     this.generalities.coverPage = this.sellersPermitString;
     this.courseService.toRegister(this.generalities).subscribe(
       (response) => {
-        console.log(response);
+        this.router.navigateByUrl("/administrador/gestionar-curso/"+this.generalities.name);
       },
       (error) => {
         console.log(error);
       }
     );
   }
+
 }
