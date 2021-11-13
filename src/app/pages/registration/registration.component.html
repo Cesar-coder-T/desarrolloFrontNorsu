@@ -15,7 +15,7 @@
     <button id="backButton" type="submit" routerLink="" >
     <mat-icon>reply</mat-icon>Iniciar sesión</button>
 </div>
-        <form id="tableForm" (ngSubmit)="onRegistro()" [formGroup]="registrationForm" #frmReg="ngForm">
+        <form id="tableForm" (ngSubmit)="onRegister()" [formGroup]="registrationForm" #frmReg="ngForm">
 
             <h1>Regístrate y disfruta las ventajas de estar capacitado</h1>
             <div id="textContainer">
@@ -187,9 +187,6 @@
                 </div>
             </div>
             <div id="buttonContainer">
-                <!--button id="registerButton" class="mat-elevation-z8" type="submit" routerLink="/preferencias"
-                    [disabled]="frmReg.invalid">
-                    SIGUIENTE</button-->
                     <button id="registerButton" class="mat-elevation-z8" type="submit" 
                     [disabled]="frmReg.invalid">
                     SIGUIENTE</button>
