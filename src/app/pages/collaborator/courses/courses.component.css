@@ -19,6 +19,7 @@
 .ctn-gnl-cs_course img{
   width: 100%;
   height: 12em;
+  cursor: pointer;
 }
 .ctn-gnl-cs_course h3{
   width: 100%;
