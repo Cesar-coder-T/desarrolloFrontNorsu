@@ -25,6 +25,7 @@ export class RegistrationComponent implements OnInit {
    * Form responsible for storing the contributor's record attributes
    */
    registrationForm!: FormGroup;
+
   contrasena1!: string;
   contrasena2!: string;
   mensaje!: string;
@@ -85,7 +86,7 @@ export class RegistrationComponent implements OnInit {
    * the registration form into the user object. Finally, 
    * it saves the user's information in the database.
    */
-  onRegistro() {
+  onRegister() {
     let user = new Registration;
     if (this.contrasena1 == this.contrasena2) {
       this.validador = 1;
