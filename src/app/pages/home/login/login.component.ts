@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   onLogin() {
     if (this.loginForm.value['electronicMail'] == "administrador@correo.com") {
       if (this.loginForm.value['password'] == "administrador12345") {
-        this.router.navigate(['administrador']);
+        this.router.navigate(['administrador/gestionar-cursos']);
       } else {
         this.snackBar.open('Advertencia: ', 'Credenciales no válidas', {
           duration: 2000,
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     } else {
       if (this.loginForm.value['electronicMail'] == "colaborador@correo.com") {
         if (this.loginForm.value['password'] == "colaborador12345") {
-          this.router.navigate(['colaborador']);
+          this.router.navigate(['colaborador/mis-cursos']);
         } else {
           this.snackBar.open('Advertencia: ', 'Credenciales no válidas', {
             duration: 2000,
