@@ -4,6 +4,11 @@
 }
 /*Beginning
 Toolbar customization*/
+#toolbar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 #toolbar mat-toolbar{
     background-color: #fff;
     border-bottom: 1px solid #293347;
@@ -32,9 +37,6 @@ Toolbar customization*/
 #nbsp{
   width: 2%;
   height: 100%;
-}
-h2{
-  color: #293347;
 }
 #home,
 #about-us{

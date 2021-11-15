@@ -20,14 +20,15 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private snackBar: MatSnackBar
-  ) { }
-
-  ngOnInit(): void {
+  ) {
     this.validador = 0;
     this.loginForm = new FormGroup({
       electronicMail: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required])
     });
+  }
+
+  ngOnInit(): void {
   }
 
   onLogin() {

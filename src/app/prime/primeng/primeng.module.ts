@@ -9,8 +9,10 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { StepsModule } from 'primeng/steps';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
-import {CheckboxModule} from 'primeng/checkbox';
-import { SkeletonModule } from 'primeng/skeleton';
+import { CheckboxModule } from 'primeng/checkbox';
+import { SkeletonModule } from "primeng/skeleton";
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ProgressBarModule } from 'primeng/progressbar';
 
 @NgModule({
   declarations: [],
@@ -26,7 +28,9 @@ import { SkeletonModule } from 'primeng/skeleton';
     FileUploadModule,
     CheckboxModule,
     HttpClientModule,
-    SkeletonModule
+    SkeletonModule,
+    ProgressSpinnerModule,
+    ProgressBarModule
   ],
   exports: [
     InputTextModule,
@@ -39,7 +43,9 @@ import { SkeletonModule } from 'primeng/skeleton';
     FileUploadModule,
     CheckboxModule,
     HttpClientModule,
-    SkeletonModule
+    SkeletonModule,
+    ProgressSpinnerModule,
+    ProgressBarModule
   ]
 })
 export class PrimengModule { }

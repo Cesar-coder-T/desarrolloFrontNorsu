@@ -70,6 +70,7 @@ Login form customization*/
     overflow: hidden;
     transition: .3s ease all;
     background-color: rgb(35, 149, 216);
+    cursor: pointer;
 }
 #ctn-lg-btn-login button span{
   position: relative;

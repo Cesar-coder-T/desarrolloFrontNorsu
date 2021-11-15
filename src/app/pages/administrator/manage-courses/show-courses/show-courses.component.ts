@@ -11,11 +11,18 @@ export class ShowCoursesComponent implements OnInit {
 
   courses!: any;
 
-  constructor(private coursesSevice: CourseService) { }
+  skls: any[] = [,,,,,,];
+
+  stateSkl: boolean;
+
+  constructor(private coursesSevice: CourseService) {
+    this.stateSkl = true;
+  }
 
   ngOnInit(): void {
     this.coursesSevice.getAll().subscribe(
       response => {
+        this.stateSkl = false;
         this.courses = response;
       },
       error => {

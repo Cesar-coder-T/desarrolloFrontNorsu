@@ -6,19 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
   title: String = "Norsu";
   state: boolean;
+  styleRt: string;
+
   constructor(
   ){
     this.state = true;
+    this.styleRt = "#293347";
   }
   ngOnInit(){
   }
 
-  getYScream(){
+  getYScream():any{
     document.onscroll = function() {
-      console.log("Vertical: " + window.scrollY);
+      return window.scrollY;
     };
+  }
+
+  goAbout(){
+    window.scroll(0, 362);
   }
 
 }

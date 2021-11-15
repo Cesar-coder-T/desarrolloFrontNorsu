@@ -10,6 +10,15 @@
       <mat-expansion-panel-header>
         <mat-panel-title><h2>Otros cursos disponibles</h2></mat-panel-title>
       </mat-expansion-panel-header>
+      <div class="ctn-gnl-skts" *ngIf="stateSkl">
+        <div class="ctn-gnl-skts_confg" *ngFor="let skl of skls">
+          <p-skeleton width="100%" height="12em"></p-skeleton>
+          <p></p>
+          <p-skeleton width="100%" height="1rem"></p-skeleton>
+          <p class="skl-p-two"></p>
+          <p-skeleton width="100%" height="1rem"></p-skeleton>
+        </div>
+      </div>
       <div class="ctn-gnl-cs">
         <div class="ctn-gnl-cs_course" *ngFor="let course of courses; let i = index">
           <img src="data:image/png;base64,{{courses[i].coverPage}}">

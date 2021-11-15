@@ -1,3 +1,10 @@
+/*Customize general container*/
+.ctn-gnl-mg{
+  width: 100%;
+  height: 100%;
+}
+/**/
+
 /*Customize first card*/
 .first-card {
   width: 80%;
@@ -8,7 +15,14 @@
   border-radius: 1em;
   display: flex;
   align-items: center;
-} /**/
+}
+.ctn-skl-fc{
+  width: 80%;
+  height: 14em;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+/**/
 
 /*Customize cover page course*/
 .first-card_cover-page {

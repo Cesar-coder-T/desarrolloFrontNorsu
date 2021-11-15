@@ -16,10 +16,10 @@
       </div>
       <div id="routes">
         <h2 id="home">Inicio</h2>
-        <h2 id="about-us">Conócenos</h2>
+        <h2 id="about-us" [ngStyle]="{'color': styleRt}" (click)="goAbout()">Conócenos</h2>
       </div>
       <div id="register">
-        <button pButton type="button" routerLink="/registro">
+        <button type="button" routerLink="/registro">
           <span>Registrarme</span>
         </button>
       </div>

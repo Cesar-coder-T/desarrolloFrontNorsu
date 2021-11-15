@@ -10,16 +10,17 @@ import { CourseService } from 'src/app/_service/Course/course.service';
   styleUrls: ['./create-course.component.css'],
 })
 export class CreateCourseComponent implements OnInit {
+
   submitted: boolean = false;
-
   generalities: Course;
-
   categories: any;
+  stateSpinner: boolean;
+  styleSpinner: {};
 
   /*image*/
-  public imagePath: any;
+  imagePath: any;
   imgURL: any;
-  public message!: string;
+  message!: string;
   sellersPermitFile: any;
   sellersPermitString!: string;
   /*image*/
@@ -37,6 +38,11 @@ export class CreateCourseComponent implements OnInit {
       coverPage: '',
       greeting: '',
       multimediaContent: Math.round(Math.random() * (100 - 1) + 1) + '',
+    };
+    this.stateSpinner = false;
+    this.styleSpinner = {
+      width: '55px',
+      height: '55px'
     };
   }
 
@@ -96,12 +102,15 @@ export class CreateCourseComponent implements OnInit {
   }
 
   createCourse() {
+    this.stateSpinner = true;
     this.generalities.coverPage = this.sellersPermitString;
     this.courseService.toRegister(this.generalities).subscribe(
       (response) => {
+        this.stateSpinner = false;
         this.router.navigateByUrl("/administrador/gestionar-curso/"+this.generalities.name);
       },
       (error) => {
+        this.stateSpinner = false;
         console.log(error);
       }
     );

@@ -60,6 +60,15 @@
                     <div id="ctn-gnl_ctn-welcome">
                         <textarea [(ngModel)]="generalities.greeting"></textarea>
                     </div>
+                    <div class="ctn-spinner" *ngIf="stateSpinner">
+                      <p-progressSpinner
+                        id="spinner"
+                        styleClass="custom-spinner"
+                        strokeWidth="4"
+                        [style]="styleSpinner"
+                        animationDuration=".6s">
+                      </p-progressSpinner>
+                    </div>
                     <div id="ctn-gnl_sub">
                         <div id="ctn-gnl_sub_buttons-cancel">
                             <button mat-button routerLink="/administrador/gestionar-cursos">Cancelar</button>

@@ -26,4 +26,8 @@ export class CourseService {
     return this._http.post<Course>(`${this.url}/toRegister`, course);
   }
 
+  toDelete(id: number){
+    return this._http.delete<Course>(`${this.url}/deleteById/${id}`);
+  }
+
 }

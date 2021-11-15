@@ -1,38 +1,52 @@
-<div class="first-card" *ngIf="!(course.coverPage == '') && !(course.name == '')">
-  <div class="first-card_cover-page">
-    <img src="data:image/png;base64,{{course.coverPage}}">
-  </div>
-  <div class="first-card_name-course">
-    <div id="ctn-name">
-      <h2>Curso: {{course.name}}</h2>
+<div class="ctn-gnl-mg">
+  <p-progressBar
+    mode="indeterminate"
+    [style]="styleProgressBar"
+    *ngIf="stateProgressBar">
+  </p-progressBar>
+  <!--First card-->
+  <div class="first-card" *ngIf="!(course.coverPage == '') && !(course.name == '')">
+    <div class="first-card_cover-page">
+      <img src="data:image/png;base64,{{course.coverPage}}">
     </div>
-    <div id="ctn-cat">
-      <h3>Categoría: {{course.category}}</h3>
-    </div>
-  </div>
-  <div id="ctn-gnl-opt">
-    <div id="title-opt">
-      <h3>Gestión del curso</h3>
-    </div>
-    <div class="first-card_options">
-      <div class="first-card_options_edit">
-        <button class="btn-options" id="btn-edit">
-          <h3 class="title-options">Editar</h3>
-          <mat-icon id="edit-icon">edit</mat-icon>
-        </button>
+    <div class="first-card_name-course">
+      <div id="ctn-name">
+        <h2>Curso: {{course.name}}</h2>
       </div>
-      <div class="first-card_options_delete">
-        <button class="btn-options" id="btn-delete">
-          <h3 class="title-options">Eliminar</h3>
-          <mat-icon id="delete-icon">delete</mat-icon>
-        </button>
+      <div id="ctn-cat">
+        <h3>Categoría: {{course.category}}</h3>
       </div>
     </div>
+    <div id="ctn-gnl-opt">
+      <div id="title-opt">
+        <h3>Gestión del curso</h3>
+      </div>
+      <div class="first-card_options">
+        <div class="first-card_options_edit">
+          <button class="btn-options" id="btn-edit">
+            <h3 class="title-options">Editar</h3>
+            <mat-icon id="edit-icon">edit</mat-icon>
+          </button>
+        </div>
+        <div class="first-card_options_delete">
+          <button class="btn-options" id="btn-delete" (click)="toDelete()">
+            <h3 class="title-options">Eliminar</h3>
+            <mat-icon id="delete-icon">delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<div class="ctn-btn-add-ctn">
-  <button>
-    <h4>Agregar contenido al curso</h4>
-    <mat-icon>add_circle_outline</mat-icon>
-  </button>
+  <!--First card-->
+  <!--Skeleton first card-->
+  <div class="ctn-skl-fc" *ngIf="stateSkl">
+    <p-skeleton width="100%" height="14em"borderRadius="1em"></p-skeleton>
+  </div>
+  <!--Skeleton first card-->
+  <div class="ctn-btn-add-ctn">
+    <button>
+      <h4>Agregar contenido al curso</h4>
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+  </div>
 </div>
