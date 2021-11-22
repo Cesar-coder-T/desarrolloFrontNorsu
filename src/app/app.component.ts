@@ -9,12 +9,10 @@ export class AppComponent implements OnInit{
 
   title: String = "Norsu";
   state: boolean;
-  styleRt: string;
 
   constructor(
   ){
     this.state = true;
-    this.styleRt = "#293347";
   }
   ngOnInit(){
   }
@@ -23,6 +21,10 @@ export class AppComponent implements OnInit{
     document.onscroll = function() {
       return window.scrollY;
     };
+  }
+
+  goHome(){
+    window.scroll(0, 0);
   }
 
   goAbout(){

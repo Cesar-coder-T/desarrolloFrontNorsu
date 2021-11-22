@@ -15,8 +15,8 @@
         <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu" routerLink="">
       </div>
       <div id="routes">
-        <h2 id="home">Inicio</h2>
-        <h2 id="about-us" [ngStyle]="{'color': styleRt}" (click)="goAbout()">Conócenos</h2>
+        <h2 id="home" (click)="goHome()">Inicio</h2>
+        <h2 id="about-us" (click)="goAbout()">Conócenos</h2>
       </div>
       <div id="register">
         <button type="button" routerLink="/registro">

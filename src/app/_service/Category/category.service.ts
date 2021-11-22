@@ -17,4 +17,9 @@ export class CategoryService {
   getAll(){
     return this._http.get<Category>(`${this.url}/getAll`);
   }
+
+  getById(idCategory: number){
+    return this._http.get<Category>(`${this.url}/getById/${idCategory}`);
+  }
+
 }

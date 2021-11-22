@@ -20,19 +20,21 @@ export class RegistrationService {
   /**
      * Stores the path of the http request
      */
-  url: string = `${environment.HOST}/collaborators/toRegister`;
+  url: string;
 
   /**
    * Constructor de la clase "RegistroService".
    * @param http
    */
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.url = `${environment.HOST}/users`;
+  }
   /**
    * Method that get the request's Json
    * @param user
    * @returns request
    */
   registro(user: Registration) {
-    return this.http.post<Registration>(`${this.url}`, user);
+    return this.http.post<Registration>(`${this.url}/toRegister`, user);
   }
 }

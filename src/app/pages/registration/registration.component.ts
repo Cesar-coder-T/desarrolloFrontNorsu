@@ -64,7 +64,7 @@ export class RegistrationComponent implements OnInit {
         this.captchaValue=true;
     }
   /**
-     * 
+     *
      * A method that runs immediately after the constructor and activates the component content.
      * Note: This method loads the validations of the registration form.
      */
@@ -82,8 +82,8 @@ export class RegistrationComponent implements OnInit {
     });
   }
   /**
-   * Method that captures and loads the information from 
-   * the registration form into the user object. Finally, 
+   * Method that captures and loads the information from
+   * the registration form into the user object. Finally,
    * it saves the user's information in the database.
    */
   onRegister() {
@@ -104,6 +104,7 @@ export class RegistrationComponent implements OnInit {
       if(!this.captchaValue){
         this.validador = 2;
       }
+      user.idRole = 2;
     }
     if (this.validador == 1) {
       this.apiRegistration.registro(user).subscribe(data => {
@@ -143,7 +144,7 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
-  
+
   /**
    * Método encargado de evaliuar si los valores de contraseña
    * y confirmar contraseña ingresados por el usuario, coinciden o no.
@@ -206,7 +207,7 @@ export class RegistrationComponent implements OnInit {
       "upperDigitLower": /^[A-Za-z0-9]+$/,
       "upperspecialDigitLower": /^[A-Za-z0-9!"#$%&/()=?¡¿.,-_]+$/
     }
-   
+
     if (listaOpciones.lower.test(words)) return 0;
     if (listaOpciones.upper.test(words)) return 0;
     if (listaOpciones.digit.test(words)) return 0;

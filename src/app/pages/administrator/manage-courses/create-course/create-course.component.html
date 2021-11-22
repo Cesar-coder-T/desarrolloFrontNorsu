@@ -21,10 +21,10 @@
                     </div>
                     <h3>Categoría: </h3>
                     <div id="ctn-gnl_sub_select-cat">
-                        <select [(ngModel)]="generalities.category">
+                        <select [(ngModel)]="generalities.idCategory">
                             <option selected disabled>Seleccione una categoría</option>
                             <option *ngFor="let category of categories; let i = index"
-                              [value]="categories[i].name">
+                              [value]="categories[i].id">
                               {{categories[i].name}}
                             </option>
                         </select>

@@ -13,4 +13,5 @@
     password!: string;
     email!: string;
     dateBirth!: string;
+    idRole!: number;
 }

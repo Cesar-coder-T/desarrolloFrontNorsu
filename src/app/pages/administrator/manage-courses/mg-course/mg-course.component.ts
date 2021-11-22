@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from 'src/app/_model/Category';
 import { Course } from 'src/app/_model/Course';
+import { CategoryService } from 'src/app/_service/Category/category.service';
 import { CourseService } from 'src/app/_service/Course/course.service';
 
 @Component({
@@ -9,8 +11,8 @@ import { CourseService } from 'src/app/_service/Course/course.service';
   styleUrls: ['./mg-course.component.css'],
 })
 export class MgCourseComponent implements OnInit {
-
   course: Course;
+  category: Category;
   stateSkl: boolean;
   stateProgressBar: boolean;
   styleProgressBar: {};
@@ -18,21 +20,27 @@ export class MgCourseComponent implements OnInit {
   constructor(
     private activeRoute: ActivatedRoute,
     private coursesSevice: CourseService,
+    private categoryService: CategoryService,
     private router: Router
   ) {
     this.course = {
-      "id": 0,
-      "name": '',
-      "category": '',
-      "visibility": '',
-      "greeting": '',
-      "coverPage": '',
-      "multimediaContent": ''
+      id: 0,
+      name: '',
+      visibility: '',
+      greeting: '',
+      coverPage: '',
+      multimediaContent: '',
+      idCategory: 0,
+    };
+    this.category = {
+      id: 0,
+      name: '',
+      state: false,
     };
     this.stateSkl = true;
     this.stateProgressBar = false;
     this.styleProgressBar = {
-      'height': '6px',
+      height: '6px',
     };
   }
 
@@ -40,13 +48,21 @@ export class MgCourseComponent implements OnInit {
     this.getByName();
   }
 
-  getByName(){
+  getByName() {
     this.coursesSevice
       .getByName(this.activeRoute.snapshot.params.nombre)
       .subscribe(
         (response) => {
           this.stateSkl = false;
           this.course = response;
+          this.categoryService.getById(this.course.idCategory).subscribe(
+            (response) => {
+              this.category = response;
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
         },
         (error) => {
           console.log(error);
@@ -54,17 +70,16 @@ export class MgCourseComponent implements OnInit {
       );
   }
 
-  toDelete(){
+  toDelete() {
     this.stateProgressBar = true;
     this.coursesSevice.toDelete(this.course.id).subscribe(
-      response => {
+      (response) => {
         this.stateProgressBar = false;
         this.router.navigateByUrl('administrador/gestionar-cursos');
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
   }
-
 }

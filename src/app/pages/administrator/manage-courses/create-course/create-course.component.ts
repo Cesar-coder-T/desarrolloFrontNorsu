@@ -34,10 +34,10 @@ export class CreateCourseComponent implements OnInit {
       id: 0,
       name: '',
       visibility: '',
-      category: '',
       coverPage: '',
       greeting: '',
       multimediaContent: Math.round(Math.random() * (100 - 1) + 1) + '',
+      idCategory: 0
     };
     this.stateSpinner = false;
     this.styleSpinner = {
