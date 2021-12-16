@@ -9,11 +9,8 @@ import { AppComponent } from 'src/app/app.component';
 export class CheckComponent implements OnInit {
   stateAux: boolean = true;
 
-  constructor(
-    stateTB: AppComponent
-  ) {
+  constructor() {
     this.stateAux = false;
-    stateTB.state = this.stateAux;
   }
 
   ngOnInit(): void {

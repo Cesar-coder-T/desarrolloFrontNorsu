@@ -1,3 +1,194 @@
-html{
-    height: auto;
+*{
+  color: #293347;
+  margin: 0;
+  padding: 0;
+}
+
+/*Customize general container*/
+.ctn-gnl{
+  background-color: #fff;
+  height: 95%;
+  width: 100%;
+}
+
+/*Customize container btn log-in*/
+.ctn-btns{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.log-in{
+  background-color: transparent;
+  color: #293347;
+  border: 2px solid transparent;
+  width: 10em;
+  height: 80%;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: .5em;
+}
+.btn-cu{
+  background-color: rgb(7, 160, 180);
+  color: #fff;
+  border: 2px solid transparent;
+  width: 10em;
+  height: 80%;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 2em;
+  border-radius: 2em;
+  box-shadow: 0 0 .3em #bbbbbb;
+  transition: .3s ease-in-out;
+}
+.btn-cu:hover{
+  color: rgb(7, 160, 180);
+  background-color: transparent;
+  border: 2px solid rgb(7, 160, 180);
+  font-weight: bold;
+}
+
+/*Customize welcome container*/
+.ctn-txt{
+  width: 35%;
+  height: 90%;
+  float: left;
+}
+.ctn-title,
+.ctn-wlcm{
+  width: 100%;
+}
+.ctn-title{
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+.title{
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 21em;
+}
+.ctn-wlcm{
+  height: 55%;
+  padding: 0 1.5em;
+}
+.ctn-ax{
+  height: 80%;
+  text-align: center;
+}
+.wlcm{
+  font-size: 1.5em;
+  margin: 0;
+}
+.by{
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-align: center;
+  height: calc(20% - 2em);
+}
+
+/*Customize video container*/
+.ctn-video{
+  width: 65%;
+  height: 90%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview{
+  width: 80%;
+}
+
+.arrow{
+  width: 100%;
+  height: 5%;
+  text-align: center;
+}
+
+/*Customize arrow*/
+.icon-arrow{
+  color: #293347;
+  font-size: 2.5em;
+  margin-top: -.2em;
+  cursor: pointer;
+  animation: floating 3.2s ease-in-out infinite;
+}
+@keyframes floating{
+  0%{
+    transform: translatey(0);
+  }
+  50%{
+    transform: translatey(-.5em);
+  }
+  0%{
+    transform: translatey(0);
+  }
+}
+
+/*Customize about us container*/
+.ctn-about-us{
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+.title-about-us{
+  font-size: 1.7em;
+}
+.about-us-text{
+  width: 70%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+footer{
+  background-color: #293347;
+  width: 100%;
+  height: 18em;
+  text-align: center;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+footer h2{
+  color: #fff;
+  cursor: pointer;
+}
+.logo img{
+  width: 10em;
+  margin-top: .7em;
+  margin-bottom: 1em;
+}
+.legal h2,
+.topics h2,
+.copy h2{
+  display: inline-block;
+  font-size: .9em;
+  font-weight: normal;
+}
+.t-u{
+  margin-right: 3em;
+}
+mat-divider{
+  background-color: #fff;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.contact h2{
+  font-size: .9em;
+  font-weight: normal;
+}
+.gmail,
+.phone,
+.web,
+.location{
+  display: inline-block;
+}
+.gmail,
+.phone,
+.web{
+  margin-right: 2em;
 }

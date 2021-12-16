@@ -7,27 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-
-  <!--ToolBar-->
-  <div id="toolbar" *ngIf="state">
-    <mat-toolbar>
-      <div id="logo">
-        <img id="Norsu" src="../assets/images/Norsu.png" alt="Norsu" routerLink="">
-      </div>
-      <div id="routes">
-        <h2 id="home" (click)="goHome()">Inicio</h2>
-        <h2 id="about-us" (click)="goAbout()">Conócenos</h2>
-      </div>
-      <div id="register">
-        <button type="button" routerLink="/registro">
-          <span>Registrarme</span>
-        </button>
-      </div>
-      <div id="nbsp">&nbsp;</div>
-    </mat-toolbar>
-  </div>
-  <!--ToolBar-->
-    <router-outlet></router-outlet>
-
+  <router-outlet></router-outlet>
 </body>
 </html>

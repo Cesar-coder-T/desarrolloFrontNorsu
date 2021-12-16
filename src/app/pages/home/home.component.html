@@ -1,22 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!--News-->
-    <app-news></app-news>
-    <!--News-->
-
-    <!--Login Form-->
-    <app-login></app-login>
-    <!--Login Form-->
-
-    <!--About us-->
-    <app-about-us></app-about-us>
-    <!--About us-->
-</body>
+  </head>
+  <body>
+    <!--Main container-->
+    <div class="ctn-gnl">
+      <div class="ctn-btns">
+        <button class="log-in">Iniciar Sesión</button>
+        <button class="btn-cu">Contáctanos</button>
+      </div>
+      <div class="ctn-txt">
+        <div class="ctn-title">
+          <img class="title" src="../../../assets/images/Title.png">
+        </div>
+        <div class="ctn-wlcm">
+          <div class="ctn-ax">
+            <h2 class="wlcm">
+              Adquiere nuestros servicios y capacita a tu equipo de trabajo.
+            </h2>
+          </div>
+          <h3 class="by">Por Movip S.A.S</h3>
+        </div>
+      </div>
+      <div class="ctn-video">
+        <video
+          class="preview"
+          controls
+          src="../../../assets/videos/test.mp4"
+          poster="https://static.spin.com/files/2021/04/syt-remix-thumbnail-1619135080.jpg"
+        ></video>
+      </div>
+    </div>
+    <!--End main container-->
+    <!--Arrow container-->
+    <div class="arrow">
+      <mat-icon class="icon-arrow" (click)="goDown()">expand_more</mat-icon>
+    </div>
+    <!--End arrow container-->
+    <!--About us container-->
+    <div class="ctn-about-us">
+      <h2 class="title-about-us">¿Qué es Norsu?</h2>
+      <p class="about-us-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+        dignissimos explicabo iusto non, rerum molestias culpa sint harum
+        corrupti? Architecto, enim. Fuga alias quas quidem repellendus sint
+        sapiente cumque beatae ullam veritatis, blanditiis quae doloribus
+        voluptas aliquid dolores esse cupiditate deserunt, sed, inventore
+        eveniet exercitationem qui provident eum consequuntur eaque. Vitae
+        deserunt, doloribus quia voluptatibus ipsam obcaecati ad, sint
+        consequuntur assumenda corrupti beatae temporibus eos, in veniam officia
+        modi animi cupiditate velit explicabo exercitationem. Reprehenderit,
+        sunt eaque modi mollitia officia ex, inventore aperiam quia ullam quas
+        porro nostrum pariatur labore neque minus praesentium quibusdam iure
+        unde nam accusamus! Repellendus, nostrum.
+      </p>
+    </div>
+    <!--End about us container-->
+    <!--Footer container-->
+    <footer>
+      <div class="logo">
+        <img src="../../../assets/images/Norsu_white.png">
+      </div>
+      <div class="legal">
+        <h2 class="t-u">Términos de uso</h2>
+        <h2>Política de privacidad</h2>
+      </div>
+      <div class="topics">
+        <h2>Acerca de Norsu</h2>
+      </div>
+      <div class="copy">
+        <h2>&copy;Movip S.A.S. Todos los derechos reservados</h2>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="contact">
+        <h2 class="gmail">contacto@correo.com</h2>
+        <h2 class="phone">(1) 2889617</h2>
+        <h2 class="web">https://www.movipsas.com</h2>
+        <h2 class="location">Carrera 67A N°9A-62 Piso 1, Bogotá</h2>
+      </div>
+    </footer>
+    <!--End footer container-->
+  </body>
 </html>

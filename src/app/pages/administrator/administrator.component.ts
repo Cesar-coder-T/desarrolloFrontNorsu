@@ -18,10 +18,7 @@ export class AdministratorComponent {
     );
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
-    private std: AppComponent
-    ) {
-      this.std.state = false;
-    }
+    private breakpointObserver: BreakpointObserver
+    ) {}
 
 }

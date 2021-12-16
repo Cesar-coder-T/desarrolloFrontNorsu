@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +7,13 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    private status: AppComponent
-  ) {
-    status.state=true;
-    };
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  goDown(){
+    window.scroll(0, 649);
   }
 
 }

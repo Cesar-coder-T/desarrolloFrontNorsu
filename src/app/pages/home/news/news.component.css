@@ -1,9 +1,0 @@
-/*Carousel customization*/
-#carouselExampleIndicators{
-    width: 70%;
-    height: 88.6vh;
-    float: left;
-}
-.carousel-inner img{
-    height: 88.6vh;
-}

@@ -37,4 +37,16 @@ export class RegistrationService {
   registro(user: Registration) {
     return this.http.post<Registration>(`${this.url}/toRegister`, user);
   }
+
+  login(nick:String, psw:String){
+    return this.http.get<any>(`/api/sesiones/iniciar/${nick}/${psw}`);
+  }
+
+  logout(token: string){
+    return this.http.get<any>(`/api/sesiones/finalizar`, {
+      headers: {
+        'Authorization': token
+      }
+    });
+  }
 }

@@ -17,10 +17,8 @@ export class CategoriesComponent implements OnInit {
   categories!: any;
 
   constructor(
-    home: AppComponent,
     private catService: CategoryService
   ){
-    home.state = this.state;
     this.stateBtb = true;
   }
 

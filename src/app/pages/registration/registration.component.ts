@@ -48,13 +48,11 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private router: Router,
     private snackBar: MatSnackBar,
-    private status: AppComponent,
     private apiRegistration: RegistrationService
   ) {
     this.value1=false;
     this.value2=false;
     this.captchaValue=false;
-    status.state=false;
     };
   /*
     showResponse(response: any) {
