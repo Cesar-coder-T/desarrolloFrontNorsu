@@ -84,10 +84,14 @@
   margin: 0;
 }
 .by{
+  width: 100%;
+  height: calc(20% - 2em);
+  text-align: center;
+}
+.mvp{
   font-size: 1.1em;
   text-transform: uppercase;
-  text-align: center;
-  height: calc(20% - 2em);
+  display: inline;
 }
 
 /*Customize video container*/
