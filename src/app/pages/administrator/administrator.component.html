@@ -1,46 +1,61 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [mode]="'side'"
+    [opened]="visibility"
+  >
+    <mat-toolbar class="toolbar">
+      <img class="logo" src="../../../assets/images/Title.png" />
     </mat-toolbar>
     <mat-nav-list>
-      <mat-icon
-        class="icons"
-        routerLink="/administrador/gestionar-cursos"
-        routerLinkActive="active">auto_stories</mat-icon>
-      <mat-icon
-        class="icons"
-        routerLink=""
-        routerLinkActive="">domain</mat-icon>
+      <mat-divider class="divider"></mat-divider>
+      <div class="ctn-admin">
+        <h2 class="title-adm">Administrador</h2>
+      </div>
+      <div class="ctn-icon">
         <mat-icon
-        class="icons"
-        routerLink="/administrador/crear-curso"
-        routerLinkActive="active">add_circle_outline</mat-icon>
+          class="icons"
+          routerLink="/administrador/gestionar-cursos"
+          routerLinkActive="active"
+          >auto_stories
+        </mat-icon>
+        <h2
+          class="title-opt"
+          routerLink="/administrador/gestionar-cursos"
+          routerLinkActive="active"
+        >
+          Cursos
+        </h2>
+      </div>
+      <div class="ctn-icon">
+        <mat-icon class="icons" routerLinkActive="active">domain </mat-icon>
+        <h2 class="title-opt">Empresas</h2>
+      </div>
+      <div class="ctn-icon">
+        <mat-icon
+          class="icons"
+          routerLink="/administrador/crear-curso"
+          routerLinkActive="active"
+          >add_circle_outline
+        </mat-icon>
+        <h2
+          class="title-opt"
+          routerLink="/administrador/crear-curso"
+          routerLinkActive="active"
+        >
+          Crear curso
+        </h2>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <!--ToolBar-->
-    <div id="toolbar">
-      <mat-toolbar>
-        <button
-        type="button"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-        <div id="ctn-h1">
-            <h1>Administrador</h1>
-        </div>
-        <div id="logo">
-            <img id="Norsu" src="../assets/images/Norsu_white.png" alt="Norsu" routerLink="">
-        </div>
-      </mat-toolbar>
-  </div>
-  <!--ToolBar-->
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+    <div class="close">
+      <mat-icon class="nav-icon" *ngIf="close" (click)="closeSideNav()">close</mat-icon>
+      <mat-icon class="nav-icon" *ngIf="menu" (click)="openSideNav()">menu</mat-icon>
+    </div>
+    <router-outlet class="router"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

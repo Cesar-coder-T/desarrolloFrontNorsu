@@ -1,30 +1,38 @@
-/*Toolbar customization*/
-#toolbar mat-toolbar{
-  background-color: #293347;
-  height: 4.5em;
+.toolbar{
+  padding: .5em;
 }
-#ctn-h1{
-  width: 80%;
-  height: 100%;
+
+.divider{
+  background-color: #293347;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.ctn-admin{
+  background-color: #293347;
+  width: 100%;
+  height: 2.5em;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
+  margin-bottom: 2em;
 }
-h1{
+
+.title-adm{
   color: #fff;
-  font-size: 1.2em;
-  margin-left: 1em;
+  margin: 0;
+  text-transform: uppercase;
 }
-#logo{
+
+.logo{
+  width: 100%;
   height: 100%;
-  width: 20%;
-  text-align: right;
 }
-#Norsu{
-  height: 4em;
-  cursor: pointer;
+
+mat-nav-list{
+  padding-top: 0;
 }
-/*End*/
 
 mat-icon{
   color: #fff;
@@ -36,9 +44,10 @@ mat-icon{
 }
 
 .sidenav {
-  width: 5em;
-  background-color: #fff !important;
-  box-shadow: 0 0 2px #293347;
+  width: 14em;
+  background-color: #ffffff !important;
+  border: none;
+  box-shadow: 0 0 .3em #434f66;
 }
 
 .sidenav .mat-toolbar {
@@ -67,14 +76,57 @@ mat-nav-list{
   text-align: center;
 }
 
-.icons{
-  font-size: 2em;
+.ctn-icon{
   width: 100%;
-  margin-top: 1.3em;
+  height: 2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.icons{
+  font-size: 1.7em;
+  height: 100%;
+  width: 1.5em;
+  margin-left: .2em;
   cursor: pointer;
   color: #293347;
 }
 
+.title-opt{
+  display: inline;
+  margin: 0;
+  height: 100%;
+  font-weight: normal;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
 .active{
-  color: rgb(35, 149, 216) !important;
+  color: rgb(7, 160, 180) !important;
+}
+
+
+.close{
+  width: 2em;
+  height: 1.6em;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 .3em #293347;
+  padding: 0;
+  cursor: pointer;
+  top: 0;
+}
+
+.nav-icon{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: #293347;
+  text-align: center;
+}
+
+.router{
+  position: relative;
 }
