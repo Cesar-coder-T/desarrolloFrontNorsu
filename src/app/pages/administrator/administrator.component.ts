@@ -1,42 +1,63 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-import { AppComponent } from 'src/app/app.component';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
+
+/**
+ * SideNav data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
+interface SideNavNode {
+  name: string;
+  children?: any;
+}
+
+const TREE_DATA: SideNavNode[] = [
+  {
+    name: 'Cursos',
+    children: [
+      { name: 'Ver Listado', icon: 'play_lesson', route: 'gestionar-cursos' },
+      { name: 'Crear', icon: 'add_circle_outline', route: 'crear-curso' },
+    ],
+  },
+  {
+    name: 'Empresas',
+    children: [
+      { name: 'Ver Listado', icon: 'business', route: 'ruta' },
+      { name: 'Crear', icon: 'domain_add', route: 'ruta' },
+    ],
+  },
+  {
+    name: 'Administradores',
+    children: [
+      { name: 'Ver Listado', icon: 'groups', route: 'route' }, 
+      { name: 'Crear', icon: 'person_add_alt', route: 'route' }
+    ],
+  }
+];
 
 @Component({
   selector: 'app-administrator',
   templateUrl: './administrator.component.html',
-  styleUrls: ['./administrator.component.css']
+  styleUrls: ['./administrator.component.css'],
 })
 export class AdministratorComponent {
+  /*Default settings for the SideNav's trees.*/
+  treeControl = new NestedTreeControl<SideNavNode>((node) => node.children);
+  dataSource = new MatTreeNestedDataSource<SideNavNode>();
+  /*Default settings for the SideNav's trees.*/
 
-  close: boolean; menu: boolean; visibility: boolean;
+  /*Default path for the admin*/
+  path: string;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  constructor() {
+    /*Default settings for the SideNav's trees.*/
+    this.dataSource.data = TREE_DATA;
+    /*Default settings for the SideNav's trees.*/
+    this.path = '/administrador/';
+  }
 
-  constructor(
-    private breakpointObserver: BreakpointObserver
-    ) {
-      this.close = true;
-      this.menu = false;
-      this.visibility = true;
-    }
-
-    closeSideNav(){
-      this.close = false;
-      this.menu = true;
-      this.visibility = false;
-    }
-
-    openSideNav(){
-      this.close = true;
-      this.menu = false;
-      this.visibility = true;
-    }
-
+  /*Default settings for the SideNav's trees.*/
+  hasChild = (_: number, node: SideNavNode) =>
+    !!node.children && node.children.length > 0;
+  /*Default settings for the SideNav's trees.*/
 }

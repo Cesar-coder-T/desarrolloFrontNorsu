@@ -1,132 +1,130 @@
-.toolbar{
-  padding: .5em;
-}
-
-.divider{
-  background-color: #293347;
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 2em;
-}
-
-.ctn-admin{
-  background-color: #293347;
-  width: 100%;
-  height: 2.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2em;
-}
-
-.title-adm{
-  color: #fff;
+*,
+*::after,
+*::before {
+  padding: 0;
   margin: 0;
-  text-transform: uppercase;
+  box-sizing: border-box;
 }
 
-.logo{
-  width: 100%;
-  height: 100%;
-}
-
-mat-nav-list{
-  padding-top: 0;
-}
-
-mat-icon{
-  color: #fff;
-}
-
-.sidenav-container {
-  height: 100%;
-  background-color: #fff !important;
-}
-
-.sidenav {
-  width: 14em;
-  background-color: #ffffff !important;
-  border: none;
-  box-shadow: 0 0 .3em #434f66;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar{
+body {
+  overflow-x: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  min-height: 100vh;
 }
 
-.mat-toolbar.mat-primary {
+/*Customize sidenav*/
+.side-nav {
+  background-color: #293347;
+  height: 100%;
+  width: 13em;
+  padding-top: 1em;
   position: sticky;
   top: 0;
-  z-index: 1;
+  left: 0;
 }
-#avatar{
+.ctn-logo {
   width: 100%;
-  height: 2.3em;
-  border-radius: 100%;
-  margin-top: .8em;
-}
-
-mat-nav-list{
-  text-align: center;
-}
-
-.ctn-icon{
-  width: 100%;
-  height: 2em;
-  margin-bottom: 1em;
+  height: 3em;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
-.icons{
-  font-size: 1.7em;
-  height: 100%;
-  width: 1.5em;
-  margin-left: .2em;
-  cursor: pointer;
-  color: #293347;
+.logo {
+  width: 80%;
+  height: 2.3em;
 }
-
-.title-opt{
-  display: inline;
-  margin: 0;
-  height: 100%;
-  font-weight: normal;
-  font-size: 1.1em;
-  text-transform: capitalize;
-  cursor: pointer;
-}
-
-.active{
-  color: rgb(7, 160, 180) !important;
-}
-
-
-.close{
-  width: 2em;
-  height: 1.6em;
-  background-color: #ffffff;
-  position: absolute;
-  box-shadow: 0 0 .3em #293347;
-  padding: 0;
-  cursor: pointer;
-  top: 0;
-}
-
-.nav-icon{
-  margin: 0;
+.divider {
+  background-color: rgb(255, 255, 255);
+  margin: .5em auto;
   width: 100%;
-  height: 100%;
-  color: #293347;
-  text-align: center;
 }
+.ctn-adm-title{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.adm-title{
+    margin: 0;
+    color: #293347;
+}
+.ctn-log-out{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2em;
+    color: rgb(255, 255, 255);
+}
+.icon-log-out{
+    width: 1em;
+    justify-content: center;
+    margin-left: .55em;
+}
+.title-log-out{
+    width: calc(100% - 1.5em);
+    margin: 0;
+    margin-left: .5em;
+    font-size: 16px;
+    font-weight: normal;
+}
+.icon-log-out,
+.title-log-out{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+/*End customize sidenav*/
 
-.router{
-  position: relative;
+/*Customize main content*/
+.content {
+  background-color: rgb(255, 255, 255);
+  width: calc(100% - 13em);
+  height: 100%;
+  padding-left: 1em;
 }
+/*End customize main content*/
+
+/*Customize SideNav's tree*/
+mat-tree{
+    margin-top: 2em;
+}
+.tree-invisible {
+  display: none;
+}
+.tree ul,
+.tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+.mat-tree-node{
+    background-color: #293347;
+    color: rgb(255, 255, 255);
+    transition: .2s ease-in-out;
+}
+.option-icon{
+    margin-right: .5em;
+    cursor: pointer;
+}
+.option-title{
+    font-size: 1em !important;
+    font-weight: normal !important;
+    margin: 0;
+    height: 100%;
+    cursor: pointer;
+}
+.isActive{
+    background-color: #16a19a;
+    border-radius: 0 -10% -10% 0 !important;
+}
+.tree div[role="group"] > .mat-tree-node {
+  padding-left: 4em;
+}
+/*End customize SideNav's tree*/
