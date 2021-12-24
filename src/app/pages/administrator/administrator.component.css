@@ -51,6 +51,7 @@ body {
 .adm-title{
     margin: 0;
     color: #293347;
+    background-color: transparent;
 }
 .ctn-log-out{
     width: 100%;
@@ -121,10 +122,198 @@ mat-tree{
     cursor: pointer;
 }
 .isActive{
-    background-color: #16a19a;
+    background-color: #1691a1;
     border-radius: 0 -10% -10% 0 !important;
 }
 .tree div[role="group"] > .mat-tree-node {
   padding-left: 4em;
 }
 /*End customize SideNav's tree*/
+
+/*Customize SideNav small*/
+.side-nav-small{
+  display: none;
+  background-color: #293347;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 5em;
+  padding-top: 1em;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.logo2{
+  width: 80%;
+  height: 2.3em;
+}
+.ctn-icons-sidenav-small{
+  width: 100%;
+  height: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+}
+.icon-sidenav-small{
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 1.5em;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #293347;
+  transition: .2s ease-in-out all;
+}
+.text-hover1,
+.text-hover2,
+.text-hover3{
+  font-size: .8em;
+  background-color: rgb(30, 160, 149);
+  height: 2em;
+  padding: 0 .5em;
+  border: none;
+  border-radius: 0 .6em 0 .6em;
+  position: absolute;
+  animation: moving 2s infinite alternate-reverse;
+  visibility: hidden;
+}
+@keyframes moving{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(.3em);
+  }
+  0%{
+    transform: translateX(0);
+  }
+}
+.text-hover1{
+  right: -3em;
+  top: 9.62em;
+}
+.text-hover2{
+  right: -4.3em;
+  top: 14.62em;
+}
+.text-hover3{
+  right: -7.15em;
+  top: 19em;
+}
+#book-icon:hover ~ .text-hover1{
+  visibility: visible;
+}
+#business-icon:hover ~ .text-hover2{
+  visibility: visible;
+}
+#groups-icon:hover ~ .text-hover3{
+  visibility: visible;
+}
+.isActiveSmall{
+  color: #293347;
+  background-color: #fff;
+  margin-left: 20%;
+  padding-left: .5em;
+  width: 80%;
+  height: 100%;
+  border: none;
+  border-radius: .6em 0 0 .6em;
+}
+/*End customize SideNav small*/
+
+/*Customize SideNav app*/
+.side-nav-app{
+  width: 100%;
+  height: 4em;
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 99;
+  background-color: #293347;
+}
+.ctn-icons-sidenav-app{
+  width: 25%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.icon-sidenav-app{
+  font-size: 2em;
+}
+.isActiveApp{
+  color: #293347;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+/*End customize SideNav app*/
+
+/*Responsive 1163px of width*/
+@media(max-width: 1163px){
+  .side-nav{
+    display: none;
+  }
+  .side-nav-small{
+    display: block;
+  }
+  .ctn-logo{
+    margin-bottom: 3.5em;
+  }
+  .icon-log-out{
+    margin: 0 auto;
+    font-size: 24px;
+  }
+  .content{
+    width: calc(100% - 5em);
+  }
+}
+
+/*Responsive 662px of height*/
+@media(max-height: 662px){
+  .side-nav{
+    display: none;
+  }
+  .side-nav-small{
+    display: block;
+  }
+  .ctn-logo{
+    margin-bottom: 3.5em;
+  }
+  .icon-log-out{
+    margin: 0 auto;
+    font-size: 24px;
+  }
+  .content{
+    width: calc(100% - 5em);
+  }
+}
+
+/*Responsive 420px of width*/
+@media(max-width: 420px){
+  body{
+    display: grid;
+  }
+  .side-nav-small{
+    display: none;
+  }
+  .side-nav-app{
+    display: block;
+  }
+  .isActiveSmall{
+    display: none;
+  }
+  .content{
+    width: 100%;
+    height: calc(100% - 4em);
+    z-index: 2;
+  }
+}

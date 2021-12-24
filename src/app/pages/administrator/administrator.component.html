@@ -18,7 +18,7 @@
       </div>
       <mat-divider class="divider"></mat-divider>
       <div class="ctn-adm-title">
-          <h2 class="adm-title">Administrador</h2>
+        <h2 class="adm-title">Administrador</h2>
       </div>
       <mat-divider class="divider"></mat-divider>
       <mat-tree
@@ -29,12 +29,16 @@
         <!-- This is the tree node template for leaf nodes -->
         <!-- There is inline padding applied to this node using styles.
           This padding value depends on the mat-icon-button width. -->
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle routerLinkActive="isActive">
-          <mat-icon class="option-icon" [routerLink]="path+node.route" >
+        <mat-tree-node
+          *matTreeNodeDef="let node"
+          matTreeNodeToggle
+          routerLinkActive="isActive"
+        >
+          <mat-icon class="option-icon" [routerLink]="path + node.route">
             {{ node.icon }}
           </mat-icon>
-          <h2 class="option-title" [routerLink]="path+node.route">
-              {{ node.name }}
+          <h2 class="option-title" [routerLink]="path + node.route">
+            {{ node.name }}
           </h2>
         </mat-tree-node>
         <!-- This is the tree node template for expandable nodes -->
@@ -51,14 +55,18 @@
                 }}
               </mat-icon>
             </button>
-            <h2 class="option-title" matTreeNodeToggle
-            [attr.aria-label]="'Toggle ' + node.name">
-                {{ node.name }}
+            <h2
+              class="option-title"
+              matTreeNodeToggle
+              [attr.aria-label]="'Toggle ' + node.name"
+            >
+              {{ node.name }}
             </h2>
           </div>
           <!-- There is inline padding applied to this div using styles.
                 This padding value depends on the mat-icon-button width.  -->
-          <div style="background-color: #293347;"
+          <div
+            style="background-color: #293347"
             [class.tree-invisible]="!treeControl.isExpanded(node)"
             role="group"
           >
@@ -67,15 +75,96 @@
         </mat-nested-tree-node>
       </mat-tree>
       <div class="ctn-log-out">
-          <mat-icon class="icon-log-out">logout</mat-icon>
-          <h2 class="title-log-out">Cerrar Sesión</h2>
+        <mat-icon class="icon-log-out">logout</mat-icon>
+        <h2 class="title-log-out">Cerrar Sesión</h2>
       </div>
     </nav>
     <!--End sidenav-->
+    <!--Sidenav small-->
+    <nav class="side-nav-small">
+      <div class="ctn-logo">
+        <img
+          src="../../../assets/images/Norsu_icon.png"
+          alt="logo"
+          class="logo2"
+        />
+      </div>
+      <div class="ctn-icons-sidenav-small">
+        <mat-icon
+          class="icon-sidenav-small"
+          id="book-icon"
+          routerLink="/administrador/gestionar-cursos"
+          routerLinkActive="isActiveSmall"
+          >play_lesson</mat-icon
+        >
+        <h3 class="text-hover1">Cursos</h3>
+      </div>
+      <div class="ctn-icons-sidenav-small">
+        <mat-icon
+          class="icon-sidenav-small"
+          id="business-icon"
+          routerLink="/administrador/gestionar-empresas"
+          routerLinkActive="isActiveSmall"
+          >business</mat-icon
+        >
+        <h3 class="text-hover2">Empresas</h3>
+      </div>
+      <div class="ctn-icons-sidenav-small" style="margin-top: -8px;">
+        <mat-icon 
+          class="icon-sidenav-small" 
+          id="groups-icon"
+          routerLink="/administrador/gestionar-administradores"
+          routerLinkActive="isActiveSmall">groups</mat-icon>
+        <h3 class="text-hover3">Administradores</h3>
+      </div>
+      <div class="ctn-log-out">
+        <mat-icon 
+          class="icon-log-out"
+          routerLink="">logout</mat-icon>
+      </div>
+    </nav>
+    <!--End sidenav small-->
     <!--Main content-->
     <main class="content">
       <router-outlet></router-outlet>
     </main>
     <!--End main Content-->
+    <!--Sidenav app-->
+    <nav class="side-nav-app">
+      <div class="ctn-icons-sidenav-app">
+        <mat-icon
+          class="icon-sidenav-app"
+          id="book-icon"
+          routerLink="/administrador/gestionar-cursos"
+          routerLinkActive="isActiveApp"
+          >play_lesson</mat-icon
+        >
+        <h3 class="text-hover1">Cursos</h3>
+      </div>
+      <div class="ctn-icons-sidenav-app">
+        <mat-icon
+          class="icon-sidenav-app"
+          id="business-icon"
+          routerLink="/administrador/gestionar-empresas"
+          routerLinkActive="isActiveApp"
+          >business</mat-icon
+        >
+        <h3 class="text-hover2">Empresas</h3>
+      </div>
+      <div class="ctn-icons-sidenav-app">
+        <mat-icon 
+          class="icon-sidenav-app" 
+          id="groups-icon"
+          routerLink="/administrador/gestionar-administradores"
+          routerLinkActive="isActiveApp">groups</mat-icon>
+        <h3 class="text-hover3">Administradores</h3>
+      </div>
+      <div class="ctn-icons-sidenav-app">
+        <mat-icon 
+          class="icon-sidenav-app"
+          routerLink="">logout</mat-icon>
+      </div>
+    </nav>
+    <!--End sidenav app-->
   </body>
 </html>
