@@ -29,10 +29,10 @@ const TREE_DATA: SideNavNode[] = [
   {
     name: 'Administradores',
     children: [
-      { name: 'Ver Listado', icon: 'groups', route: 'route' }, 
-      { name: 'Crear', icon: 'person_add_alt', route: 'route' }
+      { name: 'Ver Listado', icon: 'groups', route: 'route' },
+      { name: 'Crear', icon: 'person_add_alt', route: 'route' },
     ],
-  }
+  },
 ];
 
 @Component({
@@ -49,11 +49,30 @@ export class AdministratorComponent {
   /*Default path for the admin*/
   path: string;
 
+  options: any;
+
   constructor() {
     /*Default settings for the SideNav's trees.*/
     this.dataSource.data = TREE_DATA;
     /*Default settings for the SideNav's trees.*/
     this.path = '/administrador/';
+    this.options = [
+      {
+        icon: 'play_lesson',
+        title: 'Cursos',
+        route: '/administrador/gestionar-cursos',
+      },
+      {
+        icon: 'business',
+        title: 'Empresas',
+        route: '/administrador/gestionar-empresas',
+      },
+      {
+        icon: 'groups',
+        title: 'Admin',
+        route: '/administrador/gestionar-administradores',
+      }
+    ];
   }
 
   /*Default settings for the SideNav's trees.*/

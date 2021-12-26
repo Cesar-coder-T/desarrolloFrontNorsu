@@ -109,18 +109,18 @@
         >
         <h3 class="text-hover2">Empresas</h3>
       </div>
-      <div class="ctn-icons-sidenav-small" style="margin-top: -8px;">
-        <mat-icon 
-          class="icon-sidenav-small" 
+      <div class="ctn-icons-sidenav-small" style="margin-top: -8px">
+        <mat-icon
+          class="icon-sidenav-small"
           id="groups-icon"
           routerLink="/administrador/gestionar-administradores"
-          routerLinkActive="isActiveSmall">groups</mat-icon>
+          routerLinkActive="isActiveSmall"
+          >groups</mat-icon
+        >
         <h3 class="text-hover3">Administradores</h3>
       </div>
       <div class="ctn-log-out">
-        <mat-icon 
-          class="icon-log-out"
-          routerLink="">logout</mat-icon>
+        <mat-icon class="icon-log-out" routerLink="">logout</mat-icon>
       </div>
     </nav>
     <!--End sidenav small-->
@@ -131,38 +131,29 @@
     <!--End main Content-->
     <!--Sidenav app-->
     <nav class="side-nav-app">
-      <div class="ctn-icons-sidenav-app">
-        <mat-icon
-          class="icon-sidenav-app"
-          id="book-icon"
-          routerLink="/administrador/gestionar-cursos"
-          routerLinkActive="isActiveApp"
-          >play_lesson</mat-icon
-        >
-        <h3 class="text-hover1">Cursos</h3>
+      <div
+        class="ctn-option-sidenav-app"
+        *ngFor="let option of options"
+        [routerLink]="option.route"
+        routerLinkActive="isActiveApp"
+      >
+        <div class="ctn-icon-option">
+          <mat-icon class="icon-option-sidenav-app">{{ option.icon }}</mat-icon>
+        </div>
+        <div class="ctn-title-option">
+          <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
+        </div>
       </div>
-      <div class="ctn-icons-sidenav-app">
-        <mat-icon
-          class="icon-sidenav-app"
-          id="business-icon"
-          routerLink="/administrador/gestionar-empresas"
-          routerLinkActive="isActiveApp"
-          >business</mat-icon
-        >
-        <h3 class="text-hover2">Empresas</h3>
-      </div>
-      <div class="ctn-icons-sidenav-app">
-        <mat-icon 
-          class="icon-sidenav-app" 
-          id="groups-icon"
-          routerLink="/administrador/gestionar-administradores"
-          routerLinkActive="isActiveApp">groups</mat-icon>
-        <h3 class="text-hover3">Administradores</h3>
-      </div>
-      <div class="ctn-icons-sidenav-app">
-        <mat-icon 
-          class="icon-sidenav-app"
-          routerLink="">logout</mat-icon>
+      <div
+        class="ctn-option-sidenav-app"
+        routerLink=""
+      >
+        <div class="ctn-icon-option">
+          <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
+        </div>
+        <div class="ctn-title-option">
+          <h2 class="title-option-sidenav-app">Salir</h2>
+        </div>
       </div>
     </nav>
     <!--End sidenav app-->
