@@ -12,7 +12,7 @@
 }
 /*End customize general container*/
 
-.ctn-logo{
+.ctn-logo {
   display: none;
 }
 
@@ -141,6 +141,12 @@
 }
 /*End customize arrow*/
 
+/*Customize video responsive*/
+.ctn-video-responsive {
+  display: none;
+}
+/*End customize video responsive*/
+
 /*Customize about us container*/
 .ctn-about-us {
   text-align: center;
@@ -170,7 +176,7 @@ footer h2 {
   color: #fff;
   cursor: pointer;
 }
-.logo img {
+.footer-logo img {
   width: 10em;
   margin-top: 0.7em;
   margin-bottom: 1em;
@@ -238,7 +244,7 @@ mat-divider {
 /*Responsive 800px of width*/
 @media (max-width: 800px) {
   /*Customize container btns*/
-  .ctn-logo{
+  .ctn-logo {
     width: 14em;
     height: 10%;
     float: left;
@@ -246,11 +252,11 @@ mat-divider {
     align-items: center;
     justify-content: center;
   }
-  .logo{
+  .logo {
     width: 10em;
     height: 2.2em;
   }
-  .ctn-btns{
+  .ctn-btns {
     width: calc(100% - 14em);
   }
   /*End customize container btns*/
@@ -260,21 +266,21 @@ mat-divider {
     width: 100%;
     height: 30%;
   }
-  .ctn-title{
+  .ctn-title {
     display: none;
   }
-  .ctn-wlcm{
+  .ctn-wlcm {
     width: 100%;
     height: 100%;
   }
-  .ctn-ax{
+  .ctn-ax {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 65%;
     margin-bottom: 2%;
   }
-  .by{
+  .by {
     height: 30%;
   }
   .ctn-video {
@@ -286,59 +292,154 @@ mat-divider {
     width: 35em;
   }
   /*End customize general container*/
+
+  /*Customize about us text*/
+  .about-us-text {
+    width: 90%;
+  }
+  /*End customize about us text*/
+}
+
+/*Responsive 712px of width*/
+@media (max-width: 712px) {
+  /*Customize footer*/
+  footer {
+    height: 22em;
+  }
+  /*End customize footer*/
 }
 
 /*Responsive 600px of width*/
-@media (max-width: 600px){
+@media (max-width: 600px) {
   /*Customize container btns*/
-  .ctn-logo{
+  .ctn-logo {
     display: none;
   }
-  .ctn-btns{
+  .ctn-btns {
     width: 100%;
   }
   /*End customize container btns*/
 
   /*Customize general container*/
-  .ctn-txt{
+  .ctn-txt {
     height: 90%;
   }
-  .ctn-title{
+  .ctn-title {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 30%;
   }
-  .ctn-wlcm{
+  .ctn-wlcm {
     height: 70%;
   }
-  .ctn-ax{
+  .ctn-ax {
     margin: 0;
     height: 40%;
     padding-top: 2em;
     align-items: flex-start;
   }
-  .by{
+  .by {
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .ctn-video{
+  .ctn-video {
+    display: none;
+  }
+  .preview {
+    display: none;
+  }
+  video::-webkit-media-controls-fullscreen-button {
     display: none;
   }
   /*End customize general container*/
+
+  /*Customize video responsive*/
+  .ctn-video-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20em;
+  }
+  .preview-responsive {
+    width: 30em;
+  }
+  /*End customize video responsive*/
+}
+
+/*Responsive 500px of width*/
+@media (max-width: 500px) {
+  /*Customize video responsive*/
+  .ctn-video-responsive {
+    height: 18em;
+  }
+  .preview-responsive {
+    width: 28em;
+  }
+  /*End customize video responsive*/
+}
+
+/*Responsive 474px of width*/
+@media (max-width: 474px) {
+  /*Customize video responsive*/
+  .ctn-video-responsive {
+    height: 16em;
+  }
+  .preview-responsive {
+    width: 26em;
+  }
+  /*End customize video responsive*/
+}
+
+/*Responsive 433px of width*/
+@media (max-width: 433px) {
+  /*Customize video responsive*/
+  .ctn-video-responsive {
+    height: 14em;
+  }
+  .preview-responsive {
+    width: 24em;
+  }
+  /*End customize video responsive*/
+  /*Customize footer*/
+  footer {
+    height: 25em;
+  }
+  /*End customize footer*/
+}
+
+/*Responsive 397px of width*/
+@media (max-width: 397px) {
+  /*Customize video responsive*/
+  .ctn-video-responsive {
+    height: 14em;
+  }
+  .preview-responsive {
+    width: 22em;
+  }
+  /*End customize video responsive*/
 }
 
 /*Responsive 370px of width*/
-@media(max-width: 370px){
+@media (max-width: 370px) {
   /*Customize btns container*/
-  .ctn-btns{
+  .ctn-btns {
     justify-content: center;
   }
-  .btn-cu{
+  .btn-cu {
     margin-right: 0;
   }
   /*End customize btns container*/
-}
 
+  /*Customize video responsive*/
+  .ctn-video-responsive {
+    height: 14em;
+  }
+  .preview-responsive {
+    width: 21em;
+  }
+  /*End customize video responsive*/
+}
