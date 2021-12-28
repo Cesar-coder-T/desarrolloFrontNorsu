@@ -1,25 +1,30 @@
-*{
+* {
   color: #293347;
   margin: 0;
   padding: 0;
 }
 
 /*Customize general container*/
-.ctn-gnl{
+.ctn-gnl {
   background-color: #fff;
   height: 95%;
   width: 100%;
 }
+/*End customize general container*/
+
+.ctn-logo{
+  display: none;
+}
 
 /*Customize container btn log-in*/
-.ctn-btns{
+.ctn-btns {
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: right;
   align-items: center;
 }
-.log-in{
+.log-in {
   background-color: transparent;
   color: #293347;
   border: 2px solid transparent;
@@ -27,9 +32,9 @@
   height: 80%;
   text-transform: uppercase;
   font-weight: 600;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
-.btn-cu{
+.btn-cu {
   background-color: rgb(7, 160, 180);
   color: #fff;
   border: 2px solid transparent;
@@ -39,63 +44,65 @@
   font-weight: 500;
   margin-right: 2em;
   border-radius: 2em;
-  box-shadow: 0 0 .3em #bbbbbb;
-  transition: .3s ease-in-out;
+  box-shadow: 0 0 0.3em #bbbbbb;
+  transition: 0.3s ease-in-out;
 }
-.btn-cu:hover{
+.btn-cu:hover {
   color: rgb(7, 160, 180);
   background-color: transparent;
   border: 2px solid rgb(7, 160, 180);
   font-weight: bold;
 }
+/*End customize container btn log-in*/
 
-/*Customize welcome container*/
-.ctn-txt{
+/*Customize text container*/
+.ctn-txt {
   width: 35%;
   height: 90%;
   float: left;
 }
 .ctn-title,
-.ctn-wlcm{
+.ctn-wlcm {
   width: 100%;
 }
-.ctn-title{
+.ctn-title {
   height: 45%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 1em;
 }
-.title{
+.title {
   text-transform: uppercase;
   font-weight: bold;
   width: 21em;
 }
-.ctn-wlcm{
+.ctn-wlcm {
   height: 55%;
   padding: 0 1.5em;
 }
-.ctn-ax{
+.ctn-ax {
   height: 80%;
   text-align: center;
 }
-.wlcm{
+.wlcm {
   font-size: 1.5em;
   margin: 0;
 }
-.by{
+.by {
   width: 100%;
   height: calc(20% - 2em);
   text-align: center;
 }
-.mvp{
+.mvp {
   font-size: 1.1em;
   text-transform: uppercase;
   display: inline;
 }
+/*End customize text container*/
 
 /*Customize video container*/
-.ctn-video{
+.ctn-video {
   width: 65%;
   height: 90%;
   float: left;
@@ -103,52 +110,55 @@
   align-items: center;
   justify-content: center;
 }
-.preview{
+.preview {
   width: 80%;
 }
+/*End customize video container*/
 
-.arrow{
+/*Customize arrow*/
+.arrow {
   width: 100%;
   height: 5%;
   text-align: center;
 }
-
-/*Customize arrow*/
-.icon-arrow{
+.icon-arrow {
   color: #293347;
   font-size: 2.5em;
-  margin-top: -.2em;
+  margin-top: -0.2em;
   cursor: pointer;
   animation: floating 3.2s ease-in-out infinite;
 }
-@keyframes floating{
-  0%{
+@keyframes floating {
+  0% {
     transform: translatey(0);
   }
-  50%{
-    transform: translatey(-.5em);
+  50% {
+    transform: translatey(-0.5em);
   }
-  0%{
+  0% {
     transform: translatey(0);
   }
 }
+/*End customize arrow*/
 
 /*Customize about us container*/
-.ctn-about-us{
+.ctn-about-us {
   text-align: center;
   padding-top: 3em;
   padding-bottom: 2em;
 }
-.title-about-us{
+.title-about-us {
   font-size: 1.7em;
 }
-.about-us-text{
+.about-us-text {
   width: 70%;
   margin: 0 auto;
   text-align: justify;
 }
+/*End customize about us container*/
 
-footer{
+/*Customize footer*/
+footer {
   background-color: #293347;
   width: 100%;
   height: 18em;
@@ -156,43 +166,179 @@ footer{
   padding-top: 1em;
   margin-top: 2em;
 }
-footer h2{
+footer h2 {
   color: #fff;
   cursor: pointer;
 }
-.logo img{
+.logo img {
   width: 10em;
-  margin-top: .7em;
+  margin-top: 0.7em;
   margin-bottom: 1em;
 }
 .legal h2,
 .topics h2,
-.copy h2{
+.copy h2 {
   display: inline-block;
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: normal;
 }
-.t-u{
+.t-u {
   margin-right: 3em;
 }
-mat-divider{
+mat-divider {
   background-color: #fff;
   width: 95%;
   margin: 0 auto;
   margin-bottom: 1em;
 }
-.contact h2{
-  font-size: .9em;
+.contact h2 {
+  font-size: 0.9em;
   font-weight: normal;
 }
 .gmail,
 .phone,
 .web,
-.location{
+.location {
   display: inline-block;
 }
 .gmail,
 .phone,
-.web{
+.web {
   margin-right: 2em;
 }
+/*End customize footer*/
+
+/*Responsive 1120px of width*/
+@media (max-width: 1120px) {
+  /*Customize general container*/
+  .ctn-txt {
+    width: 40%;
+  }
+  .ctn-video {
+    width: 60%;
+  }
+  .preview {
+    width: 90%;
+  }
+  /*End customize general container*/
+}
+
+/*Responsive 900px of width*/
+@media (max-width: 900px) {
+  /*Customize general container*/
+  .title {
+    width: 18em;
+  }
+  .preview {
+    width: 95%;
+  }
+  /*End customize general container*/
+}
+
+/*Responsive 800px of width*/
+@media (max-width: 800px) {
+  /*Customize container btns*/
+  .ctn-logo{
+    width: 14em;
+    height: 10%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo{
+    width: 10em;
+    height: 2.2em;
+  }
+  .ctn-btns{
+    width: calc(100% - 14em);
+  }
+  /*End customize container btns*/
+
+  /*Customize general container*/
+  .ctn-txt {
+    width: 100%;
+    height: 30%;
+  }
+  .ctn-title{
+    display: none;
+  }
+  .ctn-wlcm{
+    width: 100%;
+    height: 100%;
+  }
+  .ctn-ax{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 65%;
+    margin-bottom: 2%;
+  }
+  .by{
+    height: 30%;
+  }
+  .ctn-video {
+    width: 100%;
+    height: 60%;
+    align-items: flex-start;
+  }
+  .preview {
+    width: 35em;
+  }
+  /*End customize general container*/
+}
+
+/*Responsive 600px of width*/
+@media (max-width: 600px){
+  /*Customize container btns*/
+  .ctn-logo{
+    display: none;
+  }
+  .ctn-btns{
+    width: 100%;
+  }
+  /*End customize container btns*/
+
+  /*Customize general container*/
+  .ctn-txt{
+    height: 90%;
+  }
+  .ctn-title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 30%;
+  }
+  .ctn-wlcm{
+    height: 70%;
+  }
+  .ctn-ax{
+    margin: 0;
+    height: 40%;
+    padding-top: 2em;
+    align-items: flex-start;
+  }
+  .by{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ctn-video{
+    display: none;
+  }
+  /*End customize general container*/
+}
+
+/*Responsive 370px of width*/
+@media(max-width: 370px){
+  /*Customize btns container*/
+  .ctn-btns{
+    justify-content: center;
+  }
+  .btn-cu{
+    margin-right: 0;
+  }
+  /*End customize btns container*/
+}
+
