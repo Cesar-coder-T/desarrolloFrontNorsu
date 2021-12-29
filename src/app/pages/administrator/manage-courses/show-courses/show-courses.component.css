@@ -1,10 +1,12 @@
+/*Customize courses*/
 .ctn-gnl-cs {
   width: 100%;
   height: auto;
   padding: 0 7%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2%;
+  column-gap: 2%;
+  margin-bottom: 2em;
 }
 .ctn-gnl-cs_course {
   height: 16em;
@@ -29,7 +31,6 @@
   color: #293347;
   text-transform: uppercase;
 }
-
 #btn-edit {
   background-color: transparent;
   color: transparent;
@@ -49,6 +50,7 @@
   background-color: rgb(167, 167, 167);
   opacity: .7;
 }
+/*End customize courses*/
 
 /*Customize skeleton*/
 .ctn-gnl-skts{
@@ -57,7 +59,7 @@
   padding: 0 7%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2%;
+  column-gap: 2%;
   margin-bottom: 2em;
 }
 .ctn-gnl-skts_confg{
@@ -74,4 +76,39 @@
   height: .3em;
   margin: 0;
 }
-/**/
+/*End customize skeleton*/
+
+/*Responsive 950px of width*/
+@media(max-width: 950px){
+  .ctn-gnl-skts{
+    grid-template-columns: repeat(2, 1.5fr);
+    column-gap: 5%;
+    row-gap: 0;
+  }
+}
+
+/*Responsive 750px of width*/
+@media(max-width: 750px){
+  .ctn-gnl-skts{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3%;
+    padding: 0 2%;
+  }
+}
+
+/*Responsive 600px of width*/
+@media(max-width: 600px){
+  .ctn-gnl-skts{
+    grid-template-columns: 21em;
+    gap: 0;
+    padding: 0 7%;
+    justify-content: center;
+  }
+}
+
+/*Responsive 460px of width*/
+@media(max-width: 460px){
+  .ctn-gnl-skts{
+    grid-template-columns: 1fr;
+  }
+}

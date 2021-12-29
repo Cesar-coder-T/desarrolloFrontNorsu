@@ -13,6 +13,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { SkeletonModule } from "primeng/skeleton";
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [],
@@ -30,7 +31,8 @@ import { ProgressBarModule } from 'primeng/progressbar';
     HttpClientModule,
     SkeletonModule,
     ProgressSpinnerModule,
-    ProgressBarModule
+    ProgressBarModule,
+    DropdownModule
   ],
   exports: [
     InputTextModule,
@@ -45,7 +47,8 @@ import { ProgressBarModule } from 'primeng/progressbar';
     HttpClientModule,
     SkeletonModule,
     ProgressSpinnerModule,
-    ProgressBarModule
+    ProgressBarModule,
+    DropdownModule
   ]
 })
 export class PrimengModule { }

@@ -79,4 +79,5 @@ export class AdministratorComponent {
   hasChild = (_: number, node: SideNavNode) =>
     !!node.children && node.children.length > 0;
   /*Default settings for the SideNav's trees.*/
+
 }

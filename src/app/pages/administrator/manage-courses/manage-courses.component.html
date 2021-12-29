@@ -1,24 +1,32 @@
-<div id="ctn-ops">
-  <div id="ctn-ops_sub1">
-  </div>
-  <div id="ctn-ops_sub2">
-    <div id="ctn-ops_sub2_seeker">
-      <mat-icon>search</mat-icon>
-      <input placeholder="Buscar curso">
+<div class="main-ctn">
+  <div class="ctn-filters">
+    <div class="ctn-filter-input">
+      <div class="ctn-filter">
+        <mat-icon class="icon-search">search</mat-icon>
+        <input
+          type="text"
+          class="filter"
+          (input)="enableDeleteBtnInput()"
+          #inputFilter
+        />
+        <mat-icon
+          class="icon-clear"
+          [style.visibility]="visibilityIconClr"
+          (click)="clearInput()"
+          >clear</mat-icon
+        >
+      </div>
+    </div>
+    <div class="ctn-filter-select">
+      <p-dropdown
+        class="filter-select"
+        [style]="stylesSelectFilter"
+        [options]="filter"
+        [(ngModel)]="selectedFilter"
+        optionLabel="name"
+      ></p-dropdown>
     </div>
   </div>
-  <div id="ctn-ops_sub3">
-    <select>
-      <option selected disabled>Visibilidad</option>
-      <option
-        class="option"
-        *ngFor="let item of filter"
-        [value]="item.id">
-        <span>{{item.name}}</span>
-      </option>
-    </select>
-  </div>
+  <h2 class="title-cs">Cursos</h2>
+  <app-show-courses></app-show-courses>
 </div>
-
-<h2>Cursos</h2>
-<app-show-courses></app-show-courses>
