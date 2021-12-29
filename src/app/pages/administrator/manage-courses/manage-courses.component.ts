@@ -32,6 +32,10 @@ export class ManageCoursesComponent implements OnInit {
       { id: 2, name: 'Públicos' },
       { id: 3, name: 'Privados' },
     ];
+    this.selectedFilter = {
+      id: 1,
+      name: "Todos"
+    };
     this.stylesSelectFilter = {
       "width": "10em",
       "height": "2em",

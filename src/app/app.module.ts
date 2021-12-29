@@ -8,7 +8,6 @@ import { PrimengModule } from './prime/primeng/primeng.module';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AboutUsComponent } from './pages/home/about-us/about-us.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { CategoriesComponent } from './pages/preferences/categories/categories.component';
 import { CheckComponent } from './pages/check/check.component';
@@ -32,7 +31,6 @@ import { ShowCoursesComponent } from './pages/administrator/manage-courses/show-
     AppComponent,
     RegistrationComponent,
     HomeComponent,
-    AboutUsComponent,
     PreferencesComponent,
     CategoriesComponent,
     CheckComponent,

@@ -1,13 +1,45 @@
 *,
 ::before,
-::after{
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*Customize new course*/
+.main-ctn__new-course,
+.new-course {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.main-ctn__new-course {
+  width: 100%;
+  height: 5em;
+  margin-top: 2em;
+}
+.new-course {
+  width: 8.5em;
+  height: 2.5em;
+  border-radius: 0.5em;
+  border: 2px solid transparent;
+  font-weight: bold;
+  background-color: #293347;
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out all;
+}
+.new-course:hover {
+  border: 2px solid #293347;
+  color: #293347;
+  background-color: rgb(255, 255, 255);
+}
+.icon-add {
+  margin-right: 0.3em;
+}
+/*End customize new course*/
+
 /*Customize filters container*/
-.ctn-filters{
+.main-ctn__filters {
   width: 100%;
   height: 3em;
   display: flex;
@@ -15,7 +47,7 @@
 /*End customize filters container*/
 
 /*Customize input filter*/
-.ctn-filter-input{
+.main-ctn__filters__input {
   width: 80%;
   height: 100%;
   display: flex;
@@ -23,7 +55,7 @@
   justify-content: center;
   padding-left: 20%;
 }
-.ctn-filter{
+.main-ctn__filters__input__filter {
   width: 300px;
   height: 2em;
   margin: 0;
@@ -32,7 +64,7 @@
   border: 2px solid #293347;
   border-radius: 1em;
 }
-.icon-search{
+.icon-search {
   width: 1.5em;
   height: 100%;
   margin: 0;
@@ -46,16 +78,16 @@
   background-color: transparent;
   cursor: pointer;
 }
-.filter{
+.filter {
   width: calc(100% - 3em);
   height: 100%;
   margin: 0;
-  padding-left: .5em;
+  padding-left: 0.5em;
   border: none;
   outline: none;
   color: #293347;
 }
-.icon-clear{
+.icon-clear {
   width: 1.5em;
   height: 100%;
   margin: 0;
@@ -71,7 +103,7 @@
 /*End customize input filter*/
 
 /*Customize select filter*/
-.ctn-filter-select{
+.main-ctn__filters__select {
   display: flex;
   width: 20%;
   height: 100%;
@@ -80,11 +112,11 @@
 }
 /*End customize select filter*/
 
-.ctn-new-course{
+.main-ctn__new-course {
   display: none;
 }
 
-.title-cs{
+.main-ctn__title {
   color: #293347;
   font-size: 1.4em;
   font-weight: bold;
@@ -93,84 +125,53 @@
 }
 
 /*Responsive 1163px of width*/
-@media(max-width: 1163px){
-  /*Customize new course*/
-  .ctn-new-course,
-  .new-course{
+@media (max-width: 1163px) {
+  .main-ctn__new-course,
+  .new-course {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .ctn-new-course{
-    width: 100%;
-    height: 11em;
-    margin-top: 2em;
-  }
-  .img-new-course{
-    height: 8em;
-    margin-right: 2em;
-  }
-  .new-course{
-    width: 8.5em;
-    height: 2.5em;
-    border-radius: .5em;
-    border: 2px solid transparent;
-    font-weight: bold;
-    background-color: #293347;
-    color: rgb(255, 255, 255);
-    transition: .3s ease-in-out all;
-  }
-  .new-course:hover{
-    border: 2px solid #293347;
-    color: #293347;
-    background-color: rgb(255, 255, 255);
-  }
-  .icon-add{
-    margin-right: .3em;
-  }
-  /*End customize new course*/
 }
 
 /*Responsive 900px of width*/
-@media(max-width: 900px){
-  .ctn-filter-input{
+@media (max-width: 900px) {
+  .main-ctn__filters__input {
     width: 70%;
   }
-  .ctn-filter-select{
+  .main-ctn__filters__select {
     width: 30%;
     justify-content: center;
   }
 }
 
 /*Responsive 750px of width*/
-@media(max-width: 750px){
-  .title-cs{
+@media (max-width: 750px) {
+  .main-ctn__title {
     margin-left: 0;
     text-align: center;
   }
 }
 
 /*Responsive 688px of width*/
-@media(max-width: 688px){
-  .ctn-filter-input{
+@media (max-width: 688px) {
+  .main-ctn__filters__input {
     padding-left: 0;
   }
-  .ctn-filter-select{
+  .main-ctn__filters__select {
     justify-content: left;
   }
 }
 
 /*Responsive 630px of width*/
-@media(max-width: 630px){
-  .ctn-filters{
+@media (max-width: 630px) {
+  .main-ctn__filters {
     height: 6em;
     display: block;
   }
-  .ctn-filter-input{
+  .main-ctn__filters__input {
     width: 100%;
     height: 3em;
   }
-  .ctn-filter-select{
+  .main-ctn__filters__select {
     width: 100%;
     height: 3em;
     justify-content: center;
@@ -178,8 +179,16 @@
 }
 
 /*Responsive 420px of width*/
-@media(max-width: 420px){
-  .icon-up{
+@media (max-width: 420px) {
+  .icon-up {
+    display: flex;
+  }
+}
+
+/*Responsive 662px of height*/
+@media (max-height: 662px) {
+  .main-ctn__new-course,
+  .new-course {
     display: flex;
   }
 }

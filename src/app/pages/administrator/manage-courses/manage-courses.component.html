@@ -1,7 +1,9 @@
 <div class="main-ctn">
-  <div class="ctn-filters">
-    <div class="ctn-filter-input">
-      <div class="ctn-filter">
+  <!--Filters-->
+  <div class="main-ctn__filters">
+    <!--Text filter-->
+    <div class="main-ctn__filters__input">
+      <div class="main-ctn__filters__input__filter">
         <mat-icon class="icon-search">search</mat-icon>
         <input
           type="text"
@@ -17,7 +19,9 @@
         >
       </div>
     </div>
-    <div class="ctn-filter-select">
+    <!--End text filter-->
+    <!--Select filter-->
+    <div class="main-ctn__filters__select">
       <p-dropdown
         class="filter-select"
         [style]="stylesSelectFilter"
@@ -26,18 +30,17 @@
         optionLabel="name"
       ></p-dropdown>
     </div>
+    <!--End select filter-->
   </div>
-  <div class="ctn-new-course">
-    <img
-      src="../../../../assets/images/online-course.png"
-      alt="crear-curso"
-      class="img-new-course"
-    />
+  <!--End filters-->
+  <!--Create course-->
+  <div class="main-ctn__new-course">
     <button class="new-course" routerLink="/administrador/crear-curso">
       <mat-icon class="icon-add">add_circle</mat-icon>
       Crear curso
     </button>
   </div>
-  <h2 class="title-cs">Cursos</h2>
+  <!--End create course-->
+  <h2 class="main-ctn__title">Cursos ({{selectedFilter.name}})</h2>
   <app-show-courses></app-show-courses>
 </div>
