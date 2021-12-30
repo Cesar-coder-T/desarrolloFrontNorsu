@@ -1,0 +1,62 @@
+<div class="ctn-generalities">
+  <!--Name course input-->
+  <input
+    class="name-input"
+    type="text"
+    pInputText
+    placeholder="Nombre del curso"
+  />
+  <!--End name course input-->
+  <!--Visibility select-->
+  <p-dropdown
+    [style]="stylesSelect"
+    [options]="visibilitySelect"
+    [(ngModel)]="visibilitySelected"
+    optionLabel="name"
+    optionDisabled="disabled"
+  ></p-dropdown>
+  <!--End visibility select-->
+  <!--Category select-->
+  <p-dropdown
+    [style]="stylesSelect"
+    [options]="categorySelect"
+    [(ngModel)]="categorySelected"
+    optionLabel="name"
+    optionDisabled="disabled"
+  ></p-dropdown>
+  <!--End category select-->
+  <!--Url front image-->
+  <div class="ctn-generalities__url-image">
+    <input
+      class="url-image-input"
+      type="text"
+      [(ngModel)]="UrlFrontImage"
+      pInputText
+      (input)="showDeleteIcon()"
+      placeholder="Url de la imagen de portada"
+    />
+    <mat-icon
+      class="delete-icon"
+      [style.visibility]="styleDeleteIcon"
+      (click)="deleteUrlImage()"
+      >clear</mat-icon
+    >
+  </div>
+  <img
+    [src]="UrlFrontImage"
+    [style.visibility]="styleImgCourse"
+    alt="Portada del curso"
+    class="view-front-image"
+  />
+  <!--End url front image-->
+</div>
+<div class="ctn-btns">
+  <div class="ctn-btns__cancel">
+    <button class="btn-cancel" routerLink="/administrador/gestionar-cursos">
+      Cancelar
+    </button>
+  </div>
+  <div class="ctn-btns__next">
+    <button class="btn-next" (click)="nextPage()">Siguiente</button>
+  </div>
+</div>

@@ -16,7 +16,7 @@ const TREE_DATA: SideNavNode[] = [
     name: 'Cursos',
     children: [
       { name: 'Ver Listado', icon: 'play_lesson', route: 'gestionar-cursos' },
-      { name: 'Crear', icon: 'add_circle_outline', route: 'crear-curso' },
+      { name: 'Crear', icon: 'add_circle_outline', route: 'crear-curso/generalidades' },
     ],
   },
   {

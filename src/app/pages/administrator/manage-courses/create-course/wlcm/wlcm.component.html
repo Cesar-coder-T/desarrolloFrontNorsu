@@ -1,0 +1,10 @@
+<div class="ctn-spinner" *ngIf="stateSpinner">
+    <p-progressSpinner
+      id="spinner"
+      styleClass="custom-spinner"
+      strokeWidth="4"
+      [style]="styleSpinner"
+      animationDuration=".6s">
+    </p-progressSpinner>
+  </div>
+  <button (click)="prevPage()">Previous</button>

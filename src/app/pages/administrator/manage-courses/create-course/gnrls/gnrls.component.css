@@ -1,0 +1,92 @@
+/*Customize generalities container*/
+.ctn-generalities {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+/*End customize generalities container*/
+
+/*Customize generalities form*/
+.name-input,
+.ctn-generalities__url-image {
+  width: 40em;
+  height: 3.5em;
+  border: 0.15em solid #293347;
+  border-radius: 0.4em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.ctn-generalities__url-image {
+  display: flex;
+}
+.url-image-input {
+  width: calc(100% - 1.3em);
+  height: 100%;
+  border-radius: 0.4em 0 0 0.4em;
+  border: none;
+  text-align: center;
+}
+.delete-icon {
+  width: 1.3em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+}
+.view-front-image {
+  width: 20em;
+  height: 13em;
+  margin: 0 auto;
+  background-image: url("../../../../../../assets/images/default_image.png");
+  background-position: 50%;
+  background-size: cover;
+}
+/*End customize generalities form*/
+
+/*Customize Buttons generalities*/
+.ctn-btns {
+  width: 40em;
+  height: 6em;
+  display: flex;
+  margin: 0 auto;
+}
+.ctn-btns__cancel,
+.ctn-btns__next {
+  width: 50%;
+  height: 3em;
+  display: flex;
+}
+.ctn-btns__cancel {
+  justify-content: left;
+}
+.ctn-btns__next {
+  justify-content: right;
+}
+.btn-cancel,
+.btn-next {
+  width: 10em;
+  height: 100%;
+  border: none;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 0.3em;
+  color: rgb(255, 255, 255);
+}
+.btn-cancel {
+  background-color: rgb(214, 42, 76);
+}
+.btn-next {
+  background-color: rgb(18, 139, 209);
+}
+/*End customize Buttons generalities*/
+
+@media (max-width: 750px) {
+  .name-input,
+  .ctn-generalities__url-image,
+  .ctn-btns {
+    width: 30em;
+  }
+}

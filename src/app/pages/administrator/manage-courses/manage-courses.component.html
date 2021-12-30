@@ -9,7 +9,7 @@
           type="text"
           class="filter"
           (input)="enableDeleteBtnInput()"
-          #inputFilter
+          [(ngModel)]="inputFilter"
         />
         <mat-icon
           class="icon-clear"
@@ -35,7 +35,7 @@
   <!--End filters-->
   <!--Create course-->
   <div class="main-ctn__new-course">
-    <button class="new-course" routerLink="/administrador/crear-curso">
+    <button class="new-course" routerLink="/administrador/crear-curso/generalidades">
       <mat-icon class="icon-add">add_circle</mat-icon>
       Crear curso
     </button>

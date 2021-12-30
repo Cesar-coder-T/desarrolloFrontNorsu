@@ -13,8 +13,8 @@ interface Filter {
 })
 export class ManageCoursesComponent implements OnInit {
 
-  /*Access to the input filter through ViewChild annotation*/
-  @ViewChild('inputFilter') inputFilter: any;
+  /*Text filter*/
+  inputFilter: string;
 
   /*Dropdown's options*/
   filter: Filter[];
@@ -45,6 +45,7 @@ export class ManageCoursesComponent implements OnInit {
       "border": "2px solid #293347",
       "outline": "none"
     };
+    this.inputFilter = '';
     this.visibilityIconClr = "hidden";
   }
 
@@ -53,11 +54,14 @@ export class ManageCoursesComponent implements OnInit {
   /*Method that allows enable the visibility of the icon to delete*/
   enableDeleteBtnInput(){
     this.visibilityIconClr = "visible";
+    if(this.inputFilter == ''){
+      this.visibilityIconClr = "hidden";
+    }
   }
 
   /*Method that allows clear the input filter*/
   clearInput(){
-    this.inputFilter.nativeElement.value = '';
+    this.inputFilter = '';
     this.visibilityIconClr = "hidden";
   }
 
