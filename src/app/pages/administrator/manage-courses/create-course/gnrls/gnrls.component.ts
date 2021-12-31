@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 /*Model to select*/
@@ -29,7 +30,7 @@ export class GnrlsComponent implements OnInit {
   /*Category*/
 
   /*Styles select*/
-  stylesSelect: {};
+  stylesSelect!: {};
 
   /*Front image*/
   UrlFrontImage!: string;
@@ -45,7 +46,10 @@ export class GnrlsComponent implements OnInit {
   sellersPermitString!: string;
   /*Image 64 bits*/
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private breakpointObserver: BreakpointObserver
+    ) {
     this.visibilitySelect = [
       { id: 0, name: 'Selección de visibilidad del curso', disabled: true },
       { id: 1, name: 'Público', disabled: false },
@@ -57,33 +61,41 @@ export class GnrlsComponent implements OnInit {
       { id: 2, name: 'Categoría 2', disabled: false },
       { id: 3, name: 'Categoría 3', disabled: false },
     ];
-    this.stylesSelect = {
-      'width': '40em',
-      'height': '3.5em',
-      'display': 'flex',
-      'align-items': 'center',
-      'text-align': 'center',
-      'margin-bottom': '2em',
-      'border-radius': '.4em',
-      'border': '.15em solid #293347'
-    };
     this.styleImgCourse = "hidden";
     this.styleDeleteIcon = "hidden";
   }
 
   ngOnInit(): void {
-    if(window.screen.width <= 750){
-      this.stylesSelect = {
-        "width": "30em",
-        'height': '3.5em',
-        'display': 'flex',
-        'align-items': 'center',
-        'text-align': 'center',
-        'margin-bottom': '2em',
-        'border-radius': '.4em',
-        'border': '.15em solid #293347'
-      };
-    }
+    this.breakpointObserver
+      .observe([
+        Breakpoints.Handset = "(min-width: 750px)",
+        Breakpoints.Handset = "(max-width: 749px)"
+      ])
+      .subscribe((state: BreakpointState) => {
+        if(state.breakpoints[Breakpoints.Handset = "(min-width: 750px)"]){
+          this.stylesSelect = {
+            'width': '40em !important',
+            'height': '3.5em',
+            'display': 'flex',
+            'align-items': 'center',
+            'text-align': 'center',
+            'margin-bottom': '2em',
+            'border-radius': '.4em',
+            'border': '.15em solid #293347',
+          };
+        }else if(state.breakpoints[Breakpoints.Handset = "(max-width: 749px)"]){
+          this.stylesSelect = {
+            'width': '30em !important',
+            'height': '3.5em',
+            'display': 'flex',
+            'align-items': 'center',
+            'text-align': 'center',
+            'margin-bottom': '2em',
+            'border-radius': '.4em',
+            'border': '.15em solid #293347',
+          };
+        }
+      });
   }
 
   /*Load the image*/

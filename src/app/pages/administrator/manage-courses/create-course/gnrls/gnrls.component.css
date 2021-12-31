@@ -34,6 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: #6c757d;
 }
 .view-front-image {
@@ -83,10 +84,56 @@
 }
 /*End customize Buttons generalities*/
 
-@media (max-width: 750px) {
+/*Responsive 749px of width*/
+@media (max-width: 749px) {
   .name-input,
   .ctn-generalities__url-image,
   .ctn-btns {
     width: 30em;
+  }
+}
+
+/*Responsive 589px of width*/
+@media (max-width: 589px) {
+  .name-input,
+  .ctn-generalities__url-image {
+    width: 20em;
+  }
+  .ctn-btns {
+    width: 21em;
+  }
+}
+
+/*Responsive 420px of width*/
+@media (max-width: 420px) {
+  .name-input,
+  .ctn-generalities__url-image,
+  .ctn-btns {
+    width: 22em;
+  }
+  .ctn-btns {
+    height: 10em;
+  }
+}
+
+/*Responsive 360px of width*/
+@media (max-width: 360px) {
+  .name-input,
+  .ctn-generalities__url-image,
+  .ctn-btns {
+    width: 20em;
+  }
+  .btn-cancel,
+  .btn-next {
+    width: 8em;
+  }
+}
+
+/*Responsive 330px of width*/
+@media (max-width: 330px) {
+  .name-input,
+  .ctn-generalities__url-image,
+  .ctn-btns {
+    width: 18em;
   }
 }
