@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [],
@@ -30,7 +31,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSelectModule,
     MatStepperModule,
     MatSnackBarModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTabsModule
   ],
   exports: [
     MatFormFieldModule,
@@ -45,7 +47,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSelectModule,
     MatStepperModule,
     MatSnackBarModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }

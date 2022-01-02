@@ -14,6 +14,7 @@ import { SkeletonModule } from "primeng/skeleton";
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [],
@@ -32,7 +33,8 @@ import { DropdownModule } from 'primeng/dropdown';
     SkeletonModule,
     ProgressSpinnerModule,
     ProgressBarModule,
-    DropdownModule
+    DropdownModule,
+    InputTextareaModule
   ],
   exports: [
     InputTextModule,
@@ -48,7 +50,8 @@ import { DropdownModule } from 'primeng/dropdown';
     SkeletonModule,
     ProgressSpinnerModule,
     ProgressBarModule,
-    DropdownModule
+    DropdownModule,
+    InputTextareaModule
   ]
 })
 export class PrimengModule { }
