@@ -1,77 +1,18 @@
-<h2 class="text-wlcm">Ingrese una bienvenida al curso</h2>
-<div class="ctn-opt">
-  <mat-tab-group
-    class="ctn-opt__tab-group"
-    mat-align-tabs="center"
-    color="primary"
-  >
-    <mat-tab>
-      <ng-template mat-tab-label class="ctn-opt__tab-group__opt">
-        <mat-icon class="icon-wlcm">article</mat-icon>
-        <h3 class="title-wlcm">Texto</h3>
-      </ng-template>
-      <div class="ctn-opt__tab-group__opt_content">
-        <!--Name course text area-->
-        <textarea
-          pInputTextarea
-          [autoResize]="true"
-          class="name-textarea"
-        ></textarea>
-        <!--End name course text area-->
-      </div>
-    </mat-tab>
-
-    <mat-tab>
-      <ng-template mat-tab-label class="ctn-opt__tab-group__opt">
-        <mat-icon class="icon-wlcm">image</mat-icon>
-        <h3 class="title-wlcm">Imagen</h3>
-      </ng-template>
-      <div class="ctn-opt__tab-group__opt_content2">
-        <!--Url front image-->
-        <div class="ctn-generalities__url-image">
-          <input
-            class="url-image-input"
-            type="text"
-            [(ngModel)]="UrlFrontImage"
-            pInputText
-            (input)="showDeleteIcon()"
-            placeholder="Url de la imagen de portada"
-          />
-          <mat-icon
-            class="delete-icon"
-            [style.visibility]="styleDeleteIcon"
-            (click)="deleteUrlImage()"
-            >clear</mat-icon
-          >
-        </div>
-        <img
-          [src]="UrlFrontImage"
-          [style.display]="styleImgCourse"
-          alt="Portada del curso"
-          class="view-front-image"
-        />
-        <!--End url front image-->
-      </div>
-    </mat-tab>
-
-    <mat-tab>
-      <ng-template mat-tab-label class="ctn-opt__tab-group__opt">
-        <mat-icon class="icon-wlcm">smart_display</mat-icon>
-        <h3 class="title-wlcm">Video</h3>
-      </ng-template>
-      <div class="ctn-opt__tab-group__opt_content">
-        <!--Name course input-->
-        <input
-          class="name-input"
-          type="text"
-          pInputText
-        />
-        <!--End name course input-->
-      </div>
-    </mat-tab>
-  </mat-tab-group>
+<h2 class="sub-title">Añade una bienvenida</h2>
+<div class="ctn-gnl">
+  <div class="ctn-gnl__btn-opt">
+    <mat-icon class="icon-wlcm">title</mat-icon>
+    <h3 class="title-wlcm">Texto</h3>
+  </div>
+  <div class="ctn-gnl__btn-opt" style="margin: 0 2em;">
+    <mat-icon class="icon-wlcm">image</mat-icon>
+    <h3 class="title-wlcm">Imagen</h3>
+  </div>
+  <div class="ctn-gnl__btn-opt">
+    <mat-icon class="icon-wlcm">smart_display</mat-icon>
+    <h3 class="title-wlcm">Video</h3>
+  </div>
 </div>
-
 <div class="ctn-spinner" *ngIf="stateSpinner">
   <p-progressSpinner
     id="spinner"

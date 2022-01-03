@@ -61,7 +61,7 @@ export class GnrlsComponent implements OnInit {
       { id: 2, name: 'Categoría 2', disabled: false },
       { id: 3, name: 'Categoría 3', disabled: false },
     ];
-    this.styleImgCourse = "hidden";
+    this.styleImgCourse = "none";
     this.styleDeleteIcon = "hidden";
   }
 
@@ -141,16 +141,16 @@ export class GnrlsComponent implements OnInit {
   /*Delete icon*/
   showDeleteIcon(){
     this.styleDeleteIcon = "visible";
-    this.styleImgCourse = "visible";
+    this.styleImgCourse = "block";
     if(this.UrlFrontImage == ''){
       this.styleDeleteIcon = "hidden";
-      this.styleImgCourse = "hidden";
+      this.styleImgCourse = "none";
     }
   }
   deleteUrlImage(){
     this.UrlFrontImage = '';
     this.styleDeleteIcon = "hidden";
-    this.styleImgCourse = "hidden";
+    this.styleImgCourse = "none";
   }
   /*End delete icon*/
 

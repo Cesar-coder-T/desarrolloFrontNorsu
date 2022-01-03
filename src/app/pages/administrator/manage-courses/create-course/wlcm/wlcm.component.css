@@ -1,103 +1,44 @@
-h2, h3{
-  margin: 0;
+
+.sub-title{
   text-align: center;
+  margin-top: 3em;
 }
-
-.text-wlcm{
-  margin-top: 2em;
-}
-
-.ctn-opt{
+.ctn-gnl{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.ctn-opt__tab-group{
-  width: 100%;
-  height: auto;
-}
-.ctn-opt__tab-group__opt{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #293347;
-}
-
-.ctn-opt__tab-group__opt_content{
-  width: 100%;
-  height: auto;
+  padding-bottom: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 2em;
-  padding-bottom: .5em;
 }
-
-.ctn-opt__tab-group__opt_content2{
-  width: 100%;
-  height: auto;
-  display: grid;
-  justify-content: center;
-  padding-top: 2em;
-}
-
-.name-textarea {
-  width: 40em;
+.ctn-gnl__btn-opt{
+  width: 8em;
   height: 3.5em;
-  border: 0.15em solid #293347;
-  border-radius: 0.4em;
-  text-align: center;
-  padding: .5em 2.5em;
-}
-
-/*Customize generalities form*/
-.name-input,
-.ctn-generalities__url-image {
-  width: 40em;
-  height: 3.5em;
-  border: 0.15em solid #293347;
-  border-radius: 0.4em;
-  margin-bottom: 2em;
-  text-align: center;
-}
-.ctn-generalities__url-image {
-  display: flex;
-}
-.url-image-input {
-  width: calc(100% - 1.3em);
-  height: 100%;
-  border-radius: 0.4em 0 0 0.4em;
-  border: none;
-  text-align: center;
-}
-.delete-icon {
-  width: 1.3em;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: .4em;
+  border: 2px solid transparent;
+  color: rgb(255, 255, 255);
+  background-color: rgb(24, 195, 187);
+}
+.ctn-gnl__btn-opt:hover{
+  border: 2px solid rgb(24, 195, 187);
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
-  color: #6c757d;
 }
-.view-front-image {
-  width: 20em;
-  height: 13em;
-  margin: 0 auto;
-  background-image: url("../../../../../../assets/images/default_image.png");
-  background-position: 50%;
-  background-size: cover;
+.ctn-gnl__btn-opt:hover .icon-wlcm,
+.ctn-gnl__btn-opt:hover .title-wlcm{
+  color: rgb(24, 195, 187);
 }
-/*End customize generalities form*/
-
-.name-input {
-  width: 40em;
-  height: 3.5em;
-  border: 0.15em solid #293347;
-  border-radius: 0.4em;
-  text-align: center;
+.icon-wlcm{
+  width: auto;
+  height: auto;
+  font-size: 2em;
+  margin-right: .2em;
+}
+.title-wlcm{
+  margin: 0;
+  font-weight: 500;
 }
 
 /*Customize Buttons generalities*/
