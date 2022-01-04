@@ -1,8 +1,12 @@
 
+/*Customize welcome title*/
 .sub-title{
   text-align: center;
   margin-top: 3em;
 }
+/*End customize welcome title*/
+
+/*Welcome option buttons customization*/
 .ctn-gnl{
   width: 100%;
   padding-bottom: 2em;
@@ -36,10 +40,16 @@
   font-size: 2em;
   margin-right: .2em;
 }
+.title-wlcm-small{
+  display: none;
+  margin: 0;
+  font-weight: 500;
+}
 .title-wlcm{
   margin: 0;
   font-weight: 500;
 }
+/*End welcome option buttons customization*/
 
 /*Customize Buttons generalities*/
 .ctn-btns {
@@ -77,3 +87,67 @@
   background-color: rgb(18, 139, 209);
 }
 /*End customize Buttons generalities*/
+
+/*Responsive 749px of width*/
+@media (max-width: 749px) {
+  .ctn-btns {
+    width: 30em;
+  }
+}
+
+/*Responsive 589px of width*/
+@media (max-width: 589px) {
+  .ctn-btns {
+    width: 21em;
+  }
+}
+
+/*Responsive 536px of width*/
+@media (max-width: 536px) {
+  /*Customize welcome title*/
+  .sub-title{
+    display: none;
+  }
+  /*End customize welcome title*/
+
+  /*Welcome option buttons customization*/
+  .ctn-gnl{
+    display: grid;
+    row-gap: 1em;
+    margin-top: 4em;
+  }
+  .title-wlcm-small{
+    display: inline-block;
+  }
+  .ctn-gnl__btn-opt{
+    margin: 0 !important;
+    width: 15em;
+  }
+  /*End welcome option buttons customization*/
+}
+
+/*Responsive 420px of width*/
+@media (max-width: 420px) {
+  .ctn-btns {
+    width: 22em;
+    height: 10em;
+  }
+}
+
+/*Responsive 360px of width*/
+@media (max-width: 360px) {
+  .ctn-btns {
+    width: 20em;
+  }
+  .btn-cancel,
+  .btn-next {
+    width: 8em;
+  }
+}
+
+/*Responsive 330px of width*/
+@media (max-width: 330px) {
+  .ctn-btns {
+    width: 18em;
+  }
+}

@@ -1,43 +1,79 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>
-      <img id="avatar" src="https://marriedbiography.com/wp-content/uploads/2017/03/drew.jpg">
-    </mat-toolbar>
-    <mat-nav-list>
-      <mat-icon
-        class="icons"
-        routerLink="/colaborador/mis-cursos"
-        routerLinkActive="active">auto_stories</mat-icon>
-      <mat-icon
-        class="icons"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Sidenav small-->
+    <nav class="side-nav-small">
+      <div class="ctn-profile">
+        <img
+          src="https://reflectionscc.com/wp-content/uploads/2018/10/blank-male-silhouette-300x300.jpg"
+          alt="Foto de perfil"
+          class="profile"
+          routerLink="/colaborador/mi-perfil"
+        />
+      </div>
+      <div class="ctn-icons-sidenav-small">
+        <mat-icon
+          class="icon-sidenav-small"
+          id="book-icon"
+          routerLink="/colaborador/mis-cursos"
+          routerLinkActive="isActiveSmall"
+          >play_lesson</mat-icon
+        >
+        <h3 class="text-hover1">Cursos</h3>
+      </div>
+      <div class="ctn-icons-sidenav-small">
+        <mat-icon
+          class="icon-sidenav-small"
+          id="certificates-icon"
+          routerLink="/administrador/gestionar-empresas"
+          routerLinkActive="isActiveSmall"
+          >library_books</mat-icon
+        >
+        <h3 class="text-hover2">Certificados</h3>
+      </div>
+      <div class="ctn-log-out">
+        <mat-icon class="icon-log-out" routerLink="">logout</mat-icon>
+      </div>
+    </nav>
+    <!--End sidenav small-->
+    <!--Main content-->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+    <!--End main Content-->
+    <!--Sidenav app-->
+    <nav class="side-nav-app">
+      <div
+        class="ctn-option-sidenav-app"
+        *ngFor="let option of options"
+        [routerLink]="option.route"
+        routerLinkActive="isActiveApp"
+      >
+        <div class="ctn-icon-option">
+          <mat-icon class="icon-option-sidenav-app">{{ option.icon }}</mat-icon>
+        </div>
+        <div class="ctn-title-option">
+          <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
+        </div>
+      </div>
+      <div
+        class="ctn-option-sidenav-app"
         routerLink=""
-        routerLinkActive="">library_books</mat-icon>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <!--ToolBar-->
-    <div id="toolbar">
-      <mat-toolbar>
-        <button
-        type="button"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-        <div id="ctn-h1">
-            <h1>Mis Cursos</h1>
+      >
+        <div class="ctn-icon-option">
+          <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
         </div>
-        <div id="logo">
-            <img id="Norsu" src="../assets/images/Norsu_white.png" alt="Norsu" routerLink="">
+        <div class="ctn-title-option">
+          <h2 class="title-option-sidenav-app">Salir</h2>
         </div>
-      </mat-toolbar>
-  </div>
-  <!--ToolBar-->
-    <!-- Add Content Here -->
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+      </div>
+    </nav>
+    <!--End sidenav app-->
+  </body>
+</html>

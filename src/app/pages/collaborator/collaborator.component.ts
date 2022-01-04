@@ -11,14 +11,26 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class CollaboratorComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  options: any;
 
-  constructor(
-    private breakpointObserver: BreakpointObserver
-    ) {}
+  constructor() {
+    this.options = [
+      {
+        icon: 'play_lesson',
+        title: 'Cursos',
+        route: '/colaborador/mis-cursos',
+      },
+      {
+        icon: 'library_books',
+        title: 'Certificados',
+        route: '/administrador/gestionar-empresas',
+      },
+      {
+        icon: 'account_circle',
+        title: 'Mi Perfil',
+        route: '/colaborador/mi-perfil',
+      }
+    ];
+  }
 
 }

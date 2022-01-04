@@ -27,6 +27,7 @@ import { MgCourseComponent } from './pages/administrator/manage-courses/mg-cours
 import { ShowCoursesComponent } from './pages/administrator/manage-courses/show-courses/show-courses.component';
 import { GnrlsComponent } from './pages/administrator/manage-courses/create-course/gnrls/gnrls.component';
 import { WlcmComponent } from './pages/administrator/manage-courses/create-course/wlcm/wlcm.component';
+import { ProfileComponent } from './pages/collaborator/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { WlcmComponent } from './pages/administrator/manage-courses/create-cours
     MgCourseComponent,
     ShowCoursesComponent,
     GnrlsComponent,
-    WlcmComponent
+    WlcmComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

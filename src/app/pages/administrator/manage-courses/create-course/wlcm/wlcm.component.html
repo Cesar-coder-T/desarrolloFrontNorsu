@@ -1,18 +1,30 @@
 <h2 class="sub-title">Añade una bienvenida</h2>
+<!--Main content-->
 <div class="ctn-gnl">
   <div class="ctn-gnl__btn-opt">
     <mat-icon class="icon-wlcm">title</mat-icon>
-    <h3 class="title-wlcm">Texto</h3>
+    <h3 class="title-wlcm">
+      <h3 class="title-wlcm-small">Añadir</h3>
+      Texto
+    </h3>
   </div>
-  <div class="ctn-gnl__btn-opt" style="margin: 0 2em;">
+  <div class="ctn-gnl__btn-opt" style="margin: 0 2em">
     <mat-icon class="icon-wlcm">image</mat-icon>
-    <h3 class="title-wlcm">Imagen</h3>
+    <h3 class="title-wlcm">
+      <h3 class="title-wlcm-small">Añadir</h3>
+      Imagen
+    </h3>
   </div>
   <div class="ctn-gnl__btn-opt">
     <mat-icon class="icon-wlcm">smart_display</mat-icon>
-    <h3 class="title-wlcm">Video</h3>
+    <h3 class="title-wlcm">
+      <h3 class="title-wlcm-small">Añadir</h3>
+      Video
+    </h3>
   </div>
 </div>
+<!--End main content-->
+<!--Load spinner-->
 <div class="ctn-spinner" *ngIf="stateSpinner">
   <p-progressSpinner
     id="spinner"
@@ -23,6 +35,8 @@
   >
   </p-progressSpinner>
 </div>
+<!--End load spinner-->
+<!--Buttons (back and next)-->
 <div class="ctn-btns">
   <div class="ctn-btns__cancel">
     <button class="btn-cancel" (click)="prevPage()">Regresar</button>
@@ -31,3 +45,4 @@
     <button class="btn-next">Siguiente</button>
   </div>
 </div>
+<!--End buttons (back and next)-->
