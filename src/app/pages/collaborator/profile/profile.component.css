@@ -1,6 +1,7 @@
 .ctn-gnl{
     width: 100%;
     height: 100%;
+    padding: 0;
     padding-top: .5em;
 }
 
@@ -9,6 +10,7 @@
     text-align: center;
     font-size: 1.8em;
     font-weight: 500;
+    margin-bottom: 3em;
     color: #293347;
 }
 
@@ -19,7 +21,9 @@
     padding: 2em 0;
     border-radius: 1.5em;
     box-shadow: 0 0 .4em #293347;
-    margin-left: 2em;
+    margin-left: 5em;
+    float: left;
+    background-color: rgb(255, 255, 255);
 }
 
 /*-----Customize profile's photo*/
@@ -104,3 +108,83 @@
 }
 /*-----End customize profile's others*/
 /*End customize profile's info*/
+
+/*Customize progress container*/
+.ctn-gnl__ctn-progress {
+    width: calc(100% - 30em);
+    height: auto;
+    float: left;
+    padding-bottom: 2em;
+}
+
+/*-----Customize progress*/
+.titles-progress{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: .5em;
+}
+.ctn-gnl__ctn-progress__progress {
+    width: 65%;
+    height: 15em;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*----------Customize achievements*/
+.ctn-gnl__ctn-progress__progress__ctn-achievements {
+    display: flex;
+    width: 100%;
+    height: 5em;
+}
+.ctn-gnl__ctn-progress__progress__ctn-achievements__icon {
+    width: 8em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-achievements {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+.title-achievement {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 8em);
+    height: 100%;
+    margin: 0;
+}
+/*----------End customize achievements*/
+
+/*----------Customize courses completed*/
+.ctn-gnl__ctn-progress__progress__courses-completed {
+    display: flex;
+    width: 100%;
+    height: 8em;
+    margin-bottom: 1em;
+}
+.ctn-gnl__ctn-progress__progress__courses-completed__ctn-foreground {
+    width: 17em;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 1em;
+}
+.foreground-course {
+    width: 14em;
+    height: 100%;
+}
+.title-course-completed {
+    width: calc(100% - 17em);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/*----------End customize courses completed*/
+
+/*-----End customize progress*/
+
+/*End customize progress container*/

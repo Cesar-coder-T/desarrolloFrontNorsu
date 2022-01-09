@@ -9,7 +9,7 @@
   <body>
     <!--Sidenav small-->
     <nav class="side-nav-small">
-      <div class="ctn-profile">
+      <div class="ctn-profile" routerLinkActive="isActiveSmallProfile">
         <img
           src="https://reflectionscc.com/wp-content/uploads/2018/10/blank-male-silhouette-300x300.jpg"
           alt="Foto de perfil"
@@ -25,7 +25,6 @@
           routerLinkActive="isActiveSmall"
           >play_lesson</mat-icon
         >
-        <h3 class="text-hover1">Cursos</h3>
       </div>
       <div class="ctn-icons-sidenav-small">
         <mat-icon
@@ -35,7 +34,6 @@
           routerLinkActive="isActiveSmall"
           >library_books</mat-icon
         >
-        <h3 class="text-hover2">Certificados</h3>
       </div>
       <div class="ctn-log-out">
         <mat-icon class="icon-log-out" routerLink="">logout</mat-icon>
@@ -62,10 +60,7 @@
           <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
         </div>
       </div>
-      <div
-        class="ctn-option-sidenav-app"
-        routerLink=""
-      >
+      <div class="ctn-option-sidenav-app" routerLink="">
         <div class="ctn-icon-option">
           <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
         </div>

@@ -1,5 +1,6 @@
 <div class="ctn-gnl">
   <h1 class="title">Mi Perfil</h1>
+  <!--Info profile-->
   <div class="ctn-gnl__ctn-info-profile">
     <div class="ctn-gnl__ctn-info-profile__photo">
       <img
@@ -10,13 +11,56 @@
       <mat-icon class="icon-edit-photo">photo_camera</mat-icon>
     </div>
     <div class="ctn-gnl__ctn-info-profile__name">
-        <h2 class="name">Rodólfo Antonio Cobos Pagdo</h2>
-        <mat-icon class="icon-edit-name">edit</mat-icon>
+      <h2 class="name">Rodólfo Antonio Cobos Pagdo</h2>
+      <mat-icon class="icon-edit-name">edit</mat-icon>
     </div>
     <div class="ctn-gnl__ctn-info-profile__others">
-        <h3 class="email">rodolfoantoniocobospagdo@gmail.com</h3>
-        <h3 class="company">Movip S.A.S</h3>
-        <h3 class="role">Colaborador</h3>
+      <h3 class="email">rodolfoantoniocobospagdo@gmail.com</h3>
+      <h3 class="company">Movip S.A.S</h3>
+      <h3 class="role">Colaborador</h3>
     </div>
   </div>
+  <!--End info profile-->
+  <!--Personal progress-->
+  <div class="ctn-gnl__ctn-progress">
+    <!--Achievements-->
+    <h2 class="titles-progress">Logros</h2>
+    <div class="ctn-gnl__ctn-progress__progress">
+      <div
+        class="ctn-gnl__ctn-progress__progress__ctn-achievements"
+        *ngFor="let achievement of achievements"
+      >
+        <div class="ctn-gnl__ctn-progress__progress__ctn-achievements__icon">
+          <img
+            [src]="achievement.icon"
+            alt="icono del logro"
+            class="icon-achievements"
+          />
+        </div>
+        <h3 class="title-achievement">{{ achievement.text }}</h3>
+      </div>
+    </div>
+    <!--End achievements-->
+    <!--Courses completed-->
+    <h2 class="titles-progress" style="margin-top: 2em">Cursos Completados</h2>
+    <div class="ctn-gnl__ctn-progress__progress">
+      <div
+        class="ctn-gnl__ctn-progress__progress__courses-completed"
+        *ngFor="let courseCompleted of coursesCompleted"
+      >
+        <div
+          class="ctn-gnl__ctn-progress__progress__courses-completed__ctn-foreground"
+        >
+          <img
+            [src]="courseCompleted.foreground"
+            alt="Portada del curso"
+            class="foreground-course"
+          />
+        </div>
+        <h3 class="title-course-completed">{{courseCompleted.text}}</h3>
+      </div>
+    </div>
+    <!--End courses completed-->
+  </div>
+  <!--End personal progress-->
 </div>
