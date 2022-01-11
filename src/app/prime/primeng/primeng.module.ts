@@ -16,6 +16,7 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [],
@@ -36,7 +37,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     ProgressBarModule,
     DropdownModule,
     InputTextareaModule,
-    SelectButtonModule
+    SelectButtonModule,
+    DialogModule
   ],
   exports: [
     InputTextModule,
@@ -54,7 +56,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     ProgressBarModule,
     DropdownModule,
     InputTextareaModule,
-    SelectButtonModule
+    SelectButtonModule,
+    DialogModule
   ]
 })
 export class PrimengModule { }
