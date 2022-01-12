@@ -1,22 +1,61 @@
 <div class="ctn-gnl">
-  <h1 class="title">Mi Perfil</h1>
+  <h1 class="title">Mi perfil</h1>
   <!--Info profile-->
   <div class="ctn-gnl__ctn-info-profile">
     <div class="ctn-gnl__ctn-info-profile__photo">
+      <!--Photo's skeleton-->
+      <p-skeleton
+        width="17em"
+        height="17em"
+        borderRadius="50%"
+        *ngIf="stateSklt"
+      ></p-skeleton>
+      <!--End photo's skeleton-->
+      <!--(API) Profile's info-->
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHqMWOPbuZolCgjRsW9rjBf91QAzARJ9oDpQ&usqp=CAU"
+        src="https://reflectionscc.com/wp-content/uploads/2018/10/blank-male-silhouette-300x300.jpg"
         alt="Foto de perfil"
         class="image-profile"
+        *ngIf="stateOthers"
       />
       <mat-icon class="icon-edit-photo">photo_camera</mat-icon>
+      <!--End (API) Profile's info-->
     </div>
     <div class="ctn-gnl__ctn-info-profile__name">
-      <h2 class="name">{{name}}</h2>
+      <!--Name's skeleton-->
+      <div class="ctn-gnl__ctn-info-profile__name__sklt" *ngIf="stateSklt">
+        <p-skeleton class="sklt-name"></p-skeleton>
+      </div>
+      <div class="ctn-gnl__ctn-info-profile__name__sklt" *ngIf="stateSklt">
+        <p-skeleton class="sklt-name"></p-skeleton>
+      </div>
+      <!--End name's skeleton-->
+      <!--(API) Profile's info-->
+      <h2 class="name" *ngIf="stateOthers">{{ name }}</h2>
+      <!--End (API) Profile's info-->
     </div>
     <div class="ctn-gnl__ctn-info-profile__others">
-      <h3 class="email">rodolfoantoniocobospagdo@gmail.com</h3>
-      <h3 class="company">Movip S.A.S</h3>
-      <h3 class="role">Colaborador</h3>
+      <!--Other info skeleton-->
+      <div class="ctn-gnl__ctn-info-profile__others__sklt" *ngIf="stateSklt">
+        <p-skeleton class="sklt-name"></p-skeleton>
+      </div>
+      <div class="ctn-gnl__ctn-info-profile__others__sklt" *ngIf="stateSklt">
+        <p-skeleton class="sklt-name"></p-skeleton>
+      </div>
+      <div class="ctn-gnl__ctn-info-profile__others__sklt" *ngIf="stateSklt">
+        <p-skeleton class="sklt-name"></p-skeleton>
+      </div>
+      <div class="ctn-gnl__ctn-info-profile__others__sklt" *ngIf="stateSklt">
+        <p-skeleton class="sklt-name"></p-skeleton>
+      </div>
+      <!--End other info skeleton-->
+      <!--(API) Profile's info-->
+      <h3 class="email" *ngIf="stateOthers">
+        rodolfoantoniocobospagdo@gmail.com
+      </h3>
+      <h3 class="company" *ngIf="stateOthers">Movip S.A.S</h3>
+      <h3 class="role" *ngIf="stateOthers">Colaborador</h3>
+      <!--End (API) Profile's info-->
     </div>
   </div>
   <!--End info profile-->
@@ -30,13 +69,36 @@
         *ngFor="let achievement of achievements"
       >
         <div class="ctn-gnl__ctn-progress__progress__ctn-achievements__icon">
+          <!--Achievements icon skeleton-->
+          <p-skeleton
+            borderRadius="50%"
+            width="4em"
+            height="4em"
+            *ngIf="stateSklt"
+          ></p-skeleton>
+          <!--End achievements icon skeleton-->
+          <!--(API) Achievements icon-->
           <img
             [src]="achievement.icon"
             alt="icono del logro"
             class="icon-achievements"
+            *ngIf="stateOthers"
           />
+          <!--End (API) Achievements icon-->
         </div>
-        <h3 class="title-achievement">{{ achievement.text }}</h3>
+        <!--Achievements text skeleton-->
+        <div
+          class="ctn-gnl__ctn-progress__progress__ctn-achievements__ctn-text-achievements-sklt"
+          *ngIf="stateSklt"
+        >
+          <p-skeleton class="text-achievements-sklt"></p-skeleton>
+        </div>
+        <!--End Achievements text skeleton-->
+        <!--(API) Achievements text-->
+        <h3 class="title-achievement" *ngIf="stateOthers">
+          {{ achievement.text }}
+        </h3>
+        <!--End (API) Achievements text-->
       </div>
     </div>
     <!--End achievements-->
@@ -52,13 +114,37 @@
         <div
           class="ctn-gnl__ctn-progress__progress__courses-completed__ctn-foreground"
         >
+          <!--Achievements icon skeleton-->
+          <p-skeleton
+            class="foreground-sklt"
+            width="14em"
+            height="100%"
+            *ngIf="stateSklt"
+          ></p-skeleton>
+          <!--End achievements icon skeleton-->
+          <!--(API) Course completed foreground-->
           <img
             [src]="courseCompleted.foreground"
             alt="Portada del curso"
             class="foreground-course"
+            *ngIf="stateOthers"
           />
+          <!--End (API) Course completed foreground-->
         </div>
-        <h3 class="title-course-completed">{{ courseCompleted.text }}</h3>
+        <!--Course completed title skeleton-->
+        <div
+          class="ctn-gnl__ctn-progress__progress__courses-completed__ctn-text-course-completed-sklt"
+          *ngIf="stateSklt"
+        >
+          <p-skeleton class="text-course-completed-sklt"></p-skeleton>
+          <p-skeleton class="text-course-completed-sklt"></p-skeleton>
+        </div>
+        <!--End Course completed title skeleton-->
+        <!--(API) Course completed title-->
+        <h3 class="title-course-completed" *ngIf="stateOthers">
+          {{ courseCompleted.text }}
+        </h3>
+        <!--End (API) Course completed title-->
       </div>
     </div>
     <!--End courses completed-->

@@ -17,11 +17,22 @@ interface CoursesCompleted {
 })
 export class ProfileComponent implements OnInit {
 
+  stateSklt: boolean;
+  /*When the API is implemented remove this*/
+  stateOthers: boolean;
+  /*When the API is implemented remove this*/
+
   name: string;
   achievements: Achievemetns[];
   coursesCompleted: CoursesCompleted[];
 
   constructor() {
+    this.stateSklt = true;
+
+    /*When the API is implemented remove this*/
+    this.stateOthers = false;
+    /*When the API is implemented remove this*/
+
     this.name = "Rodólfo Antonio Cobos Pagdo";
     this.achievements = [
       {

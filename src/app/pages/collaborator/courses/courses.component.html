@@ -1,14 +1,15 @@
+<h1 class="title">Cursos</h1>
 <div class="ctn-accordion">
   <mat-accordion [multi]="true">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        <mat-panel-title><h2>Cursos en proceso</h2></mat-panel-title>
+        <mat-panel-title><h2>En proceso</h2></mat-panel-title>
       </mat-expansion-panel-header>
       No tienes cursos en proceso
     </mat-expansion-panel>
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header>
-        <mat-panel-title><h2>Otros cursos disponibles</h2></mat-panel-title>
+        <mat-panel-title><h2>Otros disponibles</h2></mat-panel-title>
       </mat-expansion-panel-header>
       <div class="ctn-gnl-skts" *ngIf="stateSkl">
         <div class="ctn-gnl-skts_confg" *ngFor="let skl of skls">

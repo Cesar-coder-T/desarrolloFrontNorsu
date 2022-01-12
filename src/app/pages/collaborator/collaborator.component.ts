@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-collaborator',
@@ -11,10 +7,17 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class CollaboratorComponent {
 
+  /*SideNav App options*/
   options: any;
 
   constructor() {
+    /*SideNav App options*/
     this.options = [
+      {
+        icon: 'account_circle',
+        title: 'Mi Perfil',
+        route: '/colaborador/mi-perfil',
+      },
       {
         icon: 'play_lesson',
         title: 'Cursos',
@@ -23,14 +26,10 @@ export class CollaboratorComponent {
       {
         icon: 'library_books',
         title: 'Certificados',
-        route: '/administrador/gestionar-empresas',
-      },
-      {
-        icon: 'account_circle',
-        title: 'Mi Perfil',
-        route: '/colaborador/mi-perfil',
+        route: '/colaborador/mis-certificados',
       }
     ];
+    /*End sideNav App options*/
   }
 
 }

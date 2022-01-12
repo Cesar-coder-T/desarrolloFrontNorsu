@@ -30,7 +30,7 @@
         <mat-icon
           class="icon-sidenav-small"
           id="certificates-icon"
-          routerLink="/administrador/gestionar-empresas"
+          routerLink="/colaborador/mis-certificados"
           routerLinkActive="isActiveSmall"
           >library_books</mat-icon
         >
@@ -53,20 +53,12 @@
         [routerLink]="option.route"
         routerLinkActive="isActiveApp"
       >
-        <div class="ctn-icon-option">
-          <mat-icon class="icon-option-sidenav-app">{{ option.icon }}</mat-icon>
-        </div>
-        <div class="ctn-title-option">
-          <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
-        </div>
+        <mat-icon class="icon-option-sidenav-app">{{ option.icon }}</mat-icon>
+        <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
       </div>
       <div class="ctn-option-sidenav-app" routerLink="">
-        <div class="ctn-icon-option">
-          <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
-        </div>
-        <div class="ctn-title-option">
-          <h2 class="title-option-sidenav-app">Salir</h2>
-        </div>
+        <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
+        <h2 class="title-option-sidenav-app">Salir</h2>
       </div>
     </nav>
     <!--End sidenav app-->

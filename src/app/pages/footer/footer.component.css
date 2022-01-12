@@ -1,0 +1,69 @@
+/*Customize footer*/
+footer {
+  background-color: #293347;
+  width: 100%;
+  height: 18em;
+  bottom: 0;
+  text-align: center;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+footer h2 {
+  color: #fff;
+  cursor: pointer;
+}
+.footer-logo img {
+  width: 10em;
+  margin-top: 0.7em;
+  margin-bottom: 1em;
+}
+.legal h2,
+.topics h2,
+.copy h2 {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.t-u {
+  margin-right: 3em;
+}
+mat-divider {
+  background-color: #fff;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.contact h2 {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.gmail,
+.phone,
+.web,
+.location {
+  display: inline-block;
+}
+.gmail,
+.phone,
+.web {
+  margin-right: 2em;
+}
+/*End customize footer*/
+
+/*Responsive 712px of width*/
+@media (max-width: 712px) {
+  /*Customize footer*/
+  footer {
+    height: 22em;
+  }
+  /*End customize footer*/
+}
+
+/*Responsive 433px of width*/
+@media (max-width: 433px) {
+    /*Customize footer*/
+    footer {
+      height: 25em;
+    }
+    /*End customize footer*/
+  }
