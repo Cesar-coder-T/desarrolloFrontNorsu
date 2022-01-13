@@ -9,7 +9,7 @@
 /*Customize new course*/
 .main-ctn__new-course,
 .new-course {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -112,24 +112,12 @@
 }
 /*End customize select filter*/
 
-.main-ctn__new-course {
-  display: none;
-}
-
 .main-ctn__title {
   color: #293347;
   font-size: 1.4em;
   font-weight: bold;
   margin-top: 1em;
   margin-left: 7%;
-}
-
-/*Responsive 1163px of width*/
-@media (max-width: 1163px) {
-  .main-ctn__new-course,
-  .new-course {
-    display: flex;
-  }
 }
 
 /*Responsive 900px of width*/

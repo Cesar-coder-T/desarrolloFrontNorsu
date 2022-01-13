@@ -30,6 +30,7 @@ import { WlcmComponent } from './pages/administrator/manage-courses/create-cours
 import { ProfileComponent } from './pages/collaborator/profile/profile.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { CertificatesComponent } from './pages/collaborator/certificates/certificates.component';
+import { ManageAdminsComponent } from './pages/administrator/manage-admins/manage-admins.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { CertificatesComponent } from './pages/collaborator/certificates/certifi
     WlcmComponent,
     ProfileComponent,
     FooterComponent,
-    CertificatesComponent
+    CertificatesComponent,
+    ManageAdminsComponent
   ],
   imports: [
     BrowserModule,

@@ -13,45 +13,69 @@ body {
   min-height: 100vh;
 }
 
-/*Customize sidenav*/
-.side-nav {
-  background-color: #293347;
+/*Customize main content*/
+.content {
+  background-color: rgb(255, 255, 255);
+  width: calc(100% - 5em);
   height: 100%;
-  width: 13em;
+}
+/*End customize main content*/
+
+/*Customize SideNav small*/
+.side-nav-small {
+  background-color: #293347;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 5em;
   padding-top: 1em;
   position: sticky;
   top: 0;
   left: 0;
 }
-.ctn-logo {
-  width: 100%;
-  height: 3em;
+.ctn-profile {
+  width: 4em;
+  height: 4em;
+  margin: 0 auto;
+  margin-bottom: 3.5em;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.logo {
-  width: 80%;
-  height: 2.3em;
-}
-.divider {
-  background-color: rgb(255, 255, 255);
-  margin: 0.5em auto;
-  width: 100%;
-}
-.ctn-adm-title {
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  height: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-}
-.adm-title {
-  margin: 0;
-  color: #293347;
+  border-radius: 50%;
+  position: relative;
   background-color: transparent;
+}
+.profile {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ctn-icons-sidenav-small {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.5em;
+  display: flex;
+  justify-content: center;
+}
+.icon-sidenav-small {
+  font-size: 24px;
+  margin: 0;
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #293347;
+  transition: 0.2s ease-in-out all;
+}
+.isActiveSmall {
+  color: #293347;
+  background-color: #fff;
+}
+.isActiveSmallProfile {
+  background-color: rgb(255, 255, 255);
 }
 .ctn-log-out {
   width: 100%;
@@ -63,160 +87,9 @@ body {
   color: rgb(255, 255, 255);
 }
 .icon-log-out {
-  width: 1em;
-  justify-content: center;
-  margin-left: 0.55em;
-}
-.title-log-out {
-  width: calc(100% - 1.5em);
-  margin: 0;
-  margin-left: 0.5em;
-  font-size: 16px;
-  font-weight: normal;
-}
-.icon-log-out,
-.title-log-out {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-/*End customize sidenav*/
-
-/*Customize main content*/
-.content {
-  background-color: rgb(255, 255, 255);
-  width: calc(100% - 13em);
-  height: 100%;
-}
-/*End customize main content*/
-
-/*Customize SideNav's tree*/
-mat-tree {
-  margin-top: 2em;
-}
-.tree-invisible {
-  display: none;
-}
-.tree ul,
-.tree li {
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style-type: none;
-}
-.mat-tree-node {
-  background-color: #293347;
-  color: rgb(255, 255, 255);
-  transition: 0.2s ease-in-out;
-}
-.option-icon {
-  margin-right: 0.5em;
-  cursor: pointer;
-}
-.option-title {
-  font-size: 1em !important;
-  font-weight: normal !important;
-  margin: 0;
-  height: 100%;
-  cursor: pointer;
-}
-.isActive {
-  background-color: #1691a1;
-  border-radius: 0 -10% -10% 0 !important;
-}
-.tree div[role="group"] > .mat-tree-node {
-  padding-left: 4em;
-}
-/*End customize SideNav's tree*/
-
-/*Customize SideNav small*/
-.side-nav-small {
-  display: none;
-  background-color: #293347;
-  color: rgb(255, 255, 255);
-  height: 100%;
-  width: 5em;
-  padding-top: 1em;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-.logo2 {
-  width: 80%;
-  height: 2.3em;
-}
-.ctn-icons-sidenav-small {
-  width: 100%;
-  height: 2em;
-  margin-bottom: 2em;
-  display: flex;
-  justify-content: center;
-}
-.icon-sidenav-small {
+  margin: 0 auto;
   font-size: 24px;
-  margin: 0;
-  margin-bottom: 1.5em;
   cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: #293347;
-  transition: 0.2s ease-in-out all;
-}
-.text-hover1,
-.text-hover2,
-.text-hover3 {
-  font-size: 0.8em;
-  background-color: rgb(30, 160, 149);
-  height: 2em;
-  padding: 0 0.5em;
-  border: none;
-  border-radius: 0 0.6em 0 0.6em;
-  position: absolute;
-  animation: moving 2s infinite alternate-reverse;
-  visibility: hidden;
-}
-@keyframes moving {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(0.3em);
-  }
-  0% {
-    transform: translateX(0);
-  }
-}
-.text-hover1 {
-  right: -3em;
-  top: 9.62em;
-}
-.text-hover2 {
-  right: -4.3em;
-  top: 14.62em;
-}
-.text-hover3 {
-  right: -7.15em;
-  top: 19em;
-}
-#book-icon:hover ~ .text-hover1 {
-  visibility: visible;
-}
-#business-icon:hover ~ .text-hover2 {
-  visibility: visible;
-}
-#groups-icon:hover ~ .text-hover3 {
-  visibility: visible;
-}
-.isActiveSmall {
-  color: #293347;
-  background-color: #fff;
-  margin-left: 20%;
-  padding-left: 0.5em;
-  width: 80%;
-  height: 100%;
-  border: none;
-  border-radius: 0.6em 0 0 0.6em;
 }
 /*End customize SideNav small*/
 
@@ -224,9 +97,8 @@ mat-tree {
 .side-nav-app {
   width: 100%;
   height: 4em;
+  position: sticky;
   display: none;
-  position: absolute;
-  bottom: 0;
   z-index: 99;
   padding: 0;
   background-color: rgb(255, 255, 255);
@@ -236,83 +108,47 @@ mat-tree {
   width: 25%;
   height: 100%;
   display: grid;
-  float: left;
-}
-.ctn-icon-option {
-  height: 100%;
+  align-items: center;
+  justify-content: center;
   padding-top: 0.4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.ctn-title-option {
-  height: 1em;
+.icon-option-sidenav-app {
+  width: auto;
+  height: auto;
+  font-size: 1.5em;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: #293347;
 }
 .title-option-sidenav-app {
   margin: 0;
   padding: 0;
   font-size: 0.7em;
 }
-.isActiveApp {
+.isActiveApp,
+.isActiveApp .icon-option-sidenav-app {
   color: rgb(30, 160, 149);
 }
 /*End customize SideNav app*/
 
-/*Responsive 1163px of width*/
-@media (max-width: 1163px) {
-  .side-nav {
-    display: none;
-  }
-  .side-nav-small {
-    display: block;
-  }
-  .ctn-logo {
-    margin-bottom: 3.5em;
-  }
-  .icon-log-out {
-    margin: 0 auto;
-    font-size: 24px;
-  }
-  .content {
-    width: calc(100% - 5em);
-  }
-}
-
-/*Responsive 662px of height*/
-@media (max-height: 662px) {
-  .side-nav {
-    display: none;
-  }
-  .side-nav-small {
-    display: block;
-  }
-  .ctn-logo {
-    margin-bottom: 3.5em;
-  }
-  .icon-log-out {
-    margin: 0 auto;
-    font-size: 24px;
-  }
-  .content {
-    width: calc(100% - 5em);
-  }
-}
-
 /*Responsive 420px of width*/
 @media (max-width: 420px) {
+  body {
+    overflow-x: auto;
+    display: block;
+    position: relative;
+    min-height: auto;
+  }
   .side-nav-small {
     display: none;
   }
   .side-nav-app {
-    display: block;
+    display: flex;
   }
   .content {
     width: 100%;
-    padding: 0;
-    position: relative;
+    height: calc(100% - 4em);
     overflow-y: scroll;
   }
 }

@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ManageAdminsComponent } from '../pages/administrator/manage-admins/manage-admins.component';
 import { CreateCourseComponent } from '../pages/administrator/manage-courses/create-course/create-course.component';
 import { GnrlsComponent } from '../pages/administrator/manage-courses/create-course/gnrls/gnrls.component';
 import { WlcmComponent } from '../pages/administrator/manage-courses/create-course/wlcm/wlcm.component';
@@ -16,4 +17,5 @@ export const ADMINISTRATOR_ROUTES: Routes = [
     ],
   },
   { path: 'gestionar-curso/:nombre', component: MgCourseComponent },
+  { path: 'gestionar-administradores', component: ManageAdminsComponent }
 ];
