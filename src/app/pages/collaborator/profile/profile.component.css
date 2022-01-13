@@ -132,6 +132,17 @@
 
 /*End customize profile's info*/
 
+/*Customize app profile's info skeleton*/
+.ctn-gnl__app-info-profile {
+  display: none;
+  width: 100%;
+  height: 20em;
+  padding: 1em 0;
+  background-color: #293347;
+}
+
+/*End Customize app profile's info skeleton*/
+
 /*Customize progress container*/
 .ctn-gnl__ctn-progress {
   width: calc(100% - 30em);
@@ -169,6 +180,7 @@
 }
 .icon-achievements {
   width: 4em;
+  height: 4em;
   border-radius: 50%;
 }
 .title-achievement {
@@ -410,7 +422,7 @@
     font-size: 1.5em;
     width: 10em;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
   }
 
   /*----------Customize name's skeleton*/
@@ -531,11 +543,11 @@
 
 /*Responsive 420px of width*/
 @media (max-width: 420px) {
+  .title {
+    margin-top: 1em;
+  }
   .ctn-gnl__ctn-progress {
     padding-bottom: 3em;
-  }
-  .title {
-    margin-bottom: 1em;
   }
 }
 
