@@ -17,6 +17,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DialogModule } from 'primeng/dialog';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
 
 @NgModule({
   declarations: [],
@@ -38,6 +39,7 @@ import { DialogModule } from 'primeng/dialog';
     DropdownModule,
     InputTextareaModule,
     SelectButtonModule,
+    ScrollPanelModule,
     DialogModule
   ],
   exports: [
@@ -57,6 +59,7 @@ import { DialogModule } from 'primeng/dialog';
     DropdownModule,
     InputTextareaModule,
     SelectButtonModule,
+    ScrollPanelModule,
     DialogModule
   ]
 })

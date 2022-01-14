@@ -1,161 +1,258 @@
 /*Global customization*/
 *{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .material-icons{
-  font-family: 'Material Icons' !important;
+font-family: 'Material Icons' !important;
 }
 body{
-    background-color: transparent;
-  }
-a{
-    color: rgb(46, 147, 191) !important;
-    cursor: pointer;
+  background-color: transparent;
 }
-  #headerText{
-    text-align: left;
-    margin-top: 2em;
-  }
+a{
+  color: rgb(46, 147, 191) !important;
+  cursor: pointer;
+}
+.headerText{
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  font-size: 18px;
+}
 
-  .icono-clave{
-    cursor: pointer; 
-    font-size: 1.1em;
-    margin-left: -2em;
-    color: rgb(53, 47, 47);
-  }
-  .icono-clave:hover{
-    color: rgb(29, 33, 47);
-  }
-  
-  #tableForm{
-    width: 50%;
-    background-color: rgb(255, 255, 255);
-    margin:auto;
-  }
-  #tableForm h1 {
-    color: rgb(29, 33, 47);
-    font-size: 18px;
+.stepText{
+  text-align: left;
+  margin-top: 1vh;
+  font-size: 14.5px;
+}
+
+.fullnameText{
+  text-align: left;
+  margin-top: 1vh;
+  font-size: 14.5px;
+  font-weight: bold;
+}
+
+.passwordHeaderText{
+  text-align: left;
+  margin-top: 1vh;
+  font-size: 14.5px;
+  font-weight: bold;
+}
+
+.icono-clave{
+  cursor: pointer; 
+  font-size: 1.1em;
+  margin-left: -2em;
+  color: rgb(29, 33, 47);
+}
+.icono-clave:hover{
+  color: rgb(29, 33, 47);
+}
+
+#tableForm{
+  width: 50%;
+  background-color: transparent;
+  margin:auto;
+}
+#tableForm h1 {
+  color: rgb(29, 33, 47);
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+#backButton{
+  background-color: transparent;
+  color:rgb(29, 33, 47) !important;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  margin-right: 6%;
+  float: right;
+  border: none;
+}
+#backButton:hover{
+  font-size: 18px;
+}
+
+#registerButton{
+  background-color: rgb(29, 33, 47);
+  color:white;
+  border-radius: 5px; 
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  border: none;
+}
+#registerButton:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 1em rgb(29, 33, 47);
+  color: rgb(29, 33, 47);
+  font-weight: bold;
+}
+#barraProgresoCirculo{
+  margin-left: 13%;
+  position: fixed;
+  z-index: 99;
+}
+#tr{
+  align-content: center;
+  background-color: rgb(209, 245, 245);
+  width: 10px ;
+  height: 40px;
+}
+
+#textField{
     text-align: center;
-    font-weight: bold;
-  }
-  #backButton{
-    background-color: transparent;
-    color:rgb(46, 147, 191) !important;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    height: 40px;
-    margin-left: 6%;
-    border: none;
-  }
-  #registerButton{
-    background-color: rgb(29, 33, 47);
-    color:white;
-    border-radius: 5px; 
-    cursor: pointer;
-    width: 100%;
-    height: 40px;
-    border: none;
-  }
-  #registerButton:hover{
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 1em rgb(29, 33, 47);
-    color: rgb(29, 33, 47);
-    font-weight: bold;
-  }
-  #barraProgresoCirculo{
-    margin-left: 13%;
-    position: fixed;
-    z-index: 99;
-  }
-  #tr{
-    align-content: center;
-    background-color: rgb(209, 245, 245);
-    width: 10px ;
-    height: 40px;
-  }
- 
-  #textField{
-      text-align: center;
-      color: rgb(29, 33, 47) !important;
-      border: 2px solid rgb(29, 33, 47);
-      border-radius: 6px;
-      height: 45px;
-      width: 100%;
-      outline: none;
-  }
-  #textField2{
-    text-align: center;
-    background-color: rgb(255, 255, 255);
     color: rgb(29, 33, 47) !important;
     border: 2px solid rgb(29, 33, 47);
     border-radius: 6px;
     height: 45px;
     width: 100%;
+    outline: none;
+    background-color: rgba(29, 33, 47, 0.05);
+    margin-bottom: 3vh;
 }
-#textField3{
+#textField2{
   text-align: center;
-  background-color: lightgray;
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 33, 47) !important;
   border: 2px solid rgb(29, 33, 47);
   border-radius: 6px;
   height: 45px;
   width: 100%;
+}
+#textField3{
+text-align: center;
+background-color: lightgray;
+border: 2px solid rgb(29, 33, 47);
+border-radius: 6px;
+height: 45px;
+width: 100%;
 }  
 #textCompany{
-  color: rgb(29, 33, 47) !important;
+color: rgb(29, 33, 47) !important;
+font-weight: bold;
+}
+#headerBox{
+  width: 80%;
+  margin: 0 auto;
+}
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: rgb(29, 33, 47) !important;
+ }
+.boton-tool:hover{
+color: white;
+}
+.textContainer{
+  display: block;
+  width: 80%;
+  margin: 3vh 10%;
+}
+#buttonContainer{
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+#captchaContainer{
+  margin: auto;
+  margin-top: 1em;
+  display: block;
+  width: 90%;
+}
+#checkContainer{
+  margin: auto;
+  margin-top: 1em;
+  display: block;
+  width: 90%;
+}
+#expansionContainer{
+  margin: auto;
+  margin-top: 2em;
+  display: block;
+}
+#expansionPanel{
+  background-color: gray !important;
+  color: rgb(255,255,255) !important;
+}
+#expansionTittle{
+  color: rgb(255,255,255) !important;
+  text-align: center;
   font-weight: bold;
 }
-  #headerBox{
-    width: 80%;
-    margin: 0 auto;
+#space{
+  margin-top: 2.5em;
+  display: block;
+  background-color: transparent;
+  height: 1.5em;
+}
+#Norsu{
+  width: 24%;
+  margin-left: 38%;
+  margin-right: 38%;
+}
+
+#containerAgreement{
+  width: 100%;
+  height: 35vh;
+  margin: 2vh 0;
+  background-color: rgb(29, 33, 47);
+  border-radius: 1vh;
+}
+
+#textAgreement{
+text-align: justify;
+font-size: 14px;
+font-weight: light;
+color: rgb(255, 255, 255);
+}
+
+#textNote{
+text-align: center;
+font-size: 12px;
+font-weight: bold;
+color: rgb(29, 33, 47);
+width: 80%;
+margin: auto 10%;
+}
+
+#passwordNote{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(64, 103, 247);
+  width: 70%;
+  margin: 0 15%;
+  margin-bottom: 1vh;
+  cursor: pointer;
   }
-  ::ng-deep.mat-form-field-ripple {
-    /*change color of underline when focused*/
-    background-color: rgb(29, 33, 47) !important;
-   }
-  .boton-tool:hover{
-  color: white;
+
+#passwordNote:hover{
+  font-size: 16px;
+}
+
+#containerAgreement div{
+height: 5%;
+}
+
+#registerNote{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(64, 103, 247);
+  width: 70%;
+  margin: 0 15%;
+  margin-bottom: 1vh;
+  cursor: pointer;
   }
-  #textContainer{
-    display: block;
-    width: 80%;
-    margin: 1em auto;
-  }
-  #buttonContainer{
-    margin: auto;
-    display: block;
-    width: 80%;
-  }
-  
-  #captchaContainer{
-    margin: auto;
-    margin-top: 1em;
-    display: block;
-    width: 90%;
-  }
-  #checkContainer{
-    margin: auto;
-    margin-top: 1em;
-    display: block;
-    width: 90%;
-  }
-  #expansionContainer{
-    margin: auto;
-    margin-top: 2em;
-    display: block;
-  }
-  #expansionPanel{
-    background-color: gray !important;
-    color: rgb(255,255,255) !important;
-  }
-  #expansionTittle{
-    color: rgb(255,255,255) !important;
-    text-align: center;
-    font-weight: bold;
-  }
-  #space{
-    margin-top: 3em;
-    display: block;
-    background-color: transparent;
-    height: 5em;
-  }
+
+#registerNote:hover{
+  font-size: 16px;
+}
+
+#dividerAgreement{
+background-color: aliceblue;
+width: 90%;
+margin: auto 5%;
+}

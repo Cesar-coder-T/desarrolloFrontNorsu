@@ -11,7 +11,7 @@ import { COLLABORATOR_ROUTES } from './routes/collaborator.routes';
 
 
 const routes: Routes = [
-  {path: 'registro', component: RegistrationComponent},
+  {path: 'sesiones', component: RegistrationComponent},
   {path: 'preferencias', component: PreferencesComponent},
   {path: 'verificacion', component: CheckComponent},
   {path: 'colaborador', component: CollaboratorComponent, children: COLLABORATOR_ROUTES},

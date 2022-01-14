@@ -24,7 +24,7 @@ export class RegistrationComponent implements OnInit {
   /**
    * Form responsible for storing the contributor's record attributes
    */
-   registrationForm!: FormGroup;
+  registrationForm!: FormGroup;
 
   contrasena1!: string;
   contrasena2!: string;
@@ -34,10 +34,11 @@ export class RegistrationComponent implements OnInit {
   colorVar2!: string;
   validador!: number;
   correo!: string;
-  empresa: string = "Empresa prueba";
   value1!: boolean;
   value2!: boolean;
   captchaValue!: boolean;
+  step!: number;
+  activLogin!: boolean;
 
   hide = true;
   /**
@@ -48,19 +49,22 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private router: Router,
     private snackBar: MatSnackBar,
+    private status: AppComponent,
     private apiRegistration: RegistrationService
   ) {
-    this.value1=false;
-    this.value2=false;
-    this.captchaValue=false;
-    };
+    this.value1 = false;
+    this.value2 = false;
+    this.captchaValue = false;
+    this.activLogin = true;
+    this.step = 1;
+  };
   /*
     showResponse(response: any) {
       console.log(response);
   }*/
-    showResponse(event: any) {
-        this.captchaValue=true;
-    }
+  showResponse(event: any) {
+    this.captchaValue = true;
+  }
   /**
      *
      * A method that runs immediately after the constructor and activates the component content.
@@ -75,16 +79,44 @@ export class RegistrationComponent implements OnInit {
       password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]),
       referralCode: new FormControl('', [Validators.minLength(10), Validators.maxLength(10)]),
       dateBirth: new FormControl(new Date().toDateString()),
-      val1: new FormControl(false,Validators.requiredTrue),
-      val2: new FormControl(false,Validators.requiredTrue)
+      val1: new FormControl(false, Validators.requiredTrue),
+      val2: new FormControl(false, Validators.requiredTrue)
     });
   }
+
+  /**
+   * Method in charge of the validation of mail in the database
+   */
+  validateMail() {
+    if (this.registrationForm.value['electronicMail'] == "correo@correo.com") {
+      this.step = 2;
+    }else{
+      alert("Correo no registrado");
+    }
+  }
+
+  /**
+   * Method in charge of activating the corresponding step in the form
+   */
+  activateStep(){
+    this.step += 1;
+  }
+
+  /**
+   * Method in charge of activating the registration 
+   * form and deactivating the login form.
+   */
+  activateRegister(){
+    this.activLogin=false;
+  }
+
   /**
    * Method that captures and loads the information from
    * the registration form into the user object. Finally,
    * it saves the user's information in the database.
    */
   onRegister() {
+    alert("registrado");
     let user = new Registration;
     if (this.contrasena1 == this.contrasena2) {
       this.validador = 1;
@@ -104,7 +136,7 @@ export class RegistrationComponent implements OnInit {
       }
       user.idRole = 2;
     }
-    if (this.validador == 1) {
+    /*if (this.validador == 1) {
       this.apiRegistration.registro(user).subscribe(data => {
         this.snackBar.open('¡¡Usuario registrado satisfactoriamente!!', 'Info', {
           duration: 2000,
@@ -139,7 +171,12 @@ export class RegistrationComponent implements OnInit {
         duration: 2000,
       });
       }
-    }
+    }*/
+  }
+
+
+  onLogin(){
+    alert("loggeado");
   }
 
 
@@ -168,21 +205,21 @@ export class RegistrationComponent implements OnInit {
    */
   securityPasswordControl(): void {
 
-    if (this.validationSecurity(this.contrasena1) == 0 && this.contrasena1.length <=15){
+    if (this.validationSecurity(this.contrasena1) == 0 && this.contrasena1.length <= 15) {
       this.colorVar2 = '#ff0000';
       this.mensaje2 = 'Seguridad: Baja';
-    }else{
-      if ((this.validationSecurity(this.contrasena1) == 0 && this.contrasena1.length >15)||(this.validationSecurity(this.contrasena1) == 1 && this.contrasena1.length <=15)){
+    } else {
+      if ((this.validationSecurity(this.contrasena1) == 0 && this.contrasena1.length > 15) || (this.validationSecurity(this.contrasena1) == 1 && this.contrasena1.length <= 15)) {
         this.colorVar2 = '#ffa500';
         this.mensaje2 = 'Seguridad: Media';
-      }else{
-        if ((this.validationSecurity(this.contrasena1) == 1 && this.contrasena1.length >15)||(this.validationSecurity(this.contrasena1) == 2 && this.contrasena1.length <=10)){
+      } else {
+        if ((this.validationSecurity(this.contrasena1) == 1 && this.contrasena1.length > 15) || (this.validationSecurity(this.contrasena1) == 2 && this.contrasena1.length <= 10)) {
           this.colorVar2 = '#008000';
           this.mensaje2 = 'Seguridad: Alta';
-        }else{
-          if ((this.validationSecurity(this.contrasena1) == 2 && this.contrasena1.length >10)||(this.validationSecurity(this.contrasena1) == 3)){
+        } else {
+          if ((this.validationSecurity(this.contrasena1) == 2 && this.contrasena1.length > 10) || (this.validationSecurity(this.contrasena1) == 3)) {
             this.colorVar2 = '#4b0082';
-        this.mensaje2 = 'Seguridad: Muy Alta';
+            this.mensaje2 = 'Seguridad: Muy Alta';
           }
         }
       }
