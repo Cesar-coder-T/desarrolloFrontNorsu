@@ -55,6 +55,7 @@ body {
   height: auto;
   margin-bottom: 2.5em;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .icon-sidenav-small {
@@ -67,8 +68,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #293347;
+  z-index: 99;
   transition: 0.2s ease-in-out all;
+  background-color: #293347;
 }
 .isActiveSmall {
   color: #293347;

@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body onselectstart="return false">
     <!--Sidenav small-->
     <nav class="side-nav-small">
       <div class="ctn-profile" routerLinkActive="isActiveSmallProfile">
+        <!--Profile's skeleton-->
+        <p-skeleton
+          width="3.5em"
+          height="3.5em"
+          borderRadius="50%"
+          [style.cursor]="'pointer'"
+          routerLink="/colaborador/mi-perfil"
+          *ngIf="stateSklt"
+        ></p-skeleton>
+        <!--End profile's skeleton-->
         <img
           src="https://reflectionscc.com/wp-content/uploads/2018/10/blank-male-silhouette-300x300.jpg"
           alt="Foto de perfil"
           class="profile"
           routerLink="/colaborador/mi-perfil"
+          *ngIf="stateInfo"
         />
       </div>
       <div class="ctn-icons-sidenav-small">
