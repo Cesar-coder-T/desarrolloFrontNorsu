@@ -28,22 +28,15 @@
           *ngIf="stateInfo"
         />
       </div>
-      <div class="ctn-icons-sidenav-small">
+      <div
+        class="ctn-icons-sidenav-small"
+        *ngFor="let option of optionsSmallMenu"
+      >
         <mat-icon
           class="icon-sidenav-small"
-          id="book-icon"
-          routerLink="/colaborador/mis-cursos"
+          [routerLink]="option.route"
           routerLinkActive="isActiveSmall"
-          >play_lesson</mat-icon
-        >
-      </div>
-      <div class="ctn-icons-sidenav-small">
-        <mat-icon
-          class="icon-sidenav-small"
-          id="certificates-icon"
-          routerLink="/colaborador/mis-certificados"
-          routerLinkActive="isActiveSmall"
-          >library_books</mat-icon
+          >{{ option.icon }}</mat-icon
         >
       </div>
       <div class="ctn-log-out">
@@ -58,19 +51,87 @@
     <!--End main Content-->
     <!--Sidenav app-->
     <nav class="side-nav-app">
+      <!--Main options-->
       <div
         class="ctn-option-sidenav-app"
         *ngFor="let option of options"
         [routerLink]="option.route"
         routerLinkActive="isActiveApp"
+        (click)="closeOtherOptions()"
       >
         <mat-icon class="icon-option-sidenav-app">{{ option.icon }}</mat-icon>
-        <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
       </div>
-      <div class="ctn-option-sidenav-app" routerLink="">
-        <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
-        <h2 class="title-option-sidenav-app">Salir</h2>
+      <div class="ctn-option-sidenav-app" (click)="showOtherOptions()">
+        <!--Skeleton profile option-->
+        <p-skeleton
+          width="32px"
+          height="32px"
+          borderRadius="50%"
+          *ngIf="stateSklt"
+        ></p-skeleton>
+        <!--End skeleton profile option-->
+        <!--Profile option-->
+        <img
+          src="https://reflectionscc.com/wp-content/uploads/2018/10/blank-male-silhouette-300x300.jpg"
+          alt="Foto de perfil"
+          [style]="stylesProfileOptionMenu"
+          *ngIf="stateInfo"
+        />
+        <!--End profile option-->
       </div>
+      <!--Main options-->
+      <!--Other options-->
+      <div
+        class="other-options-sidenav-app"
+        [style.display]="visibilityOtherOptions"
+      >
+        <div class="other-options-sidenav-app__ctn-profile">
+          <!--Skeleton profile other options-->
+          <div
+            class="other-options-sidenav-app__ctn-profile__ctn-sklt-photo"
+            *ngIf="stateSklt"
+          >
+            <p-skeleton
+              width="4.5em"
+              height="4.5em"
+              borderRadius="50%"
+            ></p-skeleton>
+          </div>
+          <div
+            class="other-options-sidenav-app__ctn-profile__ctn-sklt-name"
+            *ngIf="stateSklt"
+          >
+            <p-skeleton width="13em" height="1em"></p-skeleton>
+            <p-skeleton width="13em" height="1em"></p-skeleton>
+          </div>
+          <!--End keleton profile other options-->
+          <!--(API) Profile other options-->
+          <img
+            src="https://reflectionscc.com/wp-content/uploads/2018/10/blank-male-silhouette-300x300.jpg"
+            alt="Foto de perfil"
+            class="photo-profile-other-options"
+            *ngIf="stateInfo"
+          />
+          <h2 class="name-profile-other-options" *ngIf="stateInfo">
+            Rodolfo Antonio Cobos Pagdo
+          </h2>
+          <!--End (API) Profile other options-->
+        </div>
+        <div
+          class="other-options-sidenav-app__ctn-other-options"
+          *ngFor="let otherOption of otherOptions"
+          [routerLink]="otherOption.route"
+          (click)="showOtherOptions()"
+        >
+          <mat-icon class="icon-other-option">{{ otherOption.icon }}</mat-icon>
+          <h2 class="other-option-text">{{ otherOption.title }}</h2>
+        </div>
+        <div class="other-options-sidenav-app__ctn-log-out" routerLink="">
+          <mat-icon class="icon-log-out-other-options">logout</mat-icon>
+          <h2 class="log-out-text">Cerrar Sesión</h2>
+        </div>
+      </div>
+      <!--Other options-->
     </nav>
     <!--End sidenav app-->
   </body>

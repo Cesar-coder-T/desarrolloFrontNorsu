@@ -31,6 +31,8 @@ import { ProfileComponent } from './pages/collaborator/profile/profile.component
 import { FooterComponent } from './pages/footer/footer.component';
 import { CertificatesComponent } from './pages/collaborator/certificates/certificates.component';
 import { ManageAdminsComponent } from './pages/administrator/manage-admins/manage-admins.component';
+import { SettingsComponent } from './pages/collaborator/settings/settings.component';
+import { NotificationsComponent } from './pages/collaborator/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { ManageAdminsComponent } from './pages/administrator/manage-admins/manag
     ProfileComponent,
     FooterComponent,
     CertificatesComponent,
-    ManageAdminsComponent
+    ManageAdminsComponent,
+    SettingsComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,
