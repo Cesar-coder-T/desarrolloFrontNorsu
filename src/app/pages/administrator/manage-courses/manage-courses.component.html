@@ -3,7 +3,10 @@
   <div class="main-ctn__filters">
     <!--Text filter-->
     <div class="main-ctn__filters__input">
-      <div class="main-ctn__filters__input__filter">
+      <div
+        class="main-ctn__filters__input__filter"
+        (click)="hiddenOtherOptions()"
+      >
         <mat-icon class="icon-search">search</mat-icon>
         <input
           type="text"
@@ -35,12 +38,15 @@
   <!--End filters-->
   <!--Create course-->
   <div class="main-ctn__new-course">
-    <button class="new-course" routerLink="/administrador/crear-curso/generalidades">
+    <button
+      class="new-course"
+      routerLink="/administrador/crear-curso/generalidades"
+    >
       <mat-icon class="icon-add">add_circle</mat-icon>
       Crear curso
     </button>
   </div>
   <!--End create course-->
-  <h2 class="main-ctn__title">Cursos ({{selectedFilter.name}})</h2>
+  <h2 class="main-ctn__title">Cursos ({{ selectedFilter.name }})</h2>
   <app-show-courses></app-show-courses>
 </div>
