@@ -1,37 +1,31 @@
-/*Toolbar customization*/
-#toolbar mat-toolbar{
-    background-color: #fff;
-    border-bottom: 1px solid rgb(0,0,0);
-    height: 4.5em;
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-transform: capitalize;
+  color: #afafaf;
 }
-#ctn-h1{
+
+/*Subtitle*/
+.message {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  text-align: center;
+}
+/*Subtitle*/
+
+/*Responsive 560px of width*/
+@media (max-width: 560px) {
+  .message {
     width: 90%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
 }
-h1{
-    color: #293347;
-    font-size: 1.7em;
-    margin-left: 2em;
-}
-#logo{
-    height: 100%;
-    width: 10%;
-}
-#Norsu{
-    height: 4em;
-    margin-left: 1.5em;
-    cursor: pointer;
-}
-/*End*/
-
-#message{
-    width: 100%;
-    height: 2em;
-    text-align: center;
-    margin-top: 4em;
-    margin-bottom: 2em;
-}
-

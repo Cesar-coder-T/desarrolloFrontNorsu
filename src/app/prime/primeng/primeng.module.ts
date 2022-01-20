@@ -10,14 +10,14 @@ import { StepsModule } from 'primeng/steps';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
 import { CheckboxModule } from 'primeng/checkbox';
-import { SkeletonModule } from "primeng/skeleton";
+import { SkeletonModule } from 'primeng/skeleton';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DialogModule } from 'primeng/dialog';
-import {ScrollPanelModule} from 'primeng/scrollpanel';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 @NgModule({
   declarations: [],
@@ -61,6 +61,6 @@ import {ScrollPanelModule} from 'primeng/scrollpanel';
     SelectButtonModule,
     ScrollPanelModule,
     DialogModule
-  ]
+  ],
 })
-export class PrimengModule { }
+export class PrimengModule {}

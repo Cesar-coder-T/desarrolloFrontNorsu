@@ -1,58 +1,14 @@
-<div id="ctn-codes">
-    <div id="input_1">
-        <input
-            class="codes"
-            [maxlength]="1"
-            placeholder="#"
-            (input)="checkEmpty()"
-            [(ngModel)]="getNumbers[0]">
-    </div>
-    <div id="input_2">
-        <input
-            class="codes"
-            [maxlength]="1"
-            placeholder="#"
-            (input)="checkEmpty()"
-            [(ngModel)]="getNumbers[1]">
-    </div>
-    <div id="input_3">
-        <input
-            class="codes"
-            [maxlength]="1"
-            placeholder="#"
-            (input)="checkEmpty()"
-            [(ngModel)]="getNumbers[2]">
-    </div>
-    <div id="input_4">
-        <input
-            class="codes"
-            [maxlength]="1"
-            placeholder="#"
-            (input)="checkEmpty()"
-            [(ngModel)]="getNumbers[3]">
-    </div>
-    <div id="input_5">
-        <input
-            class="codes"
-            [maxlength]="1"
-            placeholder="#"
-            (input)="checkEmpty()"
-            [(ngModel)]="getNumbers[4]">
-    </div>
-    <div id="input_6">
-        <input
-            class="codes"
-            [maxlength]="1"
-            placeholder="#"
-            (input)="checkEmpty()"
-            [(ngModel)]="getNumbers[5]">
-    </div>
+<div class="ctn-codes">
+  <input type="text" class="code" [maxLength]="6" (input)="checkCode()" [(ngModel)]="code" />
 </div>
-
 <!--Next button-->
-<div id="ctn_btn-end">
-  <button type="button" routerLink="/colaborador/mis-cursos" [disabled]="stateBtb">
-      <a>Finalizar Registro</a>
+<div class="ctn_btn-end">
+  <button
+    routerLink="/colaborador/mis-cursos"
+    [disabled]="stateBtb"
+    [style]="styleBtn"
+  >
+    Finalizar Registro
   </button>
 </div>
 <!--Next button-->

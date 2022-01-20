@@ -1,33 +1,46 @@
-import { Byte } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.css']
+  styleUrls: ['./code.component.css'],
 })
 export class CodeComponent implements OnInit {
 
-  getNumbers = [,,,,,];
+  code: string;
+  styleBtn: {};
   stateBtb: boolean;
 
-  constructor() {this.stateBtb = true;}
-
-  ngOnInit(): void {
+  constructor() {
+    this.code = '';
+    this.styleBtn = {
+      width: "17.5em",
+      height: "2.5em",
+      "border-radius": ".3em"
+    };
+    this.stateBtb = true;
   }
 
-  checkEmpty(){
-    let codeCheck: Byte = 0;
-    this.getNumbers.forEach(element => {
-      if(element != ""){
-        codeCheck += 1;
-      }
-    });
+  ngOnInit(): void {}
 
-    if(codeCheck == 6){
+  checkCode(){
+    if(this.code.length == 6){
       this.stateBtb = false;
+      this.styleBtn = {
+        width: "17.5em",
+        height: "2.5em",
+        border: "none",
+        "border-radius": ".3em",
+        background: "#293347",
+        color: "rgb(255, 255, 255)"
+      };
     }else{
       this.stateBtb = true;
+      this.styleBtn = {
+        width: "17.5em",
+        height: "2.5em",
+        "border-radius": ".3em"
+      };
     }
   }
 

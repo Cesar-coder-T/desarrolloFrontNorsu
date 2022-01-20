@@ -14,7 +14,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [],
@@ -34,7 +34,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSnackBarModule,
     MatTreeModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   exports: [
     MatFormFieldModule,
@@ -51,7 +51,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSnackBarModule,
     MatTreeModule,
     MatTabsModule,
-    MatDividerModule
-  ]
+    MatDividerModule,
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}
