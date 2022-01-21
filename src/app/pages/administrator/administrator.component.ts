@@ -28,6 +28,11 @@ export class AdministratorComponent {
         route: '/administrador/gestionar-cursos',
       },
       {
+        icon: 'category',
+        title: 'Categoria',
+        route: '/administrador/gestionar-categorias',
+      },
+      {
         icon: 'business',
         title: 'Empresas',
         route: '/administrador/gestionar-empresas',

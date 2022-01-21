@@ -33,6 +33,10 @@ import { CertificatesComponent } from './pages/collaborator/certificates/certifi
 import { ManageAdminsComponent } from './pages/administrator/manage-admins/manage-admins.component';
 import { SettingsComponent } from './pages/collaborator/settings/settings.component';
 import { NotificationsComponent } from './pages/collaborator/notifications/notifications.component';
+import { ManageCategoriesComponent } from './pages/administrator/manage-categories/manage-categories.component';
+import { ConfirmDialogComponent } from './pages/administrator/manage-categories/confirm-dialog/confirm-dialog.component';
+
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,9 @@ import { NotificationsComponent } from './pages/collaborator/notifications/notif
     CertificatesComponent,
     ManageAdminsComponent,
     SettingsComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    ManageCategoriesComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,9 +77,9 @@ import { NotificationsComponent } from './pages/collaborator/notifications/notif
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MessageService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

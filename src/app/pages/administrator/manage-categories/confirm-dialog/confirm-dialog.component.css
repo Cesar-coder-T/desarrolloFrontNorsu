@@ -1,0 +1,34 @@
+.question {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #293347;
+}
+.ctn-buttons,
+.ctn-buttons__ctn-cancel,
+.ctn-buttons__ctn-accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ctn-buttons__ctn-cancel,
+.ctn-buttons__ctn-accept {
+    width: 50%;
+    height: 50%;
+}
+.cancel,
+.accept {
+    width: 5em;
+    height: 2.5em;
+    border: none;
+    border-radius: .3em;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+.cancel {
+    background-color: rgb(245, 57, 57);
+}
+.accept {
+    background-color: rgb(49, 177, 216);
+}
