@@ -8,6 +8,7 @@ import { CollaboratorComponent } from './pages/collaborator/collaborator.compone
 import { AdministratorComponent } from './pages/administrator/administrator.component';
 import { ADMINISTRATOR_ROUTES } from './routes/administrator.routes';
 import { COLLABORATOR_ROUTES } from './routes/collaborator.routes';
+import { ShowCompaniesComponent } from './pages/administrator/manage-companies/show-companies/show-companies/show-companies.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'verificacion', component: CheckComponent},
   {path: 'colaborador', component: CollaboratorComponent, children: COLLABORATOR_ROUTES},
   {path: 'administrador', component: AdministratorComponent, children: ADMINISTRATOR_ROUTES},
+  {path: 'empresas', component: ShowCompaniesComponent},
   {path: '', component: HomeComponent}
 ]
 @NgModule({

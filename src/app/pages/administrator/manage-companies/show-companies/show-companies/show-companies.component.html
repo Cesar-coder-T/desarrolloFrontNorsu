@@ -1,0 +1,38 @@
+<div class="grl-spacer"></div>
+
+<div id="ctnHeader">
+<img 
+  src="../assets/images/companyPageIcon.png" 
+  alt="Icono Principal" 
+  id="prin-Icon"/>
+
+<button mat-raised-button id="btnAgregar">
+  <mat-icon>add_circle</mat-icon>&nbsp;Nueva Empresa
+</button>
+</div>
+
+<li 
+  id="tittle">Gestionar Empresas
+</li>
+
+<div class="ctn-gnl-comp">
+  <ng-container *ngIf="companies == undefined">
+    <div class="ctn-gnl-comp_companies2" 
+         *ngFor="let i of [].constructor(4)">
+      <div class="skl-spacer"></div>
+      <p-skeleton shape="circle" size="6.5em"></p-skeleton>
+      <div class="skl-spacer"></div>
+      <p-skeleton width="6.5em" height="2em"></p-skeleton>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="companies != undefined">
+    <div class="ctn-gnl-comp_companies" 
+         *ngFor="let company of companies; let i = index"
+         (click)="selectCompany(companies[i].id)">
+      <img src="{{companies[i].logo}}" 
+           onerror="this.src='../assets/images/companyIcon.png';">
+      <h1>{{companies[i].name}}</h1>
+    </div>
+  </ng-container>
+</div>
+<div class="grl-spacer"></div>

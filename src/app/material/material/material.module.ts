@@ -15,6 +15,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [],
@@ -34,7 +35,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSnackBarModule,
     MatTreeModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatProgressBarModule
   ],
   exports: [
     MatFormFieldModule,
@@ -51,7 +53,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSnackBarModule,
     MatTreeModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatProgressBarModule
   ]
 })
 export class MaterialModule { }
