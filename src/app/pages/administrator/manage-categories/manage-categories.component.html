@@ -1,0 +1,69 @@
+<h1 class="title" onselectstart="return false">Categorías</h1>
+<!--Filters-->
+<div class="main-ctn__filters">
+  <!--Text filter-->
+  <div class="main-ctn__filters__input">
+    <div
+      class="main-ctn__filters__input__filter"
+      (click)="hiddenOtherOptions()"
+    >
+      <mat-icon class="icon-search">search</mat-icon>
+      <input
+        type="text"
+        class="filter"
+        (input)="enableDeleteBtnInput()"
+        [(ngModel)]="inputFilter"
+      />
+      <mat-icon
+        class="icon-clear"
+        [style.visibility]="visibilityIconClr"
+        (click)="clearInput()"
+        >clear</mat-icon
+      >
+    </div>
+  </div>
+  <!--End text filter-->
+</div>
+<!--End filters-->
+<!--Skeleton-->
+<div class="ctn-categories" onselectstart="return false" *ngIf="stateSkeleton">
+  <div class="ctn_categories__ctn-category-skeleton" *ngFor="let skeleton of skeletons">
+    <p-skeleton width="15em" height="17em" borderRadius=".5em"></p-skeleton>
+  </div> 
+</div>
+<!--End skeleton-->
+<!--Categories-->
+<div class="ctn-categories" onselectstart="return false" *ngIf="stateCategory">
+  <div class="ctn-categories__ctn-category" *ngFor="let category of categories">
+    <div class="ctn-categories__ctn-category__category">
+      <img
+        [src]="
+          '../../../../assets/images/categories/' + category.image + '.png'
+        "
+        [alt]="category.name"
+        class="image-category"
+      />
+      <h3 class="name-category">{{ category.name }}</h3>
+      <div class="ctn-categories__ctn-category__category__ctn-options">
+        <h3 class="edit">Editar</h3>
+        <h3 class="delete" (click)="openDialog(category.id)">Eliminar</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End categories-->
+<!--Dialog Message-->
+<p-toast [breakpoints]="{ '520px': { width: '100%', right: '0', left: '0' } }">
+  <ng-template let-message pTemplate="message">
+    <div class="flex flex-column" style="flex: 1">
+      <div class="ctn-first">
+        <mat-icon class="icon-check">check</mat-icon>
+        <h4 class="summary">{{ message.summary }}</h4>
+      </div>
+      <div class="ctn-second">
+        <p class="detail">{{ message.detail }}</p>
+      </div>
+    </div>
+  </ng-template>
+</p-toast>
+<!--End dialog Message-->

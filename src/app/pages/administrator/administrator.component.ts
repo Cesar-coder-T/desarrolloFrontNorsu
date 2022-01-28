@@ -1,39 +1,4 @@
 import { Component } from '@angular/core';
-import { NestedTreeControl } from '@angular/cdk/tree';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
-
-/**
- * SideNav data with nested structure.
- * Each node has a name and an optional list of children.
- */
-interface SideNavNode {
-  name: string;
-  children?: any;
-}
-
-const TREE_DATA: SideNavNode[] = [
-  {
-    name: 'Cursos',
-    children: [
-      { name: 'Ver Listado', icon: 'play_lesson', route: 'gestionar-cursos' },
-      { name: 'Crear', icon: 'add_circle_outline', route: 'crear-curso/generalidades' },
-    ],
-  },
-  {
-    name: 'Empresas',
-    children: [
-      { name: 'Ver Listado', icon: 'business', route: 'ruta' },
-      { name: 'Crear', icon: 'domain_add', route: 'ruta' },
-    ],
-  },
-  {
-    name: 'Administradores',
-    children: [
-      { name: 'Ver Listado', icon: 'groups', route: 'route' },
-      { name: 'Crear', icon: 'person_add_alt', route: 'route' },
-    ],
-  },
-];
 
 @Component({
   selector: 'app-administrator',
@@ -41,24 +6,52 @@ const TREE_DATA: SideNavNode[] = [
   styleUrls: ['./administrator.component.css'],
 })
 export class AdministratorComponent {
-  /*Default settings for the SideNav's trees.*/
-  treeControl = new NestedTreeControl<SideNavNode>((node) => node.children);
-  dataSource = new MatTreeNestedDataSource<SideNavNode>();
-  /*Default settings for the SideNav's trees.*/
 
-  /*Default path for the admin*/
-  path: string;
+  /*Small SideNav*/
+  optionsSmallMenu: any;
+  /*Small SideNav*/
 
   options: any;
 
+  /*Other options*/
+  visibilityOtherOptions: String;
+  iconOther: String;
+  otherOptions: any;
+  /*Other options*/
+
   constructor() {
-    /*Default settings for the SideNav's trees.*/
-    this.dataSource.data = TREE_DATA;
-    /*Default settings for the SideNav's trees.*/
-    this.path = '/administrador/';
+    /*Small SideNav options*/
+    this.optionsSmallMenu = [
+      {
+        icon: 'menu_book',
+        title: 'Cursos',
+        route: '/administrador/gestionar-cursos',
+      },
+      {
+        icon: 'category',
+        title: 'Categoria',
+        route: '/administrador/gestionar-categorias',
+      },
+      {
+        icon: 'business',
+        title: 'Empresas',
+        route: '/administrador/gestionar-empresas',
+      },
+      {
+        icon: 'groups',
+        title: 'Admin',
+        route: '/administrador/gestionar-administradores',
+      },
+      {
+        icon: 'settings',
+        title: 'Configuración',
+        route: '/administrador/configuraciones',
+      }
+    ];
+    /*Small SideNav options*/
     this.options = [
       {
-        icon: 'play_lesson',
+        icon: 'menu_book',
         title: 'Cursos',
         route: '/administrador/gestionar-cursos',
       },
@@ -73,11 +66,32 @@ export class AdministratorComponent {
         route: '/administrador/gestionar-administradores',
       }
     ];
+    /*Other options*/
+    this.visibilityOtherOptions = 'none';
+    this.iconOther = "more_horiz";
+    this.otherOptions = [
+      {
+        icon: 'settings',
+        title: 'Configuración',
+        route: '/administrador/configuraciones',
+      }
+    ];
+    /*Other options*/
   }
 
-  /*Default settings for the SideNav's trees.*/
-  hasChild = (_: number, node: SideNavNode) =>
-    !!node.children && node.children.length > 0;
-  /*Default settings for the SideNav's trees.*/
+  showOtherOptions() {
+    if (this.visibilityOtherOptions == 'none') {
+      this.visibilityOtherOptions = 'block';
+      this.iconOther = "close";
+    } else {
+      this.visibilityOtherOptions = 'none';
+      this.iconOther = "more_horiz";
+    }
+  }
+
+  closeOtherOptions() {
+    this.visibilityOtherOptions = "none";
+    this.iconOther = "more_horiz";
+  }
 
 }

@@ -1,26 +1,43 @@
-<div class="ctn-btns">
-  <mat-button-toggle-group
-    class="gp-pf"
-    appearance="legacy"
-    [(value)] = "selectedValue"
-    #group="matButtonToggleGroup"
-    multiple=true>
-    <mat-button-toggle
-      class="btn-toggle"
-      (click)="checkStateBtns()"
-      *ngFor="let category of categories; let i = index"
-      [value]="categories[i].id">
-      <h3>
-        {{categories[i].name}}
-      </h3>
-    </mat-button-toggle>
-  </mat-button-toggle-group>
+<!--Preferences-->
+<div class="ctn-categories">
+  <div class="category" *ngFor="let category of categories">
+    <label [for]="category.name" class="label-category"
+      ><img
+        class="image-category"
+        [src]="
+          '../../../../assets/images/categories/' + category.image + '.png'
+        "
+        [alt]="category.name"
+      />
+      <h3 class="name-category">{{ category.name }}</h3>
+    </label>
+    <p-checkbox
+      class="checkbox"
+      [value]="category.id"
+      [(ngModel)]="preferences"
+      [inputId]="category.name"
+      (onChange)="stateNextButton()"
+    ></p-checkbox>
+  </div>
 </div>
+<!--End preferences-->
 
-<!--Next button-->
-<div id="ctn_btn-next">
-  <button type="button" routerLink="/verificacion" [disabled]="stateBtb">
-      <a>Siguiente</a>
-  </button>
+<!--Buttons Skip and Next-->
+<div class="ctn-buttons">
+  <!--Skip button-->
+  <div class="ctn_btn-skip">
+    <button routerLink="/verificacion" [disabled]="stateBtnSkip" [style]="styleBtnSkip">
+      Omitir
+    </button>
+  </div>
+  <!--End skip button-->
+
+  <!--Next button-->
+  <div class="ctn_btn-next">
+    <button routerLink="/verificacion" [disabled]="stateBtnNext" [style]="styleBtnNext">
+      Siguiente
+    </button>
+  </div>
+  <!--End next button-->
 </div>
-<!--Next button-->
+<!--End buttons Skip and Next-->

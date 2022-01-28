@@ -9,28 +9,15 @@
   <body onselectstart="return false">
     <!--Sidenav small-->
     <nav class="side-nav-small">
-      <div class="ctn-icons-sidenav-small">
+      <div
+        class="ctn-icons-sidenav-small"
+        *ngFor="let option of optionsSmallMenu"
+      >
         <mat-icon
           class="icon-sidenav-small"
-          routerLink="/administrador/gestionar-cursos"
+          [routerLink]="option.route"
           routerLinkActive="isActiveSmall"
-          >play_lesson</mat-icon
-        >
-      </div>
-      <div class="ctn-icons-sidenav-small">
-        <mat-icon
-          class="icon-sidenav-small"
-          routerLink="/administrador/gestionar-empresas"
-          routerLinkActive="isActiveSmall"
-          >business</mat-icon
-        >
-      </div>
-      <div class="ctn-icons-sidenav-small">
-        <mat-icon
-          class="icon-sidenav-small"
-          routerLink="/administrador/gestionar-administradores"
-          routerLinkActive="isActiveSmall"
-          >groups</mat-icon
+          >{{ option.icon }}</mat-icon
         >
       </div>
       <div class="ctn-log-out">
@@ -45,19 +32,40 @@
     <!--End main Content-->
     <!--Sidenav app-->
     <nav class="side-nav-app">
+      <!--Main options-->
       <div
         class="ctn-option-sidenav-app"
         *ngFor="let option of options"
         [routerLink]="option.route"
         routerLinkActive="isActiveApp"
+        (click)="closeOtherOptions()"
       >
         <mat-icon class="icon-option-sidenav-app">{{ option.icon }}</mat-icon>
-        <h2 class="title-option-sidenav-app">{{ option.title }}</h2>
       </div>
-      <div class="ctn-option-sidenav-app" routerLink="">
-        <mat-icon class="icon-option-sidenav-app">logout</mat-icon>
-        <h2 class="title-option-sidenav-app">Salir</h2>
+      <div class="ctn-option-sidenav-app" (click)="showOtherOptions()">
+        <mat-icon class="icon-option-sidenav-app">{{ iconOther }}</mat-icon>
       </div>
+      <!--Main options-->
+      <!--Other options-->
+      <div
+        class="other-options-sidenav-app"
+        [style.display]="visibilityOtherOptions"
+      >
+        <div
+          class="other-options-sidenav-app__ctn-other-options"
+          *ngFor="let otherOption of otherOptions"
+          [routerLink]="otherOption.route"
+          (click)="showOtherOptions()"
+        >
+          <mat-icon class="icon-other-option">{{ otherOption.icon }}</mat-icon>
+          <h2 class="other-option-text">{{ otherOption.title }}</h2>
+        </div>
+        <div class="other-options-sidenav-app__ctn-log-out" routerLink="">
+          <mat-icon class="icon-log-out-other-options">logout</mat-icon>
+          <h2 class="log-out-text">Cerrar Sesión</h2>
+        </div>
+      </div>
+      <!--Other options-->
     </nav>
     <!--End sidenav app-->
   </body>

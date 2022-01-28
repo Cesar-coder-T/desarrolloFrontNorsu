@@ -32,6 +32,12 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { CertificatesComponent } from './pages/collaborator/certificates/certificates.component';
 import { ManageAdminsComponent } from './pages/administrator/manage-admins/manage-admins.component';
 import { ShowCompaniesComponent } from './pages/administrator/manage-companies/show-companies/show-companies/show-companies.component';
+import { SettingsComponent } from './pages/collaborator/settings/settings.component';
+import { NotificationsComponent } from './pages/collaborator/notifications/notifications.component';
+import { ManageCategoriesComponent } from './pages/administrator/manage-categories/manage-categories.component';
+import { ConfirmDialogComponent } from './pages/administrator/manage-categories/confirm-dialog/confirm-dialog.component';
+
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -55,7 +61,11 @@ import { ShowCompaniesComponent } from './pages/administrator/manage-companies/s
     FooterComponent,
     CertificatesComponent,
     ManageAdminsComponent,
-    ShowCompaniesComponent
+    ShowCompaniesComponent,
+    SettingsComponent,
+    NotificationsComponent,
+    ManageCategoriesComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,9 +79,9 @@ import { ShowCompaniesComponent } from './pages/administrator/manage-companies/s
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MessageService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -7,7 +7,7 @@
   margin-bottom: 2em;
   padding: 0 1em;
   text-transform: capitalize;
-  color: #293347;
+  color: #afafaf;
 }
 
 /*Customize container create admin button*/
@@ -27,6 +27,7 @@
   justify-content: center;
   font-weight: bold;
   text-transform: capitalize;
+  transition: .3s ease-in-out all;
   background-color: #293347;
   color: rgb(255, 255, 255);
 }

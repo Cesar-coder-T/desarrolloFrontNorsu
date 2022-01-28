@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { AdministratorComponent } from '../administrator.component';
 
 /*Model to dropdown's options*/
 interface Filter {
@@ -12,7 +13,6 @@ interface Filter {
   styleUrls: ['./manage-courses.component.css'],
 })
 export class ManageCoursesComponent implements OnInit {
-
   /*Text filter*/
   inputFilter: string;
 
@@ -26,7 +26,7 @@ export class ManageCoursesComponent implements OnInit {
   /*Define the visibility of the filter's delete icon*/
   visibilityIconClr: string;
 
-  constructor() {
+  constructor(private admin: AdministratorComponent) {
     this.filter = [
       { id: 1, name: 'Todos' },
       { id: 2, name: 'Públicos' },
@@ -34,35 +34,43 @@ export class ManageCoursesComponent implements OnInit {
     ];
     this.selectedFilter = {
       id: 1,
-      name: "Todos"
+      name: 'Todos',
     };
     this.stylesSelectFilter = {
-      "width": "10em",
-      "height": "2em",
-      "display": "flex",
-      "align-items": "center",
-      "color": "#293347",
-      "border": "2px solid #293347",
-      "outline": "none"
+      width: '10em',
+      height: '2em',
+      display: 'flex',
+      'align-items': 'center',
+      color: '#293347',
+      border: '2px solid #293347',
+      outline: 'none',
     };
     this.inputFilter = '';
-    this.visibilityIconClr = "hidden";
+    this.visibilityIconClr = 'hidden';
   }
 
   ngOnInit(): void {}
 
+  /*Hide other options menu*/
+  hiddenOtherOptions() {
+    if (this.admin.visibilityOtherOptions == 'block') {
+      this.admin.visibilityOtherOptions = 'none';
+      this.admin.iconOther = "more_horiz";
+    }
+  }
+  /*Hide other options menu*/
+
   /*Method that allows enable the visibility of the icon to delete*/
-  enableDeleteBtnInput(){
-    this.visibilityIconClr = "visible";
-    if(this.inputFilter == ''){
-      this.visibilityIconClr = "hidden";
+  enableDeleteBtnInput() {
+    this.visibilityIconClr = 'visible';
+    if (this.inputFilter == '') {
+      this.visibilityIconClr = 'hidden';
     }
   }
 
   /*Method that allows clear the input filter*/
-  clearInput(){
+  clearInput() {
     this.inputFilter = '';
-    this.visibilityIconClr = "hidden";
+    this.visibilityIconClr = 'hidden';
   }
-
 }
